@@ -23,20 +23,15 @@ public class OthersCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext ctx) {
         dispatcher.register(
                 Commands.literal("randomTickSpeed")
-                        .requires(source -> source.hasPermission(0))
+                        .requires(source -> source.hasPermission(2))
                         .then(
                                 Commands.argument("number", IntegerArgumentType.integer())
                                         .executes(OthersCommand::rtsCommand))
         );
         dispatcher.register(
                 Commands.literal("nv")
-                        .requires(source -> source.hasPermission(0))
+                        .requires(source -> source.hasPermission(2))
                         .executes(OthersCommand::nvCommand)
-        );
-        dispatcher.register(
-                Commands.literal("help")
-                        .requires(source -> source.hasPermission(0))
-                        .executes(OthersCommand::helpCmd)
         );
         dispatcher.register(
                 Commands.literal("schwänze")
@@ -91,49 +86,6 @@ public class OthersCommand {
 
     private static int dicksCommand(CommandContext<CommandSourceStack> context) {
         Functions.runCommand(context, "msg @a schwänze sind lecker 🤤");
-        return 1;
-    }
-
-    private static int helpCmd(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
-        ServerPlayer player = context.getSource().getPlayerOrException();
-        Component helpMessage = Component.literal(
-                """
-                        §6== Help Menu ==§r
-                        
-                        §eAFK§r
-                          §7/afk-init§r        (nur OP)
-                          §7/afk§r             AFK gehen
-                          §7/un-afk§r          AFK verlassen
-                          §7(Bewegen beendet AFK automatisch)
-                        
-                        §eAnträge§r
-                          §7/antrag ...§r      Antrag stellen
-                          §7/antrag delete ID§r (eigene; OP: alle löschen)
-                          §7/antrag list§r     Anträge listen (OP)
-                          §7/antrag accept ID§r Antrag annehmen (OP)
-                          §7/antrag deny ID§r  Antrag ablehnen (OP)
-                        
-                        §eHome (privat)§r
-                          §7/home set ID§r     Home setzen
-                          §7/home tp ID§r      Zu Home teleportieren
-                          §7/home clear ID§r   Home löschen (eigene; OP: alle)
-                        
-                        §eHome (öffentlich)§r
-                          §7/home public set ID§r   Public Home setzen
-                          §7/home public tp ID§r    Zu Public Home teleportieren
-                          §7/home public clear ID§r Public Home löschen (eigene; OP: alle)
-                        
-                        §eViewCoords§r
-                          §7/viewCoords PLAYER§r (nur OP)
-                        
-                        §eSonstiges§r
-                          §7/nv§r               Nachtsicht für alle Spieler (OP)
-                          §7/randomTickSpeed N§r Gamerule ändern (OP)
-                          §7/schwänze            /msg @a etwas ;)"""
-        );
-
-
-        player.sendSystemMessage(helpMessage);
         return 1;
     }
 }

@@ -1,5 +1,6 @@
 src/main/java:
     - added recipes
+    - removed help command
 
 src/main/resources:
     - removed the data directory because the recipes are now being generated in datagen
@@ -22,6 +23,33 @@ ITEMS:
     - linseneintopf
     - sapphire sword
 
+COMMANDS:
+    /afk
+        - /afk-init                  -- initializes the AFK scoreboard, only runnable by OP's
+        - /afk                       -- afk's the player that ran the command
+        - /un-afk                    -- another option of un-afk'ing next to moving while in /afk
+    /viewCoords
+        - /viewCoords                -- outputs the coords of the given player (as argument) and their dimension
+    /nbt
+        - /dumpNbt                   -- prints out (to the console!) the nbt data of the item held in hand
+        - /listItemNbtTags           -- (NOT FULLY WORKING!) prints out (to the console!) all possible nbt tags that can be used on the item held in hand
+    /home public/private
+        - /home public/private set   -- sets a public/private home coord
+        - /home public/private tp    -- teleports the player to public/private home coord
+        - /home public/private clear -- clears the public/private home coord (SPECIAL WHEN PUBLIC::clears only the home set by the player that ran it OR if the player is OP)
+    /antrag
+        - /antrag                    -- creates an antrag with the text given as an argument as its contents
+        - /antrag delete             -- deletes the antrag with the id given as argument(special is same as /home public clear), (slightly buggy, not fully working with the /antrag special custom created antrag's if you misspelled the username)
+        - /antrag list               -- lists all the antarg's if your OP (with ACCEPTED or DENIED) or just your antrag's (with ACCEPTED or DENIED) if ur not OP
+        - /antrag accept             -- accepts the antrag with the id given as argument, only runnable by OP's
+        - /antrag deny               -- denies the antrag with the id given as argument, only runnable by OP's
+        /antrag special
+            - /antarg special        -- creates an antrag for the user rpovided as argument, only runnable by OP's
+            - /antrag special custom -- creates an antrag for a custom player name provided as argument, only runnable by OP's
+    others
+        - /randomTickSpeed           -- changes the random tick speed to the given arg, only runnable by OP's
+        - /nv                        -- gives @a night vision 255 for infinite amount of seconds, only runnable by OP's
+        - /enchantB                  -- works like the vanilla /enchant with the same arguments but the limit of the enchant lvl is 255 and not the default survival limit, only runnable by OP's
 
 INFO:
 please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
