@@ -24,6 +24,7 @@ public class ModCreativeModeTab {
                         pOutput.accept(ModItems.CRUSH_BB_MUSIC_DISC.get());
                         pOutput.accept(ModItems.TAGE_WACH_MUSIC_DISC.get());
                         pOutput.accept(ModItems.TAGE_WACH_BB_MUSIC_DISC.get());
+                        pOutput.accept(ModItems.LEICHE_MUSIC_DISC.get());
                     }))
                     .build());
 

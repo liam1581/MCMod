@@ -26,6 +26,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.CRUSH_MUSIC_DISC.get())
                 .add(ModItems.CRUSH_BB_MUSIC_DISC.get())
                 .add(ModItems.TAGE_WACH_MUSIC_DISC.get())
-                .add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get());
+                .add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get())
+                .add(ModItems.LEICHE_MUSIC_DISC.get());
     }
 }

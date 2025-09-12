@@ -1,0 +1,10 @@
+src/main/java:
+    - added new music disk/disk item/data gen entry(s)
+
+src/main/resources:
+    - added new music disc sound file/translation/sounds.json entry
+    - changed creative mode tab translation
+    - removed unused translation entries
+
+INFO
+please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD

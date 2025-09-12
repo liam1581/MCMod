@@ -18,6 +18,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> CRUSH_BB = registerSoundEvents("crush_bb");
     public static final RegistryObject<SoundEvent> TAGE_WACH = registerSoundEvents("tage_wach");
     public static final RegistryObject<SoundEvent> TAGE_WACH_BB = registerSoundEvents("tage_wach_bb");
+    public static final RegistryObject<SoundEvent> LEICHE = registerSoundEvents("leiche");
 
 
 

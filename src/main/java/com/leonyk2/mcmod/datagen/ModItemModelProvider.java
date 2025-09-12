@@ -20,8 +20,21 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         handheldItem(ModItems.SAPPHIRE_SWORD);
         simpleItem(ModItems.LINSENEINTOPF);
+
+        diskItem(ModItems.LEICHE_MUSIC_DISC);
+        diskItem(ModItems.BEATS_BB_MUSIC_DISC);
+        diskItem(ModItems.BEATS_MUSIC_DISC);
+        diskItem(ModItems.CRUSH_BB_MUSIC_DISC);
+        diskItem(ModItems.CRUSH_MUSIC_DISC);
+        diskItem(ModItems.TAGE_WACH_BB_MUSIC_DISC);
+        diskItem(ModItems.TAGE_WACH_MUSIC_DISC);
     }
 
+    private ItemModelBuilder diskItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(McMod.MOD_ID,"item/disc"));
+    }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

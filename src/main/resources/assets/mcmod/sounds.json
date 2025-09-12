@@ -46,5 +46,13 @@
         "stream": true
       }
     ]
+  },
+  "leiche": {
+    "sounds": [
+      {
+        "name": "mcmod:leiche",
+        "stream": true
+      }
+    ]
   }
 }

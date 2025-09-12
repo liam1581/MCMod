@@ -32,6 +32,8 @@ public class ModItems {
             () -> new RecordItem(6, ModSounds.TAGE_WACH, new Item.Properties().stacksTo(1), 4100));
     public static RegistryObject<Item> TAGE_WACH_BB_MUSIC_DISC = ITEMS.register("tage_wach_bb_music_disc",
             () -> new RecordItem(6, ModSounds.TAGE_WACH_BB, new Item.Properties().stacksTo(1), 4100));
+    public static RegistryObject<Item> LEICHE_MUSIC_DISC = ITEMS.register("leiche_music_disc",
+            () -> new RecordItem(6, ModSounds.LEICHE, new Item.Properties().stacksTo(1), 6540));
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
