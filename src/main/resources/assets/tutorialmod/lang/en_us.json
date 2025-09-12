@@ -1,0 +1,33 @@
+{
+  "item.tutorialmod.sapphire": "Sapphire",
+
+  "item.tutorialmod.sapphire_sword": "Sapphire Sword",
+
+  "item.tutorialmod.linseneintopf": "Linseneintopf",
+
+  "key.tutorialmod.command_menu": "Command Menu Key",
+  "key.categories.tutorialmod": "MCMod",
+
+  "sounds.tutorialmod.beats": "150 beats",
+  "sounds.tutorialmod.beats_bb": "150 beats bass boost",
+  "sounds.tutorialmod.crsuh": "crush",
+  "sounds.tutorialmod.crsuh_bb": "crush bass boost",
+  "sounds.tutorialmod.tage_wach": "7 tage wach",
+  "sounds.tutorialmod.tage_wach_bb": "7 tage wach bass boost",
+
+  "item.tutorialmod.beats_music_disc": "150 beats",
+  "item.tutorialmod.beats_bb_music_disc": "150 beats bass boost",
+  "item.tutorialmod.crush_music_disc": "crush",
+  "item.tutorialmod.crush_bb_music_disc": "crush bass boost",
+  "item.tutorialmod.tage_wach_music_disc": "7 tage wach",
+  "item.tutorialmod.tage_wach_bb_music_disc": "7 tage wach bass boost",
+
+  "item.tutorialmod.beats_music_disc.desc": "150 beats",
+  "item.tutorialmod.beats_bb_music_disc.desc": "150 beats bass boost",
+  "item.tutorialmod.crush_music_disc.desc": "crush",
+  "item.tutorialmod.crush_bb_music_disc.desc": "crush bass boost",
+  "item.tutorialmod.tage_wach_music_disc.desc": "7 tage wach",
+  "item.tutorialmod.tage_wach_bb_music_disc.desc": "7 tage wach bass boost",
+
+  "creativetab.tutorial_tab": "Sapphire Tutorial Tab"
+}

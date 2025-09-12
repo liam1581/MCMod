@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "pattern": [
+    ""
+  ],
+  "ingredients": [
+    [
+      "create:copper_nugget"
+    ]
+  ],
+  "result": {
+    "id": "numismatics:spur",
+    "count": 1
+  }
+}

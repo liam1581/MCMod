@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "ingredients": [],
+  "pattern": [
+    "SSS",
+    "S S",
+    "SSS"
+  ],
+  "key": {
+    "S": [
+      "numismatics:spur"
+    ]
+  },
+  "result": {
+    "id": "numismatics:bevel",
+    "count": 1
+  }
+}
