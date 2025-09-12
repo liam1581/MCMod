@@ -18,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 import static com.leonyk2.mcmod.util.Functions.enchant;
+import static com.leonyk2.mcmod.util.Functions.enchantWithAll;
 
 public class OthersCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext ctx) {
@@ -53,6 +54,11 @@ public class OthersCommand {
 
                                                     return customEnchant(target, enchant.value(), level, context.getSource());
                                                 })))));
+        dispatcher.register(
+                Commands.literal("enchantAll")
+                        .requires(source -> source.hasPermission(2))
+                        .executes(OthersCommand::enchantAll)
+        );
     }
 
     private static int customEnchant(ServerPlayer player, Enchantment enchant, int level, CommandSourceStack source) {
@@ -86,6 +92,19 @@ public class OthersCommand {
 
     private static int dicksCommand(CommandContext<CommandSourceStack> context) {
         Functions.runCommand(context, "msg @a schwänze sind lecker 🤤");
+        return 1;
+    }
+
+    private static int enchantAll(CommandContext<CommandSourceStack> context) {
+        if (context.getSource().getEntity() instanceof ServerPlayer player) {
+            ItemStack stack = player.getMainHandItem();
+
+            if (stack.isEmpty()) {
+                return 0;
+            }
+
+            enchantWithAll(stack);
+        }
         return 1;
     }
 }

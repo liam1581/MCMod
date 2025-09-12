@@ -3,9 +3,11 @@ package com.leonyk2.mcmod.util;
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.nbt.ListTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class Functions {
     /**
@@ -31,5 +33,18 @@ public class Functions {
 
         ListTag listtag = item.getTag().getList("Enchantments", 10);
         listtag.add(EnchantmentHelper.storeEnchantment(EnchantmentHelper.getEnchantmentId(pEnchantment), pLevel));
+    }
+
+    public static ItemStack enchantWithAll(ItemStack item) {
+        for (Enchantment en : ForgeRegistries.ENCHANTMENTS) {
+            ResourceLocation id = ForgeRegistries.ENCHANTMENTS.getKey(en);
+
+            if (en == null) continue;
+            if (en.isCurse()) continue;
+            if (id != null && id.toString().equals("minecraft:thorns")) continue;
+
+            enchant(item, en, 255);
+        }
+        return item;
     }
 }

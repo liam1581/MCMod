@@ -50,6 +50,7 @@ COMMANDS:
         - /randomTickSpeed           -- changes the random tick speed to the given arg, only runnable by OP's
         - /nv                        -- gives @a night vision 255 for infinite amount of seconds, only runnable by OP's
         - /enchantB                  -- works like the vanilla /enchant with the same arguments but the limit of the enchant lvl is 255 and not the default survival limit, only runnable by OP's
+        - /enchantAll                -- enchants the item held in hand with all enchantments in the game (including mod enchantments) on lvl 255, except for thorns and all curses, only runnable by OP's
 
 INFO:
 please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
