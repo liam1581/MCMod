@@ -1,3 +1,7 @@
-// 1.20.1	2025-09-12T20:42:21.4722464	Recipes
+// 1.20.1	2025-09-12T21:08:16.8216235	Recipes
 6101a170eb6c5d8f6e876ef96d4dee46de10836e data/mcmod/advancements/recipes/misc/linseneintopf.json
 43cd60ab5051723d83245269ec5e7a9c293b1ea7 data/mcmod/recipes/linseneintopf.json
+c70e2b139b8d20b72efbf7acee9cbfe37d21cf98 data/minecraft/advancements/recipes/misc/coal_block.json
+b81d9a029e1cb92955f2a271e48108f5f7468d88 data/minecraft/advancements/recipes/misc/quartz.json
+11f35f169238950416802720d4ca0e040a9fb93c data/minecraft/recipes/coal_block.json
+caf28fa02bdec30f2b2f5610034af6838cc1ab2a data/minecraft/recipes/quartz.json

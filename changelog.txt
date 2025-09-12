@@ -1,10 +1,31 @@
 src/main/java:
-    - added new music disk/disk item/data gen entry(s)
+    - added recipes
 
 src/main/resources:
-    - added new music disc sound file/translation/sounds.json entry
-    - changed creative mode tab translation
-    - removed unused translation entries
+    - removed the data directory because the recipes are now being generated in datagen
 
-INFO
+
+RECIPES:
+Coal block from charcoal:
+    CCC
+    CCC
+    CCC
+    C = charcoal == coal block
+Quartz from Quartz block **SC:
+    Quartz block = 4 quartz
+
+ITEMS:
+    - beats/beats bb music disc
+    - crush/crush bb music disc
+    - tage wach/ tage wach bb music disc
+    - leiche music disc
+    - linseneintopf
+    - sapphire sword
+
+
+INFO:
 please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
+
+
+**
+SC = Shapeless Crafting
