@@ -1,0 +1,50 @@
+{
+  "beats": {
+    "sounds": [
+      {
+        "name": "mcmod:beats",
+        "stream": true
+      }
+    ]
+  },
+  "beats_bb": {
+    "sounds": [
+      {
+        "name": "mcmod:beats_bb",
+        "stream": true
+      }
+    ]
+  },
+  "crush": {
+    "sounds": [
+      {
+        "name": "mcmod:crush",
+        "stream": true
+      }
+    ]
+  },
+  "crush_bb": {
+    "sounds": [
+      {
+        "name": "mcmod:crush_bb",
+        "stream": true
+      }
+    ]
+  },
+  "tage_wach": {
+    "sounds": [
+      {
+        "name": "mcmod:tage_wach",
+        "stream": true
+      }
+    ]
+  },
+  "tage_wach_bb": {
+    "sounds": [
+      {
+        "name": "mcmod:tage_wach_bb",
+        "stream": true
+      }
+    ]
+  }
+}
