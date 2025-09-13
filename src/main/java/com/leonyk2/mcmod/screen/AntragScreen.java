@@ -1,6 +1,7 @@
 package com.leonyk2.mcmod.screen;
 
 import com.leonyk2.mcmod.widget.DropdownWidget;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
@@ -59,7 +60,7 @@ public class AntragScreen extends Screen {
         }).bounds(centerX + 110, y + 90, 60, 20).build();
 
         this.addRenderableWidget(dropdown);
-        this.addRenderableWidget(operator_dropdown);
+        if (Minecraft.getInstance().player.hasPermissions(2)) this.addRenderableWidget(operator_dropdown);
         this.addRenderableWidget(antragField);
         this.addRenderableWidget(submitButton);
     }
