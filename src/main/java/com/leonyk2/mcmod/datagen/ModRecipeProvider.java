@@ -24,6 +24,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.APPLE)
                 .unlockedBy(getHasName(Items.APPLE), has(Items.APPLE))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 1)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', Items.NETHER_STAR)
+                .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NETHER_STICK.get(), 1)
+                .pattern("S")
+                .pattern("S")
+                .define('S', ModItems.SAPPHIRE.get())
+                .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_SWORD.get(), 1)
+                .pattern("S")
+                .pattern("S")
+                .pattern("#")
+                .define('S', ModItems.SAPPHIRE.get())
+                .define('#', ModItems.NETHER_STICK.get())
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COAL_BLOCK, 1)
                 .pattern("CCC")
@@ -31,11 +54,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', Items.CHARCOAL)
                 .unlockedBy(getHasName(Items.CHARCOAL), has(Items.CHARCOAL))
-                .save(pWriter, new ResourceLocation(McMod.MOD_ID, "coal_block"));
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, "coal_block"));
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.QUARTZ, 4)
                 .requires(Items.QUARTZ_BLOCK)
                 .unlockedBy(getHasName(Items.QUARTZ_BLOCK), has(Items.QUARTZ_BLOCK))
-                .save(pWriter, new ResourceLocation(McMod.MOD_ID, "quartz"));
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, "quartz"));
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

@@ -19,7 +19,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         handheldItem(ModItems.SAPPHIRE_SWORD);
+        simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.LINSENEINTOPF);
+        simpleItem(ModItems.NETHER_STICK);
 
         diskItem(ModItems.LEICHE_MUSIC_DISC);
         diskItem(ModItems.BEATS_BB_MUSIC_DISC);
@@ -32,25 +34,25 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder diskItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(McMod.MOD_ID,"item/disc"));
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID,"item/disc"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(McMod.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(McMod.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(McMod.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

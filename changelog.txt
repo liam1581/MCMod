@@ -1,8 +1,8 @@
 src/main/java:
-    - changed Antrag Screen so it only shows operator commands when ur actually an op
+    - datagen stuff for the recipes and item registration
 
 src/main/resources:
-    -
+    - added stick translation
 
 
 INFO:
@@ -22,6 +22,21 @@ Coal block from charcoal:
     CCC
     CCC
     C = charcoal == coal block
+Sapphire from nether stars
+    SSS
+    SSS
+    SSS
+    S = nether star == sapphire
+Nether Star Stick from Sapphire
+    S
+    S
+    S = Sapphire == Nether Star Stick
+Sapphire Sword from sapphire and nether star stick
+    S
+    S
+    #
+    S = Sapphire
+    # = Nether Star Stick == Sapphire Sword
 Quartz from Quartz block **SC:
     Quartz block = 4 quartz
 
@@ -32,6 +47,8 @@ ITEMS:
     - leiche music disc
     - linseneintopf
     - sapphire sword
+    - sapphire
+    - nether star stick
 
 COMMANDS:
     /afk
@@ -67,6 +84,9 @@ SCREENS:
 
 KEYBINDS:
     - added antrag screen keybind (H as default, changable in the settings)
+
+WIDGETS:
+    - DropdownWidget
 
 **
 SC = Shapeless Crafting

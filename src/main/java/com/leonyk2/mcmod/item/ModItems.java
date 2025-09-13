@@ -16,6 +16,10 @@ public class ModItems {
 
     public static RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
             () -> new SwordItem(ModToolTiers.SAPPHIRE, 2147483647, 0, new Item.Properties()));
+    public static RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
+            () -> new Item(new Item.Properties()));
+    public static RegistryObject<Item> NETHER_STICK = ITEMS.register("nether_stick",
+            () -> new Item(new Item.Properties()));
 
     public static RegistryObject<Item> LINSENEINTOPF = ITEMS.register("linseneintopf",
             () -> new Item(new Item.Properties().food(ModFoods.LINSENEINTOPF)));

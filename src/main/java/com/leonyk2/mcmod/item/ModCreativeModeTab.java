@@ -18,6 +18,10 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems(((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.LINSENEINTOPF.get());
+                        pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
+                        pOutput.accept(ModItems.NETHER_STICK.get());
+
                         pOutput.accept(ModItems.BEATS_MUSIC_DISC.get());
                         pOutput.accept(ModItems.BEATS_BB_MUSIC_DISC.get());
                         pOutput.accept(ModItems.CRUSH_MUSIC_DISC.get());
