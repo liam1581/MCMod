@@ -1,6 +1,7 @@
 package com.leonyk2.mcmod.util;
 
 import com.mojang.brigadier.context.CommandContext;
+import net.minecraft.client.Minecraft;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.resources.ResourceLocation;
@@ -12,11 +13,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class Functions {
     /**
      * Runs the mc command provided in the arguments
-     * @param context the command context
+     * @param source the CommandSourceStack
      * @param command the command that should be run
      */
-    public static void runCommand(CommandContext<CommandSourceStack> context, String command) {
-        context.getSource().getServer().getCommands().performPrefixedCommand(context.getSource(), command);
+    public static void runCommand(CommandSourceStack source, String command) {
+        source.getServer().getCommands().performPrefixedCommand(source, command);
+    }
+    public static void runCommand(String command) {
+        assert Minecraft.getInstance().player != null;
+        Minecraft.getInstance().player.connection.sendCommand(command);
     }
 
     /**
@@ -35,6 +40,11 @@ public class Functions {
         listtag.add(EnchantmentHelper.storeEnchantment(EnchantmentHelper.getEnchantmentId(pEnchantment), pLevel));
     }
 
+    /**
+     * Enchants the given item with every enchantment (including mod enchantments) except curses and thorns, on lvl 255
+     * @param item the item to be enchanted
+     * @return the item stack with the enchantments
+     */
     public static ItemStack enchantWithAll(ItemStack item) {
         for (Enchantment en : ForgeRegistries.ENCHANTMENTS) {
             ResourceLocation id = ForgeRegistries.ENCHANTMENTS.getKey(en);

@@ -16,9 +16,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraftforge.network.NetworkHooks;
 
-import static com.leonyk2.mcmod.util.Functions.enchant;
-import static com.leonyk2.mcmod.util.Functions.enchantWithAll;
+import static com.leonyk2.mcmod.util.Functions.*;
 
 public class OthersCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext ctx) {
@@ -59,6 +59,23 @@ public class OthersCommand {
                         .requires(source -> source.hasPermission(2))
                         .executes(OthersCommand::enchantAll)
         );
+        dispatcher.register(
+                Commands.literal("testing")
+                        .executes(context -> {
+                            ServerPlayer player = context.getSource().getPlayerOrException();
+
+                            player.getServer().execute(() -> {
+                                // Run only on client
+                                player.connection.send(
+                                        new net.minecraft.network.protocol.game.ClientboundOpenScreenPacket(
+                                                0, // dummy container id
+                                                net.minecraft.world.inventory.MenuType.GENERIC_9x1, // dummy menu type
+                                                net.minecraft.network.chat.Component.literal("Opening HiScreen"))
+                                );
+                            });
+
+                            return 1;
+                        }));
     }
 
     private static int customEnchant(ServerPlayer player, Enchantment enchant, int level, CommandSourceStack source) {
@@ -79,19 +96,19 @@ public class OthersCommand {
         int number = IntegerArgumentType.getInteger(context, "number");
         String command = "gamerule randomTickSpeed " + number;
 
-        Functions.runCommand(context, command);
+        runCommand(context.getSource(), command);
         return 1;
     }
 
     private static int nvCommand(CommandContext<CommandSourceStack> context) {
         String command = "effect give @a minecraft:night_vision infinite 255 true";
 
-        Functions.runCommand(context, command);
+        runCommand(context.getSource(), command);
         return 1;
     }
 
     private static int dicksCommand(CommandContext<CommandSourceStack> context) {
-        Functions.runCommand(context, "msg @a schwänze sind lecker 🤤");
+        runCommand(context.getSource(), "msg @a schwänze sind lecker 🤤");
         return 1;
     }
 
