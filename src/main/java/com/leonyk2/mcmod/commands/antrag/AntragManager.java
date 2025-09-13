@@ -35,7 +35,7 @@ public class AntragManager {
         int id = createAntragFor(player, text);
 
         player.sendSystemMessage(Component.literal(
-                "Your Antrag (ID: " + id + ") was submitted"
+                "Dein Antrag (ID: " + id + ") wurde abgegeben!"
         ));
     }
     public static int createAntragFor(ServerPlayer target, String text) {

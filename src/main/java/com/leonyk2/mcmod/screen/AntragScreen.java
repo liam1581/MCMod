@@ -7,6 +7,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -14,12 +15,11 @@ import static com.leonyk2.mcmod.util.Functions.runCommand;
 
 public class AntragScreen extends Screen {
     private EditBox antragField;
-    private Button submitButton;
-    private DropdownWidget dropdown;
-    private DropdownWidget operator_dropdown;
+    private DropdownWidget.DropdownWidgetTranslatable dropdown;
+    private DropdownWidget.DropdownWidgetTranslatable operator_dropdown;
 
-    private static final List<String> OPTIONS = List.of("", "antrag", "delete", "list");
-    private static final List<String> OPERATOR_OPTIONS = List.of("", "accept", "deny");
+    private static final List<String> OPTIONS = List.of("", "screens.mcmod.antrag.OPTIONS.antrag", "screens.mcmod.antrag.OPTIONS.delete", "screens.mcmod.antrag.OPTIONS.list");
+    private static final List<String> OPERATOR_OPTIONS = List.of("", "screens.mcmod.antrag.OPTIONS.accept", "screens.mcmod.antrag.OPTIONS.deny");
 
     public AntragScreen() {
         super(Component.literal(Component.translatable("screens.mcmod.antarg.name").toString()));
@@ -30,43 +30,44 @@ public class AntragScreen extends Screen {
         int centerX = this.width / 2 - 100;
         int y = this.height / 2;
 
-        dropdown = new DropdownWidget(centerX, y - 20, 100, 20, OPTIONS);
-        operator_dropdown = new DropdownWidget(centerX + 110, y - 20, 100, 20, OPERATOR_OPTIONS);
+        dropdown = new DropdownWidget.DropdownWidgetTranslatable(centerX, y - 20, 100, 20, OPTIONS);
+        operator_dropdown = new DropdownWidget.DropdownWidgetTranslatable(centerX + 110, y - 20, 100, 20, OPERATOR_OPTIONS);
         antragField = new EditBox(this.font, centerX, y + 90, 100, 20, Component.literal("idk"));
-        submitButton = Button.builder(Component.translatable("screens.mcmod.antarg.button.submit"), b -> {
+        Button submitButton = Button.builder(Component.translatable("screens.mcmod.antarg.button.submit"), b -> {
             switch (dropdown.getSelected()) {
                 case "":
                     break;
-                case "antrag":
+                case "screens.mcmod.antrag.OPTIONS.antrag":
                     runCommand("antrag " + antragField.getValue());
                     break;
-                case "delete":
+                case "screens.mcmod.antrag.OPTIONS.delete":
                     runCommand("antrag delete " + antragField.getValue());
                     break;
-                case "list":
+                case "screens.mcmod.antrag.OPTIONS.list":
                     runCommand("antrag list");
                     break;
             }
             switch (operator_dropdown.getSelected()) {
                 case "":
                     break;
-                case "accept":
+                case "screens.mcmod.antrag.OPTIONS.accept":
                     runCommand("antrag accept " + antragField.getValue());
                     break;
-                case "deny":
+                case "screens.mcmod.antrag.OPTIONS.deny":
                     runCommand("antrag deny " + antragField.getValue());
                     break;
             }
         }).bounds(centerX + 110, y + 90, 60, 20).build();
 
         this.addRenderableWidget(dropdown);
+        assert Minecraft.getInstance().player != null;
         if (Minecraft.getInstance().player.hasPermissions(2)) this.addRenderableWidget(operator_dropdown);
         this.addRenderableWidget(antragField);
         this.addRenderableWidget(submitButton);
     }
 
     @Override
-    public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
+    public void render(@NotNull GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
         this.renderBackground(pGuiGraphics);
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
     }

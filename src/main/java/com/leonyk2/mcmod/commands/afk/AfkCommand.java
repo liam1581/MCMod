@@ -41,7 +41,7 @@ public class AfkCommand {
             obj = sb.addObjective(
                     "AFK",
                     ObjectiveCriteria.DUMMY,
-                    Component.literal("AFK Players"),
+                    Component.translatable("commands.mcmod.afk.players"),
                     ObjectiveCriteria.RenderType.INTEGER
             );
         }
@@ -49,7 +49,7 @@ public class AfkCommand {
         // 1 = sidebar
         sb.setDisplayObjective(1, obj);
 
-        context.getSource().sendSuccess(() -> Component.literal("AFK scoreboard initialized."), true);
+        context.getSource().sendSuccess(() -> Component.translatable("commands.mcmod.afk.scoreboard_init"), true);
         return 1;
     }
 
@@ -60,13 +60,13 @@ public class AfkCommand {
         Objective obj = sb.getObjective("AFK");
 
         if (obj == null) {
-            player.sendSystemMessage(Component.literal("AFK scoreboard not initialized. Ask an admin to run /afk-init."));
+            player.sendSystemMessage(Component.translatable("commands.mcmod.afk.scoreboard_not_init"));
             return 0;
         }
 
         sb.getOrCreatePlayerScore(player.getScoreboardName(), obj).setScore(1);
 
-        player.sendSystemMessage(Component.literal(player.getName().getString() + " is now AFK."));
+        player.sendSystemMessage(Component.literal(player.getName().getString() + Component.translatable("commands.mcmod.afk.is_afk").getString()));
         return 1;
     }
 
@@ -83,7 +83,7 @@ public class AfkCommand {
 
         sb.resetPlayerScore(player.getScoreboardName(), obj);
 
-        player.sendSystemMessage(Component.literal(player.getName().getString() + " is no longer AFK."));
+        player.sendSystemMessage(Component.literal(player.getName().getString() + Component.translatable("commands.mcmod.afk.is_no_afk").getString()));
         return 1;
     }
 }

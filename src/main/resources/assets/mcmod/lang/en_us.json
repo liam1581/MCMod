@@ -42,5 +42,20 @@
 
 
   "screens.mcmod.test.name": "Test Screen",
-  "screens.mcmod.test.button.print": "Print"
+  "screens.mcmod.test.button.print": "Print",
+
+  "screens.mcmod.antrag.OPTIONS.antrag": "Antrag",
+  "screens.mcmod.antrag.OPTIONS.delete": "Delete",
+  "screens.mcmod.antrag.OPTIONS.list": "List",
+  "screens.mcmod.antrag.OPTIONS.accept": "Accept",
+  "screens.mcmod.antrag.OPTIONS.deny": "Deny",
+
+
+  "commands.mcmod.afk.players": "AFK Players",
+  "commands.mcmod.afk.scoreboard_init": "AFK Scoreboard initialized",
+  "commands.mcmod.afk.scoreboard_not_init": "AFK scoreboard not initialized. Ask an admin to run /afk-init.",
+  "commands.mcmod.afk.is_afk": "is now AFK.",
+  "commands.mcmod.afk.is_no_afk": "is no longer AFK.",
+
+  "commands.mcmod.schwänze.text": "schwänze sind lecker"
 }

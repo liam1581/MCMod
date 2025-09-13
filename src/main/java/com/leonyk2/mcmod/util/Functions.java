@@ -36,6 +36,7 @@ public class Functions {
      */
     public static void enchant(ItemStack item, Enchantment pEnchantment, int pLevel) {
         item.getOrCreateTag();
+        assert item.getTag() != null;
         if (!item.getTag().contains("Enchantments", 9)) {
             item.getTag().put("Enchantments", new ListTag());
         }
@@ -46,10 +47,10 @@ public class Functions {
 
     /**
      * Enchants the given item with every enchantment (including mod enchantments) except curses and thorns, on lvl 255
+     *
      * @param item the item to be enchanted
-     * @return the item stack with the enchantments
      */
-    public static ItemStack enchantWithAll(ItemStack item) {
+    public static void enchantWithAll(ItemStack item) {
         for (Enchantment en : ForgeRegistries.ENCHANTMENTS) {
             ResourceLocation id = ForgeRegistries.ENCHANTMENTS.getKey(en);
 
@@ -59,7 +60,6 @@ public class Functions {
 
             enchant(item, en, 255);
         }
-        return item;
     }
 
     /**

@@ -1,0 +1,61 @@
+{
+  "item.mcmod.sapphire": "Saphir",
+
+  "item.mcmod.sapphire_sword": "Saphir Schwert",
+  "item.mcmod.nether_stick": "Nether Stern Stock",
+
+  "item.mcmod.linseneintopf": "Linseneintopf",
+
+  "sounds.mcmod.beats": "150 beats",
+  "sounds.mcmod.beats_bb": "150 beats bass boost",
+  "sounds.mcmod.crsuh": "crush",
+  "sounds.mcmod.crsuh_bb": "crush bass boost",
+  "sounds.mcmod.tage_wach": "7 tage wach",
+  "sounds.mcmod.tage_wach_bb": "7 tage wach bass boost",
+  "sounds.mcmod.leiche": "Ne leiche",
+
+  "item.mcmod.beats_music_disc": "150 beats",
+  "item.mcmod.beats_bb_music_disc": "150 beats bass boost",
+  "item.mcmod.crush_music_disc": "crush",
+  "item.mcmod.crush_bb_music_disc": "crush bass boost",
+  "item.mcmod.tage_wach_music_disc": "7 tage wach",
+  "item.mcmod.tage_wach_bb_music_disc": "7 tage wach bass boost",
+  "item.mcmod.leiche_music_disc": "Ne leiche",
+
+  "item.mcmod.beats_music_disc.desc": "150 beats",
+  "item.mcmod.beats_bb_music_disc.desc": "150 beats bass boost",
+  "item.mcmod.crush_music_disc.desc": "crush",
+  "item.mcmod.crush_bb_music_disc.desc": "crush bass boost",
+  "item.mcmod.tage_wach_music_disc.desc": "7 tage wach",
+  "item.mcmod.tage_wach_bb_music_disc.desc": "7 tage wach bass boost",
+  "item.mcmod.leiche_music_disc.desc": "Ne leiche",
+
+  "creativetab.tutorial_tab": "McMod Tab",
+
+  "key.mcmod.antrag_key": "Antrag key",
+  "key.mcmod.test": "Testing key",
+
+  "key.categories.mcmod": "McMod",
+
+  "screens.mcmod.antarg.button.submit": "Abgeben",
+  "screens.mcmod.antarg.name": "Antarg Menü",
+
+
+  "screens.mcmod.test.name": "Test Screen",
+  "screens.mcmod.test.button.print": "Print",
+
+  "screens.mcmod.antrag.OPTIONS.antrag": "Antrag",
+  "screens.mcmod.antrag.OPTIONS.delete": "Löschen",
+  "screens.mcmod.antrag.OPTIONS.list": "List",
+  "screens.mcmod.antrag.OPTIONS.accept": "Akzeptieren",
+  "screens.mcmod.antrag.OPTIONS.deny": "Ablehnen",
+
+
+  "commands.mcmod.afk.players": "AFK Spieler",
+  "commands.mcmod.afk.scoreboard_init": "AFK Scoreboard initialisiert",
+  "commands.mcmod.afk.scoreboard_not_init": "AFK scoreboard ist nicht initialisiert. Frage einen admin ob er /afk-init ausführen kann.",
+  "commands.mcmod.afk.is_afk": " ist jetzt AFK.",
+  "commands.mcmod.afk.is_no_afk": " ist nicht mehr AFK.",
+
+  "commands.mcmod.schwänze.text": "schwänze sind lecker"
+}

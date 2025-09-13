@@ -15,6 +15,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 
+import java.util.Objects;
+
 import static com.leonyk2.mcmod.util.Functions.*;
 
 public class OthersCommand {
@@ -61,7 +63,7 @@ public class OthersCommand {
                         .executes(context -> {
                             ServerPlayer player = context.getSource().getPlayerOrException();
 
-                            player.getServer().execute(() -> {
+                            Objects.requireNonNull(player.getServer()).execute(() -> {
                                 // Run only on client
                                 player.connection.send(
                                         new net.minecraft.network.protocol.game.ClientboundOpenScreenPacket(
@@ -105,7 +107,7 @@ public class OthersCommand {
     }
 
     private static int dicksCommand(CommandContext<CommandSourceStack> context) {
-        runCommand(context.getSource(), "msg @a schwänze sind lecker 🤤");
+        runCommand(context.getSource(), "msg @a " + Component.translatable("commands.mcmod.schwänze.text").getString() +  "🤤");
         return 1;
     }
 
