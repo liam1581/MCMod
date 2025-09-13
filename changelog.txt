@@ -1,8 +1,9 @@
 src/main/java:
-    - added keybinds and screens
+    - cleanup -- removed unused imports
+    - added function overload in util.Functions, runCommand can now be used as server side (with CommandSourceStack, command) or client side (with just command)
 
 src/main/resources:
-    - added translation for the keybind (keybind and category) and stuff in the antrag screen
+
 
 
 RECIPES:
