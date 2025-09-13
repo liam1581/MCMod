@@ -1,9 +1,102 @@
-src/main/java:
-    - added new Function in Functions
-    - added debug command
+v2.6.0-r3
+    another changelog update XD (again basically useless)
 
-src/main/resources:
-    -
+v2.6.0-r2
+    changelog changed xD (basically useless again)
+
+v2.6.0
+    added sendMessage Function and documentation
+    added debug testCommands command
+
+v2.5.0-r3
+    changed README (so basically this version is USELESS)
+
+v2.5.0-r2
+    added german translation
+    added a bunch of @NotNull things
+    added output.jar files for each ongoing version
+
+v2.4.1-r2
+    changed datagen package directory
+
+v2.4.1
+    changed some missed ResourceLocation thingies
+
+v2.3.1-r3
+    changed all ResourceLocation mentions to newer things so Intellij IDEA wont scream at me
+
+v2.3.1-r2
+    added crafting recipe for sapphire sword and nether stick item for it
+
+v2.3.1
+    changed Antrag screen to only show op commands when op
+
+v2.3.0
+    added dropdown menu widget
+    changed Antrag screen to use the dropdown menu instead of input fields and buttons
+    added println function + documentation
+
+v2.2.2-r3
+    removed #mandatory from mods.toml
+
+v2.2.2-r2
+    added some Function documentation
+
+v2.2.2
+    datagen bug-fix, generates the vanilla recipes (coal block from charcoal and quartz from quartz block) to data/mcmod instead of data/minecraft
+    added jei to build environment (not mandatory for mod to work)
+
+v2.2.1
+    removed unused imports
+    added Function overload for runCommand (runCommand(CommandSourceStack, String) & runCommand(String))
+
+v2.2.0-r2
+    added README.md
+
+v2.2.0
+    added testing command which openas a dummy container
+    added HelloKeybind (H by default) that opens AntragScreen
+    added AntragScreen
+    changed runCommand(CommandContext, String) function
+v2.1.2
+    added enchantAll command aswell as enchantWithAll Function
+
+v2.1.1-r2
+    removed custom /help command
+    changed randomTickSpeed/nv command permission to 2
+
+v2.1.1
+    added recipes for coal block from charcoal & quartz from quartz block to the datagen
+    changed mod description
+
+v2.1.0-r2
+    added run-data to .gitignore file
+    added music disc texture
+
+v2.1.0
+    added new music disk
+    changed creative mode tab name
+    removed unused translation entries
+
+v2.0.2
+    Bug fixes after changing the modid
+
+v2.0.1
+    changed modid
+    removed spur_from_copper_nugget recipe & bevel_from_spur recipe
+
+v2.0
+    Music discs
+    The datagen
+    Linseneintopf
+    Sapphire Sword
+    afk/antrag/home/nbt/viewCoords and others commands
+    coal block from charcoal & quartz from quartz block recipe's
+
+    BUGS:
+        music discs dont work because of the sound files dont exist
+
+
 
 INFO:
     - please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
