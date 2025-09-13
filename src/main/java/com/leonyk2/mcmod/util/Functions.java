@@ -18,6 +18,11 @@ public class Functions {
     public static void runCommand(CommandSourceStack source, String command) {
         source.getServer().getCommands().performPrefixedCommand(source, command);
     }
+
+    /**
+     * Runs the mc command provided in the argument
+     * @param command the command that should be run
+     */
     public static void runCommand(String command) {
         assert Minecraft.getInstance().player != null;
         Minecraft.getInstance().player.connection.sendCommand(command);
