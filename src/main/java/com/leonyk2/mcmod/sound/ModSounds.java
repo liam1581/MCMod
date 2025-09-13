@@ -23,7 +23,7 @@ public class ModSounds {
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
-        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(McMod.MOD_ID, name)));
+        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, name)));
     }
 
     public static void register(IEventBus eventBus) {

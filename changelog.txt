@@ -5,10 +5,10 @@ src/main/java:
 src/main/resources:
     - added stick translation
 
-
 INFO:
     - please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
     - added jei as dependency (not mandatory), mainly for the build environment
+    - updated parchment version
     - known bug: u can run op and non op thingy from the dropdowns at the same time
 
 DOCUMENTATION:
