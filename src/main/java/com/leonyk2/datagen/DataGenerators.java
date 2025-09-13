@@ -1,4 +1,4 @@
-package com.leonyk2.mcmod.datagen;
+package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
 import net.minecraft.core.HolderLookup;
