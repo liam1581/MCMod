@@ -2,6 +2,7 @@ package com.leonyk2.mcmod.commands;
 
 import com.leonyk2.mcmod.commands.afk.AfkCommand;
 import com.leonyk2.mcmod.commands.antrag.AntragCommand;
+import com.leonyk2.mcmod.commands.debug.DebugCommand;
 import com.leonyk2.mcmod.commands.home.HomeCommand;
 import com.leonyk2.mcmod.commands.nbt.DumpAllPossibleNbtCommand;
 import com.leonyk2.mcmod.commands.nbt.DumpNbtCommand;
@@ -61,5 +62,7 @@ public class CommandManager {
         DumpNbtCommand.register(dispatcher);
 
         DumpAllPossibleNbtCommand.register(dispatcher);
+
+        DebugCommand.register(dispatcher);
 	}
 }
