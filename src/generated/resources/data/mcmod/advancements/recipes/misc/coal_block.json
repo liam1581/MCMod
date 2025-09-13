@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_quartz_block": {
+    "has_charcoal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:quartz_block"
+              "minecraft:charcoal"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:quartz"
+        "recipe": "mcmod:coal_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_quartz_block",
+      "has_charcoal",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:quartz"
+      "mcmod:coal_block"
     ]
   },
   "sends_telemetry_event": false

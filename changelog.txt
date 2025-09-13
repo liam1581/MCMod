@@ -1,9 +1,7 @@
 src/main/java:
-    - cleanup -- removed unused imports
-    - added function overload in util.Functions, runCommand can now be used as server side (with CommandSourceStack, command) or client side (with just command)
+    - data gen bug-fix, now generates the recipes for coal block & quartz in the correct directory (now in data/mcmod/recipes instead of data/minecraft/recipes overwriting the original coal block recipe)
 
 src/main/resources:
-
 
 
 RECIPES:
@@ -59,8 +57,8 @@ KEYBINDS:
     - added antrag screen keybind (H as default, changable in the settings)
 
 INFO:
-please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
-
+    - please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
+    - added jei as dependency (not mandatory), mainly for the build environment
 
 **
 SC = Shapeless Crafting

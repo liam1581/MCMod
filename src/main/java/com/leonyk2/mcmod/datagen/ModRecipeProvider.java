@@ -4,6 +4,7 @@ import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -30,11 +31,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', Items.CHARCOAL)
                 .unlockedBy(getHasName(Items.CHARCOAL), has(Items.CHARCOAL))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(McMod.MOD_ID, "coal_block"));
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.QUARTZ, 4)
                 .requires(Items.QUARTZ_BLOCK)
                 .unlockedBy(getHasName(Items.QUARTZ_BLOCK), has(Items.QUARTZ_BLOCK))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(McMod.MOD_ID, "quartz"));
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
