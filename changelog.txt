@@ -10,6 +10,7 @@ INFO:
     - added jei as dependency (not mandatory), mainly for the build environment
     - updated parchment version
     - known bug: u can run op and non op thingy from the dropdowns at the same time
+    - WORKING ON WORKING DEBUG CHECK THINGY
 
 DOCUMENTATION:
     - runCommand function (both)
