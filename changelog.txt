@@ -1,5 +1,6 @@
 src/main/java:
     - datagen stuff for the recipes and item registration
+    - also changed all ResourceLocation things to stuff that'd work in later versions
 
 src/main/resources:
     - added stick translation
