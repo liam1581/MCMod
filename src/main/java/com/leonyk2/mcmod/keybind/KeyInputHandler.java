@@ -5,13 +5,18 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import static com.leonyk2.mcmod.keybind.Keybinds.HELLO_KEY;
+import static com.leonyk2.mcmod.keybind.Keybinds.ANTRAG_KEY;
 
 public class KeyInputHandler {
     @SubscribeEvent
     public void onKeyInput(InputEvent.Key event) {
-        if (HELLO_KEY.isDown()) {
+        if (ANTRAG_KEY.isDown()) {
             Minecraft.getInstance().setScreen(new AntragScreen());
         }
+        /*
+        if (TEST_KEY.isDown()) {
+            Minecraft.getInstance().setScreen(new TestScreen());
+        }
+         */
     }
 }

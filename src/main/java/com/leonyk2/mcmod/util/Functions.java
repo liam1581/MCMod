@@ -61,4 +61,12 @@ public class Functions {
         }
         return item;
     }
+
+    /**
+     * System.out.println(String) but without the whole System.out thing (bcs it annoys me)
+     * @param x the String argument
+     */
+    public static void println(String x) {
+        System.out.println(x);
+    }
 }

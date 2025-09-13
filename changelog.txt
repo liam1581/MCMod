@@ -1,13 +1,16 @@
 src/main/java:
-    - data gen bug-fix, now generates the recipes for coal block & quartz in the correct directory (now in data/mcmod/recipes instead of data/minecraft/recipes overwriting the original coal block recipe)
+    - added a dropdown menu widget (for screens)
+    - changed the antrag screen's (keybinding h) name in code and changed the antrag screen to use dropdown menus instead of many buttons
 
 src/main/resources:
-
+    - changed translation for keybind
+    - removed unused translations
 
 DOCUMENTATION:
     - runCommand function (both)
     - enchant function
     - enchantWithAll function
+    - println function
 
 RECIPES:
 Coal block from charcoal:

@@ -12,16 +12,27 @@ import org.lwjgl.glfw.GLFW;
 
 @Mod.EventBusSubscriber(modid = McMod.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Keybinds {
-    public static final KeyMapping HELLO_KEY = new KeyMapping(
-            "key.mcmod.hello",
+    public static final KeyMapping ANTRAG_KEY = new KeyMapping(
+            "key.mcmod.antrag_key",
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_H,
             "key.categories.mcmod"
             );
 
+    /*
+    public static final KeyMapping TEST_KEY = new KeyMapping(
+            "key.mcmod.test",
+            InputConstants.Type.KEYSYM,
+            GLFW.GLFW_KEY_P,
+            "key.categories.mcmod"
+    );
+     */
+
     @SubscribeEvent
     public static void registerKeyMapping(RegisterKeyMappingsEvent event) {
-        event.register(HELLO_KEY);
+        event.register(ANTRAG_KEY);
+        //event.register(TEST_KEY);
+
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
     }
 }

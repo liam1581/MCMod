@@ -5,9 +5,6 @@
 
   "item.mcmod.linseneintopf": "Linseneintopf",
 
-  "key.mcmod.hello": "Hello World key",
-  "key.categories.mcmod": "McMod",
-
   "sounds.mcmod.beats": "150 beats",
   "sounds.mcmod.beats_bb": "150 beats bass boost",
   "sounds.mcmod.crsuh": "crush",
@@ -34,10 +31,15 @@
 
   "creativetab.tutorial_tab": "McMod Tab",
 
-  "screens.mcmod.antarg.button.deny": "Deny",
-  "screens.mcmod.antarg.button.accept": "Accept",
-  "screens.mcmod.antarg.button.list": "List",
-  "screens.mcmod.antarg.button.delete": "Delete",
+  "key.mcmod.antrag_key": "Antrag key",
+  "key.mcmod.test": "Testing key",
+
+  "key.categories.mcmod": "McMod",
+
   "screens.mcmod.antarg.button.submit": "Submit",
-  "screens.mcmod.antarg.name": "Antarg Menu"
+  "screens.mcmod.antarg.name": "Antarg Menu",
+
+
+  "screens.mcmod.test.name": "Test Screen",
+  "screens.mcmod.test.button.print": "Print"
 }
