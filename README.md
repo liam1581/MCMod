@@ -2,4 +2,4 @@ Please visit the changelog.txt file for the changelog (obvious, duh)
 
 The mod .jar file is in build/reobjJar/output.jat
 
-!INCLUDE "changelog.md"
+[See the changelog :3](changelog.md)

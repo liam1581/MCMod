@@ -1,3 +1,6 @@
+v2.6.0-r5
+    finally done with testing README stuff (hopefully)
+
 v2.6.0-r4
     testing around with the README
 
