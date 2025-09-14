@@ -1,196 +1,248 @@
-v2.6.0-r5
-    finally done with testing README stuff (hopefully)
+# 📜 Changelog & Documentation
 
-v2.6.0-r4
-    testing around with the README
+---
 
-v2.6.0-r3
-    another changelog update XD (again basically useless)
+## v2.6.0
+### r6
+- Changed the changelog.md
+### r5
+- Finally done with testing README stuff (hopefully)
 
-v2.6.0-r2
-    changelog changed xD (basically useless again)
+### r4
+- Testing around with the README
 
-v2.6.0
-    added sendMessage Function and documentation
-    added debug testCommands command
+### r3
+- Another changelog update XD (again basically useless)
 
-v2.5.0-r3
-    changed README (so basically this version is USELESS)
+### r2
+- Changelog changed xD (basically useless again)
 
-v2.5.0-r2
-    added german translation
-    added a bunch of @NotNull things
-    added output.jar files for each ongoing version
+### Base
+- Added `sendMessage` function and documentation
+- Added `debug testCommands` command
 
-v2.4.1-r2
-    changed datagen package directory
+---
 
-v2.4.1
-    changed some missed ResourceLocation thingies
+## v2.5.0
+### r3
+- Changed README (so basically this version is useless)
 
-v2.3.1-r3
-    changed all ResourceLocation mentions to newer things so Intellij IDEA wont scream at me
+### r2
+- Added German translation
+- Added a bunch of `@NotNull` annotations
+- Added `output.jar` files for each ongoing version
 
-v2.3.1-r2
-    added crafting recipe for sapphire sword and nether stick item for it
+---
 
-v2.3.1
-    changed Antrag screen to only show op commands when op
+## v2.4.1
+### r2
+- Changed datagen package directory
 
-v2.3.0
-    added dropdown menu widget
-    changed Antrag screen to use the dropdown menu instead of input fields and buttons
-    added println function + documentation
+### Base
+- Changed some missed `ResourceLocation` references
 
-v2.2.2-r3
-    removed #mandatory from mods.toml
+---
 
-v2.2.2-r2
-    added some Function documentation
+## v2.3.1
+### r3
+- Updated `ResourceLocation` usage so IntelliJ IDEA doesn’t scream
 
-v2.2.2
-    datagen bug-fix, generates the vanilla recipes (coal block from charcoal and quartz from quartz block) to data/mcmod instead of data/minecraft
-    added jei to build environment (not mandatory for mod to work)
+### r2
+- Added crafting recipe for **Sapphire Sword** and **Nether Stick**
 
-v2.2.1
-    removed unused imports
-    added Function overload for runCommand (runCommand(CommandSourceStack, String) & runCommand(String))
+### Base
+- Antrag screen shows OP commands only if OP
 
-v2.2.0-r2
-    added README.md
+---
 
-v2.2.0
-    added testing command which openas a dummy container
-    added HelloKeybind (H by default) that opens AntragScreen
-    added AntragScreen
-    changed runCommand(CommandContext, String) function
-v2.1.2
-    added enchantAll command aswell as enchantWithAll Function
+## v2.3.0
+- Added `DropdownMenuWidget`
+- Antrag screen now uses dropdowns instead of input fields & buttons
+- Added `println` function + documentation
 
-v2.1.1-r2
-    removed custom /help command
-    changed randomTickSpeed/nv command permission to 2
+---
 
-v2.1.1
-    added recipes for coal block from charcoal & quartz from quartz block to the datagen
-    changed mod description
+## v2.2.x
+### v2.2.2
+- Fixed datagen bug: vanilla recipes now generate in `data/mcmod` instead of `data/minecraft`
+- Added JEI to build environment (not required for mod)
 
-v2.1.0-r2
-    added run-data to .gitignore file
-    added music disc texture
+### v2.2.2-r2
+- Added some `Function` documentation
 
-v2.1.0
-    added new music disk
-    changed creative mode tab name
-    removed unused translation entries
+### v2.2.2-r3
+- Removed `#mandatory` from `mods.toml`
 
-v2.0.2
-    Bug fixes after changing the modid
+### v2.2.1
+- Removed unused imports
+- Added overload for `runCommand`:
+    - `runCommand(CommandSourceStack, String)`
+    - `runCommand(String)`
 
-v2.0.1
-    changed modid
-    removed spur_from_copper_nugget recipe & bevel_from_spur recipe
+### v2.2.0
+- Added testing command that opens a dummy container
+- Added `HelloKeybind` (default: **H**) to open AntragScreen
+- Added AntragScreen
+- Changed `runCommand(CommandContext, String)`
 
-v2.0
-    Music discs
-    The datagen
-    Linseneintopf
-    Sapphire Sword
-    afk/antrag/home/nbt/viewCoords and others commands
-    coal block from charcoal & quartz from quartz block recipe's
+### v2.2.0-r2
+- Added `README.md`
 
-    BUGS:
-        music discs dont work because of the sound files dont exist
+---
 
+## v2.1.x
+### v2.1.2
+- Added `/enchantAll` command
+- Added `enchantWithAll` function
 
+### v2.1.1
+- Added recipes for **coal block from charcoal** & **quartz from quartz block** to datagen
+- Changed mod description
 
-INFO:
-    - please notice that for all of the music disks except for "Ne leiche" you have to wait a couple of seconds before the music starts, sorry xD
-    - added jei as dependency (not mandatory), mainly for the build environment
-    - updated parchment version
-    - known bug: u can run op and non op thingy from the dropdowns at the same time
-    - WORKING ON WORKING DEBUG CHECK THINGY
+### v2.1.1-r2
+- Removed custom `/help` command
+- Changed `/randomTickSpeed` and `/nv` permissions to level 2
 
-DOCUMENTATION:
-    - runCommand function (both)
-    - enchant function
-    - enchantWithAll function
-    - println function
-    - sendMessage function
+### v2.1.0
+- Added new music disc
+- Changed creative mode tab name
+- Removed unused translation entries
 
-RECIPES:
-Coal block from charcoal:
-    CCC
-    CCC
-    CCC
-    C = charcoal == coal block
-Sapphire from nether stars
-    SSS
-    SSS
-    SSS
-    S = nether star == sapphire
-Nether Star Stick from Sapphire
-    S
-    S
-    S = Sapphire == Nether Star Stick
-Sapphire Sword from sapphire and nether star stick
-    S
-    S
-    #
-    S = Sapphire
-    # = Nether Star Stick == Sapphire Sword
-Quartz from Quartz block **SC:
-    Quartz block = 4 quartz
+### v2.1.0-r2
+- Added `run-data` to `.gitignore`
+- Added music disc texture
 
-ITEMS:
-    - beats/beats bb music disc
-    - crush/crush bb music disc
-    - tage wach/ tage wach bb music disc
-    - leiche music disc
-    - linseneintopf
-    - sapphire sword
-    - sapphire
-    - nether star stick
+---
 
-COMMANDS:
-    /afk
-        - /afk-init                  -- initializes the AFK scoreboard, only runnable by OP's
-        - /afk                       -- afk's the player that ran the command
-        - /un-afk                    -- another option of un-afk'ing next to moving while in /afk
-    /viewCoords
-        - /viewCoords                -- outputs the coords of the given player (as argument) and their dimension
-    /nbt
-        - /dumpNbt                   -- prints out (to the console!) the nbt data of the item held in hand
-        - /listItemNbtTags           -- (NOT FULLY WORKING!) prints out (to the console!) all possible nbt tags that can be used on the item held in hand
-    /home public/private
-        - /home public/private set   -- sets a public/private home coord
-        - /home public/private tp    -- teleports the player to public/private home coord
-        - /home public/private clear -- clears the public/private home coord (SPECIAL WHEN PUBLIC::clears only the home set by the player that ran it OR if the player is OP)
-    /antrag
-        - /antrag                    -- creates an antrag with the text given as an argument as its contents
-        - /antrag delete             -- deletes the antrag with the id given as argument(special is same as /home public clear), (slightly buggy, not fully working with the /antrag special custom created antrag's if you misspelled the username)
-        - /antrag list               -- lists all the antarg's if your OP (with ACCEPTED or DENIED) or just your antrag's (with ACCEPTED or DENIED) if ur not OP
-        - /antrag accept             -- accepts the antrag with the id given as argument, only runnable by OP's
-        - /antrag deny               -- denies the antrag with the id given as argument, only runnable by OP's
-        /antrag special
-            - /antarg special        -- creates an antrag for the user rpovided as argument, only runnable by OP's
-            - /antrag special custom -- creates an antrag for a custom player name provided as argument, only runnable by OP's
-    others
-        - /randomTickSpeed           -- changes the random tick speed to the given arg, only runnable by OP's
-        - /nv                        -- gives @a night vision 255 for infinite amount of seconds, only runnable by OP's
-        - /enchantB                  -- works like the vanilla /enchant with the same arguments but the limit of the enchant lvl is 255 and not the default survival limit, only runnable by OP's
-        - /enchantAll                -- enchants the item held in hand with all enchantments in the game (including mod enchantments) on lvl 255, except for thorns and all curses, only runnable by OP's
-    /debug
-        - /debug testCommands        -- runs all mod commands (except itself)
+## v2.0.x
+### v2.0.2
+- Bug fixes after changing the modid
 
-SCREENS:
-    - added antrag screen which basically works like the /antrag command (without the /antrag special)
+### v2.0.1
+- Changed modid
+- Removed `spur_from_copper_nugget` recipe
+- Removed `bevel_from_spur` recipe
 
-KEYBINDS:
-    - added antrag screen keybind (H as default, changable in the settings)
+### v2.0
+- **New Content:**
+    - Music discs
+    - Datagen system
+    - Linseneintopf item
+    - Sapphire Sword
+    - AFK/Antrag/Home/NBT/ViewCoords commands
+    - Coal block from charcoal & quartz from quartz block recipes
 
-WIDGETS:
-    - DropdownWidget
+- **Known Bugs:**
+    - Music discs don’t work (missing sound files)
 
-**
-SC = Shapeless Crafting
+---
+
+# ℹ️ Info
+- For all music discs (except *Ne Leiche*), you must wait a few seconds before the music starts
+- JEI added as a dependency (not mandatory, mainly for build environment)
+- Updated parchment version
+- Known bug: dropdowns allow OP & non-OP actions at the same time
+- Working on debug check system
+
+---
+
+# 📚 Documented Functions
+- `runCommand` (both overloads)
+- `enchant`
+- `enchantWithAll`
+- `println`
+- `sendMessage`
+
+---
+
+# 🍳 Recipes
+
+**Coal Block (from Charcoal)**  
+CCC
+CCC
+CCC
+C = Charcoal → Coal Block
+**Sapphire (from Nether Stars)**  
+SSS
+SSS
+SSS
+S = Nether Star → Sapphire
+**Nether Star Stick (from Sapphire)**  
+S
+S
+S = Sapphire → Nether Star Stick
+**Sapphire Sword**  
+S
+S
+S = Sapphire
+= Nether Star Stick → Sapphire Sword
+
+**Quartz (from Quartz Block)** *(Shapeless)*
+- Quartz Block → 4 Quartz
+
+---
+
+# 🎵 Items
+- Music Discs:
+    - `beats/beats bb`
+    - `crush/crush bb`
+    - `tage wach/tage wach bb`
+    - `leiche`
+- Linseneintopf
+- Sapphire Sword
+- Sapphire
+- Nether Star Stick
+
+---
+
+# ⌨️ Commands
+
+### `/afk`
+- `/afk-init` — initializes AFK scoreboard (OP only)
+- `/afk` — marks player as AFK
+- `/un-afk` — un-AFKs player
+
+### `/viewCoords`
+- Outputs coords and dimension of given player
+
+### `/nbt`
+- `/dumpNbt` — prints held item’s NBT (console only)
+- `/listItemNbtTags` — attempts to print all valid NBT tags (not fully working)
+
+### `/home`
+- `/home public/private set` — sets a home
+- `/home public/private tp` — teleports to home
+- `/home public/private clear` — clears home (special behavior for public homes + OPs)
+
+### `/antrag`
+- `/antrag` — creates an antrag with text
+- `/antrag delete` — deletes an antrag by ID (slightly buggy)
+- `/antrag list` — lists all antrags (more info for OPs)
+- `/antrag accept` — accepts an antrag (OP only)
+- `/antrag deny` — denies an antrag (OP only)
+- `/antrag special` — creates an antrag for another user (OP only)
+- `/antrag special custom` — creates an antrag for a custom username (OP only)
+
+### Other Commands
+- `/randomTickSpeed` — sets random tick speed (OP only)
+- `/nv` — gives all players infinite night vision (OP only)
+- `/enchantB` — vanilla `/enchant` but allows levels up to 255 (OP only)
+- `/enchantAll` — enchants held item with all enchantments at level 255 (except thorns & curses) (OP only)
+
+### `/debug`
+- `/debug testCommands` — runs all mod commands (except itself)
+
+---
+
+# 🖥️ Screens
+- **Antrag screen**: GUI equivalent of `/antrag` (no special support)
+
+---
+
+# ⌨️ Keybinds
+- `H` (default) — opens Antrag screen (configurable in settings)
+
+---
+
+# 🧩 Widgets
+- `DropdownWidget`
