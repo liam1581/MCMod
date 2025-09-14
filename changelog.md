@@ -1,3 +1,6 @@
+v2.6.0-r4
+    testing around with the README
+
 v2.6.0-r3
     another changelog update XD (again basically useless)
 
