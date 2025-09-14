@@ -3,13 +3,8 @@
 ---
 
 ## v2.6.0
-### r6
-- Changed the changelog.md
-### r5
-- Finally done with testing README stuff (hopefully)
-
-### r4
-- Testing around with the README
+### r4-r7
+- README / CHANGELOG.md testing/modfying
 
 ### r3
 - Another changelog update XD (again basically useless)
@@ -158,24 +153,28 @@
 # 🍳 Recipes
 
 **Coal Block (from Charcoal)**  
-CCC
-CCC
-CCC
-C = Charcoal → Coal Block
+- CCC
+- CCC
+- CCC
+- C = Charcoal → Coal Block
+
 **Sapphire (from Nether Stars)**  
-SSS
-SSS
-SSS
-S = Nether Star → Sapphire
+- SSS
+- SSS
+- SSS
+- S = Nether Star → Sapphire
+
 **Nether Star Stick (from Sapphire)**  
-S
-S
-S = Sapphire → Nether Star Stick
+- S
+- S
+- S = Sapphire → Nether Star Stick
+
 **Sapphire Sword**  
-S
-S
-S = Sapphire
-= Nether Star Stick → Sapphire Sword
+- S
+- S
+- \#
+- S = Sapphire
+- \# = Nether Star Stick → Sapphire Sword
 
 **Quartz (from Quartz Block)** *(Shapeless)*
 - Quartz Block → 4 Quartz
