@@ -6,9 +6,14 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -44,6 +49,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
+        oreBlasting(pWriter, List.of(Items.COBBLESTONE), RecipeCategory.MISC, Items.STONE, 0.25f, 100, "stone");
+        oreBlasting(pWriter, List.of(Items.STONE), RecipeCategory.MISC, Items.SMOOTH_STONE, 0.25f, 100, "stone");
+        oreBlasting(pWriter, List.of(Items.SAND), RecipeCategory.MISC, Items.GLASS, 0.25f, 100, "sand");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COAL_BLOCK, 1)
                 .pattern("CCC")
                 .pattern("CCC")
@@ -57,7 +66,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, "quartz"));
     }
 
-    /*
+
     protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTIme, @NotNull String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
@@ -74,5 +83,4 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pFinishedRecipeConsumer,  McMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
-     */
 }

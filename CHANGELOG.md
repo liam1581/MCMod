@@ -2,17 +2,21 @@
 
 ---
 
-## v2.6.0
-### r4-r7
+## v2.6.x
+
+### 2.6.1
+- added vanilla+ recipes for blasting cobble/stone/sand
+
+### 2.6.0-r4-r7
 - README / CHANGELOG.md testing/modfying
 
-### r3
+### 2.6.0-r3
 - Another changelog update XD (again basically useless)
 
-### r2
+### 2.6.0-r2
 - Changelog changed xD (basically useless again)
 
-### Base
+### 2.6.0
 - Added `sendMessage` function and documentation
 - Added `debug testCommands` command
 
