@@ -3,6 +3,9 @@
 ---
 
 ## v2.6.x
+### 2.6.1-r2
+- changed the build.gradle so i can run the datagen and then client with one thing (bcs im still lazy) as well as datagen + jar
+- also corrected some spelling mistakes in this file (CHANGELOG.md) and changed one mistake where i forgot 2 words
 
 ### 2.6.1
 - added vanilla+ recipes for blasting cobble/stone/sand
@@ -115,10 +118,10 @@
 
 ## v2.0.x
 ### v2.0.2
-- Bug fixes after changing the modid
+- Bug fixes after changing the mod_id
 
 ### v2.0.1
-- Changed modid
+- Changed mod_id
 - Removed `spur_from_copper_nugget` recipe
 - Removed `bevel_from_spur` recipe
 
@@ -206,11 +209,11 @@
 - `/un-afk` — un-AFKs player
 
 ### `/viewCoords`
-- Outputs coords and dimension of given player
+- Outputs coordinates and dimension of given player
 
 ### `/nbt`
 - `/dumpNbt` — prints held item’s NBT (console only)
-- `/listItemNbtTags` — attempts to print all valid NBT tags (not fully working)
+- `/listItemNbtTags` — attempts to print all valid NBT tags (not fully working + console only)
 
 ### `/home`
 - `/home public/private set` — sets a home
