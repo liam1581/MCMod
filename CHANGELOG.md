@@ -2,7 +2,13 @@
 
 ---
 
-## v3.0.0
+## v3.0.x
+### v3.1.0
+- added incomplete diamond block (ITEM)
+- changed incomplete diamond to be stackable to 1
+- added translation for the block (ITEM) as well as a shitty texture xD
+
+### v3.0.0
 - McMod is now a create mod addon
 - removed the runDataAndClient & runDataAndJar things bcs they dont (fucking) work
 - added recipe functions for create mod pressing, crushing, mixing and more

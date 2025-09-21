@@ -29,6 +29,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         diskItem(ModItems.CRUSH_MUSIC_DISC);
         diskItem(ModItems.TAGE_WACH_BB_MUSIC_DISC);
         diskItem(ModItems.TAGE_WACH_MUSIC_DISC);
+
+        withExistingParent("incomplete_diamond_block",
+                mcLoc("block/cube_all")).texture("all", mcLoc("mcmod:block/incomplete_diamond_block"));
     }
 
     private void diskItem(RegistryObject<Item> item) {

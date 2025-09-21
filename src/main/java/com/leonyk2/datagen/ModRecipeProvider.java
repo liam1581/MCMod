@@ -66,28 +66,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, fromNamespaceAndPath(McMod.MOD_ID, "quartz"));
 
 
-        SequencedAssemblyRecipeBuilder builder =
+        SequencedAssemblyRecipeBuilder incomp_dia_builder =
                 new SequencedAssemblyRecipeBuilder(fromNamespaceAndPath(McMod.MOD_ID, "diamond_from_pressing_sequence_coal"));
-        builder.require(Items.COAL);
-        builder.transitionTo(ModItems.UNCOMPLETE_DIAMOND.get());
-        builder.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder.addOutput(Items.DIAMOND, 1.0f);
-        builder.build(pWriter);
+        incomp_dia_builder.require(Items.COAL);
+        incomp_dia_builder.transitionTo(ModItems.UNCOMPLETE_DIAMOND.get());
+        for (int i = 0; i < 5; i++) {
+            incomp_dia_builder.addStep(PressingRecipe::new, UnaryOperator.identity());
+        }
+        incomp_dia_builder.addOutput(Items.DIAMOND, 1.0f);
+        incomp_dia_builder.build(pWriter);
 
-        SequencedAssemblyRecipeBuilder builder2 =
+        SequencedAssemblyRecipeBuilder incomp_dia_block_builder =
                 new SequencedAssemblyRecipeBuilder(fromNamespaceAndPath(McMod.MOD_ID, "diamond_block_from_pressing_sequence_coal"));
-        builder2.require(Items.COAL_BLOCK);
-        builder2.transitionTo(ModItems.UNCOMPLETE_DIAMOND.get());
-        builder2.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder2.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder2.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder2.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder2.addStep(PressingRecipe::new, UnaryOperator.identity());
-        builder2.addOutput(Items.DIAMOND_BLOCK, 1.0f);
-        builder2.build(pWriter);
+        incomp_dia_block_builder.require(Items.COAL_BLOCK);
+        incomp_dia_block_builder.transitionTo(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get());
+        for (int i = 0; i < 5; i++) {
+            incomp_dia_block_builder.addStep(PressingRecipe::new, UnaryOperator.identity());
+        }
+        incomp_dia_block_builder.addOutput(Items.DIAMOND_BLOCK, 1.0f);
+        incomp_dia_block_builder.build(pWriter);
     }
 }

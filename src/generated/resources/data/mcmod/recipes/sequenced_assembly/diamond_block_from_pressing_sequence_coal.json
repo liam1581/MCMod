@@ -14,12 +14,12 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ],
       "results": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ]
     },
@@ -27,12 +27,12 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ],
       "results": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ]
     },
@@ -40,12 +40,12 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ],
       "results": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ]
     },
@@ -53,12 +53,12 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ],
       "results": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ]
     },
@@ -66,17 +66,17 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ],
       "results": [
         {
-          "item": "mcmod:incomplete_diamond"
+          "item": "mcmod:incomplete_diamond_block"
         }
       ]
     }
   ],
   "transitionalItem": {
-    "item": "mcmod:incomplete_diamond"
+    "item": "mcmod:incomplete_diamond_block"
   }
 }

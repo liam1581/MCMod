@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-21T02:18:41.5900306	Recipes
+// 1.20.1	2025-09-21T12:36:39.4524104	Recipes
 ea316b2ecf68623c05b07ab7d8a21894911daf8b data/mcmod/advancements/recipes/misc/coal_block.json
 6101a170eb6c5d8f6e876ef96d4dee46de10836e data/mcmod/advancements/recipes/misc/linseneintopf.json
 24ad2ac0ffbef6e39c3324e9ac0c8df264642e7e data/mcmod/advancements/recipes/misc/nether_stick.json
@@ -11,7 +11,7 @@ fe849aae3fd105392388e1cac343606f4b53d5a8 data/mcmod/recipes/nether_stick.json
 caf28fa02bdec30f2b2f5610034af6838cc1ab2a data/mcmod/recipes/quartz.json
 7c9128c66dfb7b840dba2aeecc157d3b04c76433 data/mcmod/recipes/sapphire.json
 6e79ce341f080d8af0295272b591312bdca608e4 data/mcmod/recipes/sapphire_sword.json
-9467034c8e817e1c20afcd29a760a23386d4a711 data/mcmod/recipes/sequenced_assembly/diamond_block_from_pressing_sequence_coal.json
+4fd5e83abd473fbfd59f8fde95d0659ffade8f3b data/mcmod/recipes/sequenced_assembly/diamond_block_from_pressing_sequence_coal.json
 3ec8d89854ce3e538ee0e84d64531a3a8c97ad9b data/mcmod/recipes/sequenced_assembly/diamond_from_pressing_sequence_coal.json
 a483c77646a42fb566969eca4e0c46de28b86b44 data/minecraft/advancements/recipes/misc/glass_from_blasting_sand.json
 b0e02faf098592331f37f9654362aa2a0bd09ef1 data/minecraft/advancements/recipes/misc/smooth_stone_from_blasting_stone.json
