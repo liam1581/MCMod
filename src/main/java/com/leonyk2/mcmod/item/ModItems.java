@@ -21,6 +21,9 @@ public class ModItems {
     public static RegistryObject<Item> NETHER_STICK = ITEMS.register("nether_stick",
             () -> new Item(new Item.Properties()));
 
+    public static RegistryObject<Item> UNCOMPLETE_DIAMOND = ITEMS.register("incomplete_diamond",
+            () -> new Item(new Item.Properties()));
+
     public static RegistryObject<Item> LINSENEINTOPF = ITEMS.register("linseneintopf",
             () -> new Item(new Item.Properties().food(ModFoods.LINSENEINTOPF)));
 

@@ -5,8 +5,6 @@ import com.leonyk2.mcmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.LINSENEINTOPF);
         simpleItem(ModItems.NETHER_STICK);
+        simpleItem(ModItems.UNCOMPLETE_DIAMOND);
 
         diskItem(ModItems.LEICHE_MUSIC_DISC);
         diskItem(ModItems.BEATS_BB_MUSIC_DISC);

@@ -1,0 +1,82 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "mcmod:incomplete_diamond"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "mcmod:incomplete_diamond"
+  }
+}

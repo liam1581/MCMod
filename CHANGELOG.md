@@ -2,6 +2,13 @@
 
 ---
 
+## v3.0.0
+- McMod is now a create mod addon
+- removed the runDataAndClient & runDataAndJar things bcs they dont (fucking) work
+- added recipe functions for create mod pressing, crushing, mixing and more
+- added diamond recipe (pressing a coal 25 times or a coal block 25 times for a diamond block)
+- added Incomplete diamond (for the above recipes)
+
 ## v2.6.x
 ### 2.6.1-r2
 - changed the build.gradle so i can run the datagen and then client with one thing (bcs im still lazy) as well as datagen + jar
@@ -142,6 +149,7 @@
 # ℹ️ Info
 - For all music discs (except *Ne Leiche*), you must wait a few seconds before the music starts
 - JEI added as a dependency (not mandatory, mainly for build environment)
+- Create added as dependency (mandatory)
 - Updated parchment version
 - Known bug: dropdowns allow OP & non-OP actions at the same time
 - Working on debug check system
@@ -198,6 +206,7 @@
 - Sapphire Sword
 - Sapphire
 - Nether Star Stick
+- Incomplete Diamond
 
 ---
 

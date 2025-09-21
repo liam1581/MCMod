@@ -2,10 +2,13 @@ package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.item.ModItems;
+import com.leonyk2.mcmod.util.ModTags;
+import com.simibubi.create.AllItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
