@@ -1,0 +1,17 @@
+// 1.20.1	2025-09-26T22:08:10.6680501	Block States: mcmod
+07d14267b6e4e662aeddf3a27dc96653b9c31a26 assets/mcmod/blockstates/acacia_table.json
+eb363a3b27a0992b165a83a33dd0c272ee5743c7 assets/mcmod/blockstates/birch_table.json
+35dec4927a6710d61cfef11b6fc7046239bd34b4 assets/mcmod/blockstates/cherry_table.json
+346bcd394ba4737b5f7c7cf4cfa7f35dbcd2a59e assets/mcmod/blockstates/dark_oak_table.json
+ccdc7fc026a384d35f681db529c261bc35e4316f assets/mcmod/blockstates/jungle_table.json
+dcf4dbdbca23ebf1ce7824a3b2e00574000382d2 assets/mcmod/blockstates/mangrove_table.json
+6569a9f6995bf3edc426a9e45f74e8175ae9b863 assets/mcmod/blockstates/oak_table.json
+8aa933b2b3b7d0b7e81707530644f234a2e5f93f assets/mcmod/blockstates/spruce_table.json
+6dd14d6f823b3c05cc1ea826e4a09abb1b4ce65f assets/mcmod/models/item/acacia_table.json
+8bd98e458ee8be1efc82fabf881c8cf8dd1258b5 assets/mcmod/models/item/birch_table.json
+5ecd2c29b42a1f3239e8f587b48bbd3aa03899af assets/mcmod/models/item/cherry_table.json
+c90fd2790beabc66923a43a17dbbb7b8339b526c assets/mcmod/models/item/dark_oak_table.json
+78fd74c2beff5603f051638de20bb9d40052d9ad assets/mcmod/models/item/jungle_table.json
+1dd765dd09b00d5a9d363ff5ad81deab074b112d assets/mcmod/models/item/mangrove_table.json
+267132a580a00e4921f5295a98c48c0b871316f4 assets/mcmod/models/item/oak_table.json
+3ec71b93e14da88d899c839daf9c8d407e1ad93c assets/mcmod/models/item/spruce_table.json

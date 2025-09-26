@@ -1,6 +1,7 @@
 package com.leonyk2.mcmod.screen;
 
 import com.leonyk2.mcmod.widget.DropdownWidget;
+import com.leonyk2.mcmod.widget.DropdownWidgetTranslatable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -15,11 +16,11 @@ import static com.leonyk2.mcmod.util.Functions.runCommand;
 
 public class AntragScreen extends Screen {
     private EditBox antragField;
-    private DropdownWidget.DropdownWidgetTranslatable dropdown;
-    private DropdownWidget.DropdownWidgetTranslatable operator_dropdown;
+    private DropdownWidgetTranslatable dropdown;
+    private DropdownWidgetTranslatable operator_dropdown;
 
-    private static final List<String> OPTIONS = List.of("", "screens.mcmod.antrag.OPTIONS.antrag", "screens.mcmod.antrag.OPTIONS.delete", "screens.mcmod.antrag.OPTIONS.list");
-    private static final List<String> OPERATOR_OPTIONS = List.of("", "screens.mcmod.antrag.OPTIONS.accept", "screens.mcmod.antrag.OPTIONS.deny");
+    private static final List<String> OPTIONS = List.of("screens.mcmod.antrag.OPTIONS.antrag", "screens.mcmod.antrag.OPTIONS.delete", "screens.mcmod.antrag.OPTIONS.list");
+    private static final List<String> OPERATOR_OPTIONS = List.of("screens.mcmod.antrag.OPTIONS.accept", "screens.mcmod.antrag.OPTIONS.deny");
 
     public AntragScreen() {
         super(Component.literal(Component.translatable("screens.mcmod.antarg.name").toString()));
@@ -30,8 +31,8 @@ public class AntragScreen extends Screen {
         int centerX = this.width / 2 - 100;
         int y = this.height / 2;
 
-        dropdown = new DropdownWidget.DropdownWidgetTranslatable(centerX, y - 20, 100, 20, OPTIONS);
-        operator_dropdown = new DropdownWidget.DropdownWidgetTranslatable(centerX + 110, y - 20, 100, 20, OPERATOR_OPTIONS);
+        dropdown = new DropdownWidgetTranslatable(centerX, y - 20, 100, 20, OPTIONS);
+        operator_dropdown = new DropdownWidgetTranslatable(centerX + 110, y - 20, 100, 20, OPERATOR_OPTIONS);
         antragField = new EditBox(this.font, centerX, y + 90, 100, 20, Component.literal("idk"));
         Button submitButton = Button.builder(Component.translatable("screens.mcmod.antarg.button.submit"), b -> {
             switch (dropdown.getSelected()) {

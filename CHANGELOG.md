@@ -3,6 +3,14 @@
 ---
 
 ## v3.0.x
+### v3.2.0
+- added **ModLanguageProvider** as datagen for de_de and en_us languages
+- added unused ponder testing item (for create mod [all the code for that is commented out, and it doesn't have a translation/texture])
+- moved DropdownWidgetTranslatable to its own class
+- changed both DropdownWidget and DropdownWidgetTranslatable to always add a blank option at the start
+- custom block type for tables
+- added decoration tables (every wood type in the game)
+
 ### v3.1.0
 - added incomplete diamond block (ITEM)
 - changed incomplete diamond to be stackable to 1
@@ -157,7 +165,7 @@
 - JEI added as a dependency (not mandatory, mainly for build environment)
 - Create added as dependency (mandatory)
 - Updated parchment version
-- Known bug: dropdowns allow OP & non-OP actions at the same time
+- Known bug: dropdowns allow OP & non-OP actions at the same time (in Antrag screen)
 - Working on debug check system
 
 ---
@@ -200,6 +208,9 @@
 **Quartz (from Quartz Block)** *(Shapeless)*
 - Quartz Block → 4 Quartz
 
+**Diamond/Diamond Block** *(Create Recipe Sequence)
+- Pressing coal/coal block 25 times resulting in the corresponding item
+
 ---
 
 # 🎵 Items
@@ -213,6 +224,7 @@
 - Sapphire
 - Nether Star Stick
 - Incomplete Diamond
+- Incomplete Diamond Block
 
 ---
 
@@ -257,13 +269,16 @@
 
 # 🖥️ Screens
 - **Antrag screen**: GUI equivalent of `/antrag` (no special support)
+- **Test screen**: GUI for testing stuff i created sometimes, isn't added in the version, just existing not used code
 
 ---
 
 # ⌨️ Keybinds
 - `H` (default) — opens Antrag screen (configurable in settings)
+- `P` (default, in code) - opens Test screen (not used, just existing in code)
 
 ---
 
 # 🧩 Widgets
 - `DropdownWidget`
+- `DropdownWidgetTranslatable` same as DropdownWidget just takes list of id's that are being handled as Component.translatable's

@@ -1,6 +1,9 @@
 package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
+import com.leonyk2.mcmod.ponder.McModPonderPlugin;
+import com.simibubi.create.Create;
+import net.createmod.ponder.foundation.PonderIndex;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -26,6 +29,12 @@ public class DataGenerators {
                 new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+
+
+        generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "en_us"));
+        generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "de_de"));
+
     }
 }

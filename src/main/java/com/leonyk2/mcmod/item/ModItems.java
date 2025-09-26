@@ -2,9 +2,13 @@ package com.leonyk2.mcmod.item;
 
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.sound.ModSounds;
+import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -43,6 +47,7 @@ public class ModItems {
             () -> new RecordItem(6, ModSounds.TAGE_WACH_BB, new Item.Properties().stacksTo(1), 4100));
     public static RegistryObject<Item> LEICHE_MUSIC_DISC = ITEMS.register("leiche_music_disc",
             () -> new RecordItem(6, ModSounds.LEICHE, new Item.Properties().stacksTo(1), 6540));
+
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
