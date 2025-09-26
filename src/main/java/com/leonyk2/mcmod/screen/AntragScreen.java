@@ -1,6 +1,5 @@
 package com.leonyk2.mcmod.screen;
 
-import com.leonyk2.mcmod.widget.DropdownWidget;
 import com.leonyk2.mcmod.widget.DropdownWidgetTranslatable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;

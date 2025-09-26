@@ -3,6 +3,10 @@
 ---
 
 ## v3.0.x
+### v3.2.1
+- cleanup (removed unused imports)
+- made warnings BE GONE
+
 ### v3.2.0
 - added **ModLanguageProvider** as datagen for de_de and en_us languages
 - added unused ponder testing item (for create mod [all the code for that is commented out, and it doesn't have a translation/texture])

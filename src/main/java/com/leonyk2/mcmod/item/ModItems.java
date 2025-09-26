@@ -2,13 +2,9 @@ package com.leonyk2.mcmod.item;
 
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.sound.ModSounds;
-import com.tterrag.registrate.Registrate;
-import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

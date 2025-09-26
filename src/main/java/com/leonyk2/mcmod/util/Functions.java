@@ -33,6 +33,7 @@ public class Functions {
      * @param message the message
      */
     public static void sendMessage(String message) {
+        assert Minecraft.getInstance().player != null;
         Minecraft.getInstance().player.sendSystemMessage(Component.literal(message));
     }
 

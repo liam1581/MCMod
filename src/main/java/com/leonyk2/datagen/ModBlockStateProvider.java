@@ -11,6 +11,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Objects;
+
 import static net.minecraft.resources.ResourceLocation.fromNamespaceAndPath;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -31,7 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void simpleBlockWithItem(Block block) {
-        String blockName = ForgeRegistries.BLOCKS.getKey(block).getPath();
+        String blockName = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
 
         getVariantBuilder(block).forAllStates(state -> ConfiguredModel.builder()
                 .modelFile(models().getExistingFile(fromNamespaceAndPath(McMod.MOD_ID,"block/" + blockName)))
@@ -42,6 +44,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(McMod.MOD_ID +
-                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+                ":block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
     }
 }

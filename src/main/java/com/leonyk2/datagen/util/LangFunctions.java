@@ -58,6 +58,13 @@ public class LangFunctions {
             adder.accept("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
 
             // Sounds
+            assert ModSounds.BEATS.getId() != null;
+            assert ModSounds.BEATS_BB.getId() != null;
+            assert ModSounds.CRUSH.getId() != null;
+            assert ModSounds.CRUSH_BB.getId() != null;
+            assert ModSounds.TAGE_WACH.getId() != null;
+            assert ModSounds.TAGE_WACH_BB.getId() != null;
+            assert ModSounds.LEICHE.getId() != null;
             adder.accept("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
             adder.accept("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
             adder.accept("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
@@ -129,6 +136,13 @@ public class LangFunctions {
             adder.accept("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
 
             // Sounds
+            assert ModSounds.BEATS.getId() != null;
+            assert ModSounds.BEATS_BB.getId() != null;
+            assert ModSounds.CRUSH.getId() != null;
+            assert ModSounds.CRUSH_BB.getId() != null;
+            assert ModSounds.TAGE_WACH.getId() != null;
+            assert ModSounds.TAGE_WACH_BB.getId() != null;
+            assert ModSounds.LEICHE.getId() != null;
             adder.accept("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
             adder.accept("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
             adder.accept("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");

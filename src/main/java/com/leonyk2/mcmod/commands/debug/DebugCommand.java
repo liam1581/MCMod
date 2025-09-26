@@ -5,7 +5,6 @@ import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.client.Minecraft;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
-import net.minecraft.network.chat.Component;
 
 import static com.leonyk2.mcmod.util.Functions.runCommand;
 
@@ -34,6 +33,7 @@ public class DebugCommand {
         runCommand("randomTickSpeed 10");
         runCommand("schwänze");
         runCommand("give @s netherite_sword 36");
+        assert Minecraft.getInstance().player != null;
         Minecraft.getInstance().player.getInventory().selected = 0;
         runCommand("enchantB @s minecraft:sharpness 255");
         Minecraft.getInstance().player.getInventory().selected = 1;
