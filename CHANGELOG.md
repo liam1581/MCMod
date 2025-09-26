@@ -220,7 +220,7 @@
 
 ---
 
-# 🎵 Items
+# Items
 - Music Discs:
     - `beats/beats bb`
     - `crush/crush bb`
@@ -232,6 +232,9 @@
 - Nether Star Stick
 - Incomplete Diamond
 - Incomplete Diamond Block
+
+# Blocks
+- Tables (based on the wood types in game)
 
 ---
 
