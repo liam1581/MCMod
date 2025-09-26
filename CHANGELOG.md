@@ -3,6 +3,9 @@
 ---
 
 ## v3.0.x
+### v3.2.1-r2
+- just the jar file of the prev version because i forgor 👉👈
+
 ### v3.2.1
 - cleanup (removed unused imports)
 - made warnings BE GONE
