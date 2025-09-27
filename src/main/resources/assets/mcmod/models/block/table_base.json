@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:blobk/blobk",
 	"textures": {
-		"0": "minecraft:block/cherry_log",
-		"2": "minecraft:block/cherry_log_top",
-		"particle": "minecraft:block/cherry_log"
+		"0": "missingno",
+		"2": "missingno",
+		"particle": "missingno"
 	},
 	"elements": [
 		{
@@ -38,10 +38,10 @@
 			"to": [3, 13, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 14]},
 			"faces": {
-				"north": {"uv": [0, 0, 2, 4.5], "texture": "#0"},
-				"east": {"uv": [0, 0, 2, 4.5], "texture": "#0"},
-				"south": {"uv": [0, 0, 2, 4.5], "texture": "#0"},
-				"west": {"uv": [0, 0, 2, 4.5], "texture": "#0"},
+				"north": {"uv": [0, 0, 3, 8.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 3, 8.5], "texture": "#0"},
+				"south": {"uv": [0, 0, 3, 8.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 3, 8.5], "texture": "#0"},
 				"up": {"uv": [0, 0, 2, 1], "texture": "#missing"},
 				"down": {"uv": [5, 5, 11, 11], "texture": "#2"}
 			}

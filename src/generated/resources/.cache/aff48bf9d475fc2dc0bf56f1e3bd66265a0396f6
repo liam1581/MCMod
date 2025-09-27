@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-26T22:08:10.6680501	Block States: mcmod
+// 1.20.1	2025-09-27T01:43:44.5923797	Block States: mcmod
 07d14267b6e4e662aeddf3a27dc96653b9c31a26 assets/mcmod/blockstates/acacia_table.json
 eb363a3b27a0992b165a83a33dd0c272ee5743c7 assets/mcmod/blockstates/birch_table.json
 35dec4927a6710d61cfef11b6fc7046239bd34b4 assets/mcmod/blockstates/cherry_table.json
@@ -7,6 +7,14 @@ ccdc7fc026a384d35f681db529c261bc35e4316f assets/mcmod/blockstates/jungle_table.j
 dcf4dbdbca23ebf1ce7824a3b2e00574000382d2 assets/mcmod/blockstates/mangrove_table.json
 6569a9f6995bf3edc426a9e45f74e8175ae9b863 assets/mcmod/blockstates/oak_table.json
 8aa933b2b3b7d0b7e81707530644f234a2e5f93f assets/mcmod/blockstates/spruce_table.json
+ddcb56c2d5ee44b7f9815e8f82b4b58f0a067a30 assets/mcmod/models/block/acacia_table.json
+bcf6b8187142a6663eb8b5bb3014090a72c48162 assets/mcmod/models/block/birch_table.json
+57047f6b4de2586797472252b5da85ca85d1fbcd assets/mcmod/models/block/cherry_table.json
+c1806539f7c92775509ea70ec7af67b6f6cd7f32 assets/mcmod/models/block/dark_oak_table.json
+f32a89f045c4c10d356659c175145d55858561ac assets/mcmod/models/block/jungle_table.json
+d8fc70913a09968129ad6215ec8736df1aa9e6f3 assets/mcmod/models/block/mangrove_table.json
+ee843acbe7c24995303a0951768728f0224d2f50 assets/mcmod/models/block/oak_table.json
+c9fa60fef33afd16ad1dbacdacf911c5fc128b2f assets/mcmod/models/block/spruce_table.json
 6dd14d6f823b3c05cc1ea826e4a09abb1b4ce65f assets/mcmod/models/item/acacia_table.json
 8bd98e458ee8be1efc82fabf881c8cf8dd1258b5 assets/mcmod/models/item/birch_table.json
 5ecd2c29b42a1f3239e8f587b48bbd3aa03899af assets/mcmod/models/item/cherry_table.json

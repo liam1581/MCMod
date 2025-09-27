@@ -79,7 +79,7 @@ public class LangFunctions {
             itemAdder.accept(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
             itemAdder.accept(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
             itemAdder.accept(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
-            itemAdder.accept(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB)- Music Disc");
+            itemAdder.accept(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
             itemAdder.accept(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
 
             adder.accept("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
@@ -157,7 +157,7 @@ public class LangFunctions {
             itemAdder.accept(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
             itemAdder.accept(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
             itemAdder.accept(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
-            itemAdder.accept(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB)- Music Disc");
+            itemAdder.accept(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
             itemAdder.accept(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
 
             adder.accept("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");

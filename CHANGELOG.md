@@ -3,6 +3,8 @@
 ---
 
 ## v3.0.x
+### v3.2.1-r3
+- changed the way tables (their blockstates/block models/item models) are created in the datagen
 ### v3.2.1-r2
 - just the jar file of the prev version because i forgor 👉👈
 
