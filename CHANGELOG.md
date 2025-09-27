@@ -2,7 +2,14 @@
 
 ---
 
-## v3.0.x
+## v3.2.x
+
+### v3.2.2
+- added crafting recipes for tables
+- added create mod crafting recipes:
+  - added automatable andesite
+  - added different belt recipe
+  - added different way to "fill" blaze burner
 ### v3.2.1-r3
 - changed the way tables (their blockstates/block models/item models) are created in the datagen
 ### v3.2.1-r2
@@ -20,10 +27,14 @@
 - custom block type for tables
 - added decoration tables (every wood type in the game)
 
+---
+
 ### v3.1.0
 - added incomplete diamond block (ITEM)
 - changed incomplete diamond to be stackable to 1
 - added translation for the block (ITEM) as well as a shitty texture xD
+
+---
 
 ### v3.0.0
 - McMod is now a create mod addon
@@ -31,6 +42,8 @@
 - added recipe functions for create mod pressing, crushing, mixing and more
 - added diamond recipe (pressing a coal 25 times or a coal block 25 times for a diamond block)
 - added Incomplete diamond (for the above recipes)
+
+---
 
 ## v2.6.x
 ### 2.6.1-r2
