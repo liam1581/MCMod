@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "biomesoplenty:jacaranda_log"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "S S"
+  ],
+  "result": {
+    "item": "mcmod:jacaranda_table"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "biomesoplenty:magic_log"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "S S"
+  ],
+  "result": {
+    "item": "mcmod:magic_table"
+  },
+  "show_notification": true
+}

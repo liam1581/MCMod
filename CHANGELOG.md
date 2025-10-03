@@ -1,8 +1,11 @@
 # 📜 Changelog & Documentation
 
 ---
-## Planned:
-- adding Biomes 'o Plenty for more tables
+
+## v3.4.x
+### v3.4.0
+- added BOP tables as well as corresponding lootTABLES and block/item models
+
 ---
 
 ## v3.3.x
@@ -10,6 +13,8 @@
 - added drop lootTABLES
 - added BlockTags so Tables can be mined with axes faster
 - removed the ponder (that was just unused code)
+
+---
 
 ## v3.2.x
 ### v3.2.2

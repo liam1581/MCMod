@@ -1,5 +1,6 @@
 package com.leonyk2.datagen;
 
+import biomesoplenty.api.block.BOPBlocks;
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
@@ -70,6 +71,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         tableRecipe(Blocks.ACACIA_LOG, ModBlocks.ACACIA_TABLE.get(), pWriter);
         tableRecipe(Blocks.MANGROVE_LOG, ModBlocks.MANGROVE_TABLE.get(), pWriter);
         tableRecipe(Blocks.CHERRY_LOG, ModBlocks.CHERRY_TABLE.get(), pWriter);
+
+        tableRecipe(BOPBlocks.FIR_LOG.get(), ModBlocks.FIR_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.REDWOOD_LOG.get(), ModBlocks.REDWOOD_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.MAHOGANY_LOG.get(), ModBlocks.MAHOGANY_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.JACARANDA_LOG.get(), ModBlocks.JACARANDA_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.PALM_LOG.get(), ModBlocks.PALM_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.WILLOW_LOG.get(), ModBlocks.WILLOW_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.DEAD_LOG.get(), ModBlocks.DEAD_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.MAGIC_LOG.get(), ModBlocks.MAGIC_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.UMBRAN_LOG.get(), ModBlocks.UMBRAN_TABLE.get(), pWriter);
+        tableRecipe(BOPBlocks.HELLBARK_LOG.get(), ModBlocks.HELLBARK_TABLE.get(), pWriter);
 
 
         // ----- Vanilla+ Recipes ----- //

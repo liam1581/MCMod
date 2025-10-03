@@ -3,6 +3,7 @@ package com.leonyk2.mcmod.block;
 
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.custom.TableBlock;
+import com.leonyk2.mcmod.compat.CompatHandler;
 import com.leonyk2.mcmod.item.ModItems;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
@@ -41,8 +42,36 @@ public class ModBlocks {
             () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
 
 
+    public static RegistryObject<Block> FIR_TABLE;
+    public static RegistryObject<Block> REDWOOD_TABLE;
+    public static RegistryObject<Block> MAHOGANY_TABLE;
+    public static RegistryObject<Block> JACARANDA_TABLE;
+    public static RegistryObject<Block> PALM_TABLE;
+    public static RegistryObject<Block> WILLOW_TABLE;
+    public static RegistryObject<Block> DEAD_TABLE;
+    public static RegistryObject<Block> MAGIC_TABLE;
+    public static RegistryObject<Block> UMBRAN_TABLE;
+    public static RegistryObject<Block> HELLBARK_TABLE;
+
+    public static void regitserBopBlocks() {
+        FIR_TABLE = registerBlock("fir_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        REDWOOD_TABLE = registerBlock("redwood_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        MAHOGANY_TABLE = registerBlock("mahogany_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        JACARANDA_TABLE = registerBlock("jacaranda_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        PALM_TABLE = registerBlock("palm_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        WILLOW_TABLE = registerBlock("willow_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        DEAD_TABLE = registerBlock("dead_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        MAGIC_TABLE = registerBlock("magic_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        UMBRAN_TABLE = registerBlock("umbran_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+        HELLBARK_TABLE = registerBlock("hellbark_table", () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
+    }
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+
+        if (CompatHandler.isBopLoaded()) {
+            regitserBopBlocks();
+        }
     }
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

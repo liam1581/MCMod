@@ -1,9 +1,19 @@
-// 1.20.1	2025-09-27T21:21:32.2309668	Loot Tables
+// 1.20.1	2025-10-03T11:47:33.3962394	Loot Tables
 be420e569a98dd632596303c90480ca93ff89266 data/mcmod/loot_tables/blocks/acacia_table.json
 48ea6f33fbb278f61d85cafb4b0a7775056b6cc3 data/mcmod/loot_tables/blocks/birch_table.json
 95afbc45689769ddec36b91bae7ac103315de483 data/mcmod/loot_tables/blocks/cherry_table.json
 4b7bb58f25dfa334110522d3caa52b1af09a2b4e data/mcmod/loot_tables/blocks/dark_oak_table.json
+757e8d60fcb07e665fa00d70a942e30334feb4a7 data/mcmod/loot_tables/blocks/dead_table.json
+cd0b6f80ed71389366f0d925c1afa881c7bbf17d data/mcmod/loot_tables/blocks/fir_table.json
+cf5abc5cd4632eec21d3e17cb96f1733e04fdfdb data/mcmod/loot_tables/blocks/hellbark_table.json
+c61372ec89bc4d3123681558deba326cb6547850 data/mcmod/loot_tables/blocks/jacaranda_table.json
 532ec262f226fc2331ad7193f08ebbe99def8153 data/mcmod/loot_tables/blocks/jungle_table.json
+372f9f3ad3bfd14f47469922523f7edfd16d76eb data/mcmod/loot_tables/blocks/magic_table.json
+ff30da21d9f9c24072f4cbb177b172d9368dc529 data/mcmod/loot_tables/blocks/mahogany_table.json
 f06fd2f9cb8f6ed35deb450d8db0e0797408dccc data/mcmod/loot_tables/blocks/mangrove_table.json
 00117d6df6ddf19a578e3a4a4b9eff8530260c07 data/mcmod/loot_tables/blocks/oak_table.json
+bf17e23e4ca7940faa8ee4726c8a40edf2568c24 data/mcmod/loot_tables/blocks/palm_table.json
+0901cf393b4630bdcb6e31765887976cab5d437b data/mcmod/loot_tables/blocks/redwood_table.json
 7b816523d99c2180ddf439040f1233cbf0a3092c data/mcmod/loot_tables/blocks/spruce_table.json
+e55554662c366790be5b00a519cd2d69fbe8f1a9 data/mcmod/loot_tables/blocks/umbran_table.json
+f3cb3d183de119869e03bb7d00fd9076b4cfc1f4 data/mcmod/loot_tables/blocks/willow_table.json

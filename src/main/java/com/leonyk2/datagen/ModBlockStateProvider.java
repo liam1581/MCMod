@@ -2,6 +2,7 @@ package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.ModBlocks;
+import com.leonyk2.mcmod.compat.CompatHandler;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeTableBlock(ModBlocks.ACACIA_TABLE.get(), "minecraft", "acacia");
         makeTableBlock(ModBlocks.MANGROVE_TABLE.get(), "minecraft", "mangrove");
         makeTableBlock(ModBlocks.CHERRY_TABLE.get(), "minecraft", "cherry");
+
+        /*if (CompatHandler.isBopLoaded()) {
+            makeTableBlock(ModBlocks.FIR_TABLE.get(), "biomesoplenty", "fir");
+            makeTableBlock(ModBlocks.REDWOOD_TABLE.get(), "biomesoplenty", "redwood");
+            makeTableBlock(ModBlocks.MAHOGANY_TABLE.get(), "biomesoplenty", "mahogany");
+            makeTableBlock(ModBlocks.JACARANDA_TABLE.get(), "biomesoplenty", "jacaranda");
+            makeTableBlock(ModBlocks.PALM_TABLE.get(), "biomesoplenty", "palm");
+            makeTableBlock(ModBlocks.WILLOW_TABLE.get(), "biomesoplenty", "willow");
+            makeTableBlock(ModBlocks.DEAD_TABLE.get(), "biomesoplenty", "dead");
+            makeTableBlock(ModBlocks.MAGIC_TABLE.get(), "biomesoplenty", "magic");
+            makeTableBlock(ModBlocks.UMBRAN_TABLE.get(), "biomesoplenty", "umbran");
+            makeTableBlock(ModBlocks.HELLBARK_TABLE.get(), "biomesoplenty", "hellbark");
+        }*/
     }
 
     private void simpleBlockWithItem(Block block) {
@@ -45,13 +59,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         models().withExistingParent("item/" + blockName, fromNamespaceAndPath(McMod.MOD_ID, "block/" + blockName));
     }
 
-    private void makeTableBlock(Block block, String namesopace,  String woodName) {
+    private void makeTableBlock(Block block, String namespace,  String woodName) {
         String blockName = woodName + "_table";
 
         ModelFile model = models().withExistingParent(blockName, modLoc("block/table_base"))
-                .texture("0", fromNamespaceAndPath(namesopace, "block/" + woodName + "_log"))
-                .texture("2", fromNamespaceAndPath(namesopace, "block/" + woodName + "_log_top"))
-                .texture("particle", fromNamespaceAndPath(namesopace, "block/" + woodName + "_log"));
+                .texture("0", new ResourceLocation(namespace, "block/" + woodName + "_log"))
+                .texture("2", new ResourceLocation(namespace, "block/" + woodName + "_log_top"))
+                .texture("particle", new ResourceLocation(namespace, "block/" + woodName + "_log"));
 
         simpleBlock(block, model);
 

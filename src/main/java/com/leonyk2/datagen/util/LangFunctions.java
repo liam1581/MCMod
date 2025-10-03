@@ -30,9 +30,21 @@ public class LangFunctions {
             blockAdder.accept(ModBlocks.ACACIA_TABLE.get(), "Acacia Table");
             blockAdder.accept(ModBlocks.MANGROVE_TABLE.get(), "Mangrove Table");
             blockAdder.accept(ModBlocks.CHERRY_TABLE.get(), "Cherry Table");
+            // BOP
+            blockAdder.accept(ModBlocks.FIR_TABLE.get(), "Fir Table");
+            blockAdder.accept(ModBlocks.REDWOOD_TABLE.get(), "Redwood Table");
+            blockAdder.accept(ModBlocks.MAHOGANY_TABLE.get(), "Mahogany Table");
+            blockAdder.accept(ModBlocks.JACARANDA_TABLE.get(), "Jacaranda Table");
+            blockAdder.accept(ModBlocks.PALM_TABLE.get(), "Palm Table");
+            blockAdder.accept(ModBlocks.WILLOW_TABLE.get(), "Willow Table");
+            blockAdder.accept(ModBlocks.DEAD_TABLE.get(), "Dead Table");
+            blockAdder.accept(ModBlocks.MAGIC_TABLE.get(), "Magic Table");
+            blockAdder.accept(ModBlocks.UMBRAN_TABLE.get(), "Umbran Table");
+            blockAdder.accept(ModBlocks.HELLBARK_TABLE.get(), "Hellbark Table");
 
             // Creative Mode Tabs
-            adder.accept("creativetab.tutorial_tab", "McMod Tab");
+            adder.accept("creativetab.mcmod_tab", "McMod Tab");
+            adder.accept("creativetab.mcmod_tab_bop", "McMod Tab BOP");
 
             // Keybinds / Category's
             adder.accept(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
@@ -110,7 +122,8 @@ public class LangFunctions {
             blockAdder.accept(ModBlocks.CHERRY_TABLE.get(), "Kirsch Tisch");
 
             // Creative Mode Tabs
-            adder.accept("creativetab.tutorial_tab", "McMod Tab");
+            adder.accept("creativetab.mcmod_tab", "McMod Tab");
+            adder.accept("creativetab.mcmod_tab_bop", "McMod Tab BOP");
 
             // Keybinds / Category's
             adder.accept(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
