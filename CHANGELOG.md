@@ -1,9 +1,17 @@
 # 📜 Changelog & Documentation
 
 ---
+## Planned:
+- adding Biomes 'o Plenty for more tables
+---
+
+## v3.3.x
+### v3.3.0
+- added drop lootTABLES
+- added BlockTags so Tables can be mined with axes faster
+- removed the ponder (that was just unused code)
 
 ## v3.2.x
-
 ### v3.2.2
 - added crafting recipes for tables
 - added create mod crafting recipes:
@@ -226,6 +234,12 @@
 - \#
 - S = Sapphire
 - \# = Nether Star Stick → Sapphire Sword
+
+**Tables**
+- LLL
+- S S
+- L = Log
+- S = Stick → Log Name-Table
 
 **Quartz (from Quartz Block)** *(Shapeless)*
 - Quartz Block → 4 Quartz

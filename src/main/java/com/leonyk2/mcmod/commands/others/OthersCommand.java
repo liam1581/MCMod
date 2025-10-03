@@ -1,5 +1,7 @@
 package com.leonyk2.mcmod.commands.others;
 
+import com.leonyk2.mcmod.listeners.PlayerJoinListener;
+import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -75,6 +77,14 @@ public class OthersCommand {
 
                             return 1;
                         }));
+        dispatcher.register(
+                Commands.literal("enableJoinCheck")
+                        .executes(ctx2 -> {
+                            PlayerJoinListener.enabled = true;
+                            ctx2.getSource().sendSuccess(() -> Component.literal("Join check enabled"), true);
+                            return Command.SINGLE_SUCCESS;
+                        })
+        );
     }
 
     private static int customEnchant(ServerPlayer player, Enchantment enchant, int level, CommandSourceStack source) {

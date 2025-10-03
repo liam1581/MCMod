@@ -17,23 +17,16 @@ import static com.leonyk2.mcmod.McMod.MOD_ID;
 @Mod(MOD_ID)
 public class McMod {
     public static final String MOD_ID = "mcmod";
-    public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
 
     public McMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-        IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
-
 
         ModSounds.register(modEventBus);
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
-        //ModBlocks.init(REGISTRATE);
-
         ModCreativeModeTab.registerMod(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        //DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> McModClient.onCtorClient(modEventBus, forgeEventBus));
     }
 }

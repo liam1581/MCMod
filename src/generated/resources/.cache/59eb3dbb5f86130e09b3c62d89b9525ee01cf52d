@@ -1,0 +1,9 @@
+// 1.20.1	2025-09-27T21:21:32.2309668	Loot Tables
+be420e569a98dd632596303c90480ca93ff89266 data/mcmod/loot_tables/blocks/acacia_table.json
+48ea6f33fbb278f61d85cafb4b0a7775056b6cc3 data/mcmod/loot_tables/blocks/birch_table.json
+95afbc45689769ddec36b91bae7ac103315de483 data/mcmod/loot_tables/blocks/cherry_table.json
+4b7bb58f25dfa334110522d3caa52b1af09a2b4e data/mcmod/loot_tables/blocks/dark_oak_table.json
+532ec262f226fc2331ad7193f08ebbe99def8153 data/mcmod/loot_tables/blocks/jungle_table.json
+f06fd2f9cb8f6ed35deb450d8db0e0797408dccc data/mcmod/loot_tables/blocks/mangrove_table.json
+00117d6df6ddf19a578e3a4a4b9eff8530260c07 data/mcmod/loot_tables/blocks/oak_table.json
+7b816523d99c2180ddf439040f1233cbf0a3092c data/mcmod/loot_tables/blocks/spruce_table.json
