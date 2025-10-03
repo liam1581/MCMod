@@ -3,6 +3,9 @@
 ---
 
 ## v3.4.x
+### v3.4.0-r2
+- changed "new ResourceLocation()" back to fromNamespaceAndPath() in BlockStateProvider
+
 ### v3.4.0
 - added BOP tables as well as corresponding lootTABLES and block/item models
 

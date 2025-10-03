@@ -63,9 +63,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         String blockName = woodName + "_table";
 
         ModelFile model = models().withExistingParent(blockName, modLoc("block/table_base"))
-                .texture("0", new ResourceLocation(namespace, "block/" + woodName + "_log"))
-                .texture("2", new ResourceLocation(namespace, "block/" + woodName + "_log_top"))
-                .texture("particle", new ResourceLocation(namespace, "block/" + woodName + "_log"));
+                .texture("0", fromNamespaceAndPath(namespace, "block/" + woodName + "_log"))
+                .texture("2", fromNamespaceAndPath(namespace, "block/" + woodName + "_log_top"))
+                .texture("particle", fromNamespaceAndPath(namespace, "block/" + woodName + "_log"));
 
         simpleBlock(block, model);
 
