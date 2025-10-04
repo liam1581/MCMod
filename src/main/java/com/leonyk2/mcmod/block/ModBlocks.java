@@ -5,13 +5,12 @@ import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.custom.TableBlock;
 import com.leonyk2.mcmod.compat.CompatHandler;
 import com.leonyk2.mcmod.item.ModItems;
-import com.tterrag.registrate.Registrate;
-import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,7 +39,6 @@ public class ModBlocks {
             () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> CHERRY_TABLE = registerBlock("cherry_table",
             () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
-
 
     public static RegistryObject<Block> FIR_TABLE;
     public static RegistryObject<Block> REDWOOD_TABLE;

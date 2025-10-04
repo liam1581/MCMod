@@ -49,6 +49,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         }*/
     }
 
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
     private void simpleBlockWithItem(Block block) {
         String blockName = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
 

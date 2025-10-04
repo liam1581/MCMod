@@ -1,13 +1,19 @@
 package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
+import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import static net.minecraft.resources.ResourceLocation.fromNamespaceAndPath;
+import static net.minecraft.resources.ResourceLocation.parse;
 
 public class ModItemModelProvider extends ItemModelProvider {
         public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -34,25 +40,31 @@ public class ModItemModelProvider extends ItemModelProvider {
                 mcLoc("block/cube_all")).texture("all", mcLoc("mcmod:block/incomplete_diamond_block"));
     }
 
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                parse("item/generated")).texture("layer0",
+                fromNamespaceAndPath(McMod.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
     private void diskItem(RegistryObject<Item> item) {
         assert item.getId() != null;
         withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, "item/disc"));
+                fromNamespaceAndPath(McMod.MOD_ID, "item/disc"));
     }
 
     private void simpleItem(RegistryObject<Item> item) {
         assert item.getId() != null;
         withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, "item/" + item.getId().getPath()));
+                fromNamespaceAndPath(McMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private void handheldItem(RegistryObject<Item> item) {
         assert item.getId() != null;
         withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(McMod.MOD_ID, "item/" + item.getId().getPath()));
+                fromNamespaceAndPath(McMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     /*

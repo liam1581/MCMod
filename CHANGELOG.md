@@ -3,6 +3,10 @@
 ---
 
 ## v3.4.x
+### v3.4.0-r3
+- exactly same as 3.4.0-r2 but different i guess QwQ
+- maybe something changed because i completely re-ran data (deleted generated datagen stuff and just ran it again)
+
 ### v3.4.0-r2
 - changed "new ResourceLocation()" back to fromNamespaceAndPath() in BlockStateProvider
 
