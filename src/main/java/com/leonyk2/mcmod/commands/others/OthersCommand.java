@@ -1,6 +1,5 @@
 package com.leonyk2.mcmod.commands.others;
 
-import com.leonyk2.mcmod.listeners.PlayerJoinListener;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -13,7 +12,11 @@ import net.minecraft.commands.arguments.ResourceArgument;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundOpenScreenPacket;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 
@@ -59,31 +62,6 @@ public class OthersCommand {
                 Commands.literal("enchantAll")
                         .requires(source -> source.hasPermission(2))
                         .executes(OthersCommand::enchantAll)
-        );
-        dispatcher.register(
-                Commands.literal("testing")
-                        .executes(context -> {
-                            ServerPlayer player = context.getSource().getPlayerOrException();
-
-                            Objects.requireNonNull(player.getServer()).execute(() -> {
-                                // Run only on client
-                                player.connection.send(
-                                        new net.minecraft.network.protocol.game.ClientboundOpenScreenPacket(
-                                                0, // dummy container id
-                                                net.minecraft.world.inventory.MenuType.GENERIC_9x1, // dummy menu type
-                                                net.minecraft.network.chat.Component.literal("Opening HiScreen"))
-                                );
-                            });
-
-                            return 1;
-                        }));
-        dispatcher.register(
-                Commands.literal("enableJoinCheck")
-                        .executes(ctx2 -> {
-                            PlayerJoinListener.enabled = true;
-                            ctx2.getSource().sendSuccess(() -> Component.literal("Join check enabled"), true);
-                            return Command.SINGLE_SUCCESS;
-                        })
         );
     }
 

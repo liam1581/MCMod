@@ -3,6 +3,12 @@
 ---
 
 ## v3.4.x
+### v3.4.1
+- added recipe for crafting edible blue stuff from create bb/bb edibles
+- removed testing command
+- removed PlayerJoin thingy
+- Changed stuff in CHANGELOG.md (early naming scheme for versions and some other stuff)
+
 ### v3.4.0-r3
 - exactly same as 3.4.0-r2 but different i guess QwQ
 - maybe something changed because i completely re-ran data (deleted generated datagen stuff and just ran it again)
@@ -30,8 +36,10 @@
   - added automatable andesite
   - added different belt recipe
   - added different way to "fill" blaze burner
+
 ### v3.2.1-r3
 - changed the way tables (their blockstates/block models/item models) are created in the datagen
+
 ### v3.2.1-r2
 - just the jar file of the prev version because i forgor 👉👈
 
@@ -89,10 +97,10 @@
 ---
 
 ## v2.5.0
-### r3
+### v2.5.0-r3
 - Changed README (so basically this version is useless)
 
-### r2
+### v2.5.0-r2
 - Added German translation
 - Added a bunch of `@NotNull` annotations
 - Added `output.jar` files for each ongoing version
@@ -100,22 +108,22 @@
 ---
 
 ## v2.4.1
-### r2
+### v2.4.1-r2
 - Changed datagen package directory
 
-### Base
+### v2.4.1
 - Changed some missed `ResourceLocation` references
 
 ---
 
 ## v2.3.1
-### r3
+### v2.3.1-r3
 - Updated `ResourceLocation` usage so IntelliJ IDEA doesn’t scream
 
-### r2
+### v2.3.1-r2
 - Added crafting recipe for **Sapphire Sword** and **Nether Stick**
 
-### Base
+### v2.3.1
 - Antrag screen shows OP commands only if OP
 
 ---
@@ -256,8 +264,11 @@
 **Quartz (from Quartz Block)** *(Shapeless)*
 - Quartz Block → 4 Quartz
 
-**Diamond/Diamond Block** *(Create Recipe Sequence)
+**Diamond/Diamond Block** *(Create Recipe Sequence)*
 - Pressing coal/coal block 25 times resulting in the corresponding item
+
+**Edible White/Blue Stuff** *(Shapeless)*
+- White/Blue Stuff → Edible White/Blue Stuff
 
 ---
 

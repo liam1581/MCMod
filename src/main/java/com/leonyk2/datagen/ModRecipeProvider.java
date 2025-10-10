@@ -1,6 +1,7 @@
 package com.leonyk2.datagen;
 
 import biomesoplenty.api.block.BOPBlocks;
+import com.jetpacker06.CreateBrokenBad.register.CBBItems;
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
@@ -13,6 +14,7 @@ import com.simibubi.create.content.kinetics.press.PressingRecipe;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyRecipeBuilder;
+import net.mcreator.ediblestuff.init.EdibleStuffModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
@@ -142,7 +144,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ProcessingRecipeBuilder<CompactingRecipe> builder2 =
                 new ProcessingRecipeBuilder<>(CompactingRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, "lava_from_heated_compacting"));
         builder2.require(Items.COBBLESTONE).output(Fluids.LAVA, 100).requiresHeat(HeatCondition.HEATED).build(pWriter);
-   }
+
+        // ------- Create BB -------- //
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EdibleStuffModItems.BLUE_STUFF.get())
+                .requires(CBBItems.BLUE_METH)
+                .unlockedBy(getHasName(CBBItems.BLUE_METH), has(CBBItems.BLUE_METH))
+                .save(pWriter, fromNamespaceAndPath(McMod.MOD_ID, "edible_blue_stuff"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EdibleStuffModItems.WHITE_STUFF.get())
+                .requires(CBBItems.WHITE_METH)
+                .unlockedBy(getHasName(CBBItems.WHITE_METH), has(CBBItems.WHITE_METH))
+                .save(pWriter, fromNamespaceAndPath(McMod.MOD_ID, "edible_white_stuff"));
+
+    }
 
     private void tableRecipe(Block log, Block result, @NotNull Consumer<FinishedRecipe> pWriter) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)

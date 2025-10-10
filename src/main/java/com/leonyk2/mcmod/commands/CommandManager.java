@@ -4,16 +4,19 @@ import com.leonyk2.mcmod.commands.afk.AfkCommand;
 import com.leonyk2.mcmod.commands.antrag.AntragCommand;
 import com.leonyk2.mcmod.commands.debug.DebugCommand;
 import com.leonyk2.mcmod.commands.home.HomeCommand;
-import com.leonyk2.mcmod.commands.nbt.DumpAllPossibleNbtCommand;
 import com.leonyk2.mcmod.commands.nbt.DumpNbtCommand;
 import com.leonyk2.mcmod.commands.others.OthersCommand;
 import com.leonyk2.mcmod.commands.viewCoords.ViewCoordsCommand;
 import com.mojang.brigadier.CommandDispatcher;
 
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.Component;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import static com.leonyk2.mcmod.util.Functions.println;
 
 @Mod.EventBusSubscriber
 public class CommandManager {
@@ -61,8 +64,13 @@ public class CommandManager {
         //dump nbt data of held item "/dumpNbt"
         DumpNbtCommand.register(dispatcher);
 
-        DumpAllPossibleNbtCommand.register(dispatcher);
-
         DebugCommand.register(dispatcher);
+
+        dispatcher.register(Commands.literal(Component.translatable("mcmod.cmd.test").getString())
+                .requires(src -> src.hasPermission(2)) // ops only
+                .executes(ctx -> {
+                    println("test cmd ran");
+                    return 1;
+                }));
 	}
 }

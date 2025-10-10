@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-05T00:08:12.4402282	Recipes
+// 1.20.1	2025-10-10T22:05:30.7187612	Recipes
 9c2c8bc91d138b7d0cc5d9a079bbe9e0a4cc5615 data/mcmod/advancements/recipes/misc/acacia_table.json
 c719e66a783ebc4d75e8460e69f4c9a5657fe046 data/mcmod/advancements/recipes/misc/andesite.json
 80d93318c56f2b4cf8bb5e7b9647d4fe1ae31299 data/mcmod/advancements/recipes/misc/belt.json
@@ -7,6 +7,8 @@ c719e66a783ebc4d75e8460e69f4c9a5657fe046 data/mcmod/advancements/recipes/misc/an
 ea316b2ecf68623c05b07ab7d8a21894911daf8b data/mcmod/advancements/recipes/misc/coal_block.json
 5f29fb0a10db5dcbd5f4b8ffdf2fb4cbd0870325 data/mcmod/advancements/recipes/misc/dark_oak_table.json
 585f54d79f53cddcba562971aece19329a0cff73 data/mcmod/advancements/recipes/misc/dead_table.json
+4ed7f74ce63be09b53b42dbac8b7ac5acb17f158 data/mcmod/advancements/recipes/misc/edible_blue_stuff.json
+185878a111752ed86dff89339be1fecf8fbb1779 data/mcmod/advancements/recipes/misc/edible_white_stuff.json
 4000cb8fd4bbf1ba8ffa26b103944c00edbaa82a data/mcmod/advancements/recipes/misc/fir_table.json
 d5e4e2df4b8b41fc9ef3cffcf61547820094b333 data/mcmod/advancements/recipes/misc/hellbark_table.json
 306cea3bec3617fcf9aa6b87760bfe0add008745 data/mcmod/advancements/recipes/misc/jacaranda_table.json
@@ -34,6 +36,8 @@ fd9948921381bcb8d1ed0a620a829e590ce0a8ed data/mcmod/recipes/birch_table.json
 fa11554d4061003db187f84e52bd1fae0d9211c3 data/mcmod/recipes/compacting/lava_from_heated_compacting.json
 f3c5cc2dc2cb12b335b5c95d9f73583fac43550a data/mcmod/recipes/dark_oak_table.json
 3495e5606d3b519c5a780b6cdac28cc4f22b39f5 data/mcmod/recipes/dead_table.json
+e9f5f0c0751bbd954d722538331fe1c4bad6cac3 data/mcmod/recipes/edible_blue_stuff.json
+91b68f9eac30b890d9b77abfb0d7f6bb26fb77bf data/mcmod/recipes/edible_white_stuff.json
 553af76b27f48846df6c48369e63246cdb6b3f30 data/mcmod/recipes/filling/blaze_burner_from_filling_empty_blaze_burner.json
 a37659b08b02456f6657d4541a75a9e5a42b125e data/mcmod/recipes/fir_table.json
 f5e2a8c8cc40d23b1d9e96780ba040c58d9d5dfb data/mcmod/recipes/hellbark_table.json

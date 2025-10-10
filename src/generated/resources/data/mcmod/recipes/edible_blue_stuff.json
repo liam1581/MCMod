@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "createbb:blue_meth"
+    }
+  ],
+  "result": {
+    "item": "edible_stuff:blue_stuff"
+  }
+}

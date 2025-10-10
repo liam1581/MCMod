@@ -162,9 +162,13 @@ dependencies {
 
     implementation fg.deobf("biomesoplenty:BiomesOPlenty:${bop_version}")
     runtimeOnly fg.deobf("biomesoplenty:BiomesOPlenty:${bop_version}")
-
     implementation fg.deobf("terrablender:TerraBlender:${terrablender_version}")
     runtimeOnly fg.deobf("terrablender:TerraBlender:${terrablender_version}")
+    implementation fg.deobf("createbb:createbb:${create_bb_version}")
+    runtimeOnly fg.deobf("createbb:createbb:${create_bb_version}")
+    implementation fg.deobf("edible_stuff:edible_stuff:${bb_edible_stuff_version}")
+    runtimeOnly fg.deobf("edible_stuff:edible_stuff:${bb_edible_stuff_version}")
+
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

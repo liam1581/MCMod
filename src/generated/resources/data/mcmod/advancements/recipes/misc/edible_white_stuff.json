@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mcmod:edible_white_stuff"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_meth": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createbb:white_meth"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_white_meth",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mcmod:edible_white_stuff"
+    ]
+  },
+  "sends_telemetry_event": false
+}
