@@ -21,6 +21,8 @@ public class LangFunctions {
             itemAdder.accept(ModItems.NETHER_STICK.get(), "Nether Star Stick");
 
             // Blocks
+            blockAdder.accept(ModBlocks.CREATIFY_BLOCK.get(), "Creatify Block");
+            blockAdder.accept(ModBlocks.SAPPHIRE_BLOCK.get(), "Sapphire Block");
             //adder.accept(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
             blockAdder.accept(ModBlocks.OAK_TABLE.get(), "Oak Table");
             blockAdder.accept(ModBlocks.DARK_OAK_TABLE.get(), "Dark Oak Table");
@@ -111,6 +113,8 @@ public class LangFunctions {
             itemAdder.accept(ModItems.NETHER_STICK.get(), "Nether stern stock");
 
             // Blocks
+            blockAdder.accept(ModBlocks.CREATIFY_BLOCK.get(), "Kreatifizierungs Block");
+            blockAdder.accept(ModBlocks.SAPPHIRE_BLOCK.get(), "Saphir Block");
             //adder.accept(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
             blockAdder.accept(ModBlocks.OAK_TABLE.get(), "Eichen Tisch");
             blockAdder.accept(ModBlocks.DARK_OAK_TABLE.get(), "Schwarzeichen Tisch");

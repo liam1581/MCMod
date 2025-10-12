@@ -1,7 +1,6 @@
 package com.leonyk2.mcmod;
 
 import com.leonyk2.mcmod.block.ModBlocks;
-import com.leonyk2.mcmod.item.ModCreativeModeTab;
 import com.leonyk2.mcmod.item.ModItems;
 import com.leonyk2.mcmod.sound.ModSounds;
 import net.minecraftforge.common.MinecraftForge;

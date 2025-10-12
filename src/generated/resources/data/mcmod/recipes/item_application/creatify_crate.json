@@ -1,0 +1,14 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    [],
+    {
+      "item": "mcmod:creatify_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:creative_crate"
+    }
+  ]
+}

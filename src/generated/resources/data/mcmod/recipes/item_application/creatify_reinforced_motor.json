@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "create_new_age:reinforced_motor"
+    },
+    {
+      "item": "mcmod:creatify_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:creative_motor"
+    }
+  ]
+}

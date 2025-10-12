@@ -47,6 +47,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             makeTableBlock(ModBlocks.UMBRAN_TABLE.get(), "biomesoplenty", "umbran");
             makeTableBlock(ModBlocks.HELLBARK_TABLE.get(), "biomesoplenty", "hellbark");
         }*/
+
+        blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
@@ -81,5 +83,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(McMod.MOD_ID +
                 ":block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
+    }
+
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }

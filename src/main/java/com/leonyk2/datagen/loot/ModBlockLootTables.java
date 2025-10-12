@@ -4,7 +4,9 @@ import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.compat.CompatHandler;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.MossBlock;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -16,6 +18,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(ModBlocks.CREATIFY_BLOCK.get());
+
         this.dropSelf(ModBlocks.OAK_TABLE.get());
         this.dropSelf(ModBlocks.BIRCH_TABLE.get());
         this.dropSelf(ModBlocks.ACACIA_TABLE.get());

@@ -160,15 +160,39 @@ dependencies {
     implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
 
 
+    // BOP
     implementation fg.deobf("biomesoplenty:BiomesOPlenty:${bop_version}")
     runtimeOnly fg.deobf("biomesoplenty:BiomesOPlenty:${bop_version}")
+    // Terrablender
     implementation fg.deobf("terrablender:TerraBlender:${terrablender_version}")
     runtimeOnly fg.deobf("terrablender:TerraBlender:${terrablender_version}")
+
+    // Create BB / Edible BB Stuff
     implementation fg.deobf("createbb:createbb:${create_bb_version}")
     runtimeOnly fg.deobf("createbb:createbb:${create_bb_version}")
+    // Edible BB Stuff
     implementation fg.deobf("edible_stuff:edible_stuff:${bb_edible_stuff_version}")
     runtimeOnly fg.deobf("edible_stuff:edible_stuff:${bb_edible_stuff_version}")
 
+    // Create: New Age
+    implementation fg.deobf("create_new_age:create-new-age:${new_age_version}")
+    runtimeOnly fg.deobf("create_new_age:create-new-age:${new_age_version}")
+    // Botarium
+    implementation fg.deobf("botarium:botarium:${botarium_version}")
+    runtimeOnly fg.deobf("botarium:botarium:${botarium_version}")
+
+    // Sophisticated Backpacks
+    implementation fg.deobf("sophisticatedbackpacks:sophisticatedbackpacks:${sb_version}")
+    runtimeOnly fg.deobf("sophisticatedbackpacks:sophisticatedbackpacks:${sb_version}")
+    // Sophisticated Core
+    implementation fg.deobf("sophisticatedcore:sophisticatedcore:${sc_version}")
+    runtimeOnly fg.deobf("sophisticatedcore:sophisticatedcore:${sc_version}")
+
+
+    /*
+    implementation fg.deobf("")
+    runtimeOnly fg.deobf("")
+     */
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
@@ -210,6 +234,54 @@ tasks.named('jar', Jar).configure {
 
     // This is the preferred method to reobfuscate your jar file
     finalizedBy 'reobfJar'
+}
+
+tasks.register("renameFinalJar") {
+    group = "build"
+    description = "Rename the ForgeGradle output jar to mod_id-mod_version.jar"
+
+    doLast {
+        def outDir = file("$buildDir/reobfJar")
+        if (!outDir.exists()) {
+            println "renameFinalJar: build/libs does not exist — nothing to rename."
+            return
+        }
+
+        def jars = outDir.listFiles()?.findAll { it.isFile() && it.name.endsWith(".jar") } ?: []
+        if (jars.isEmpty()) {
+            println "renameFinalJar: no jars found in ${outDir}"
+            return
+        }
+
+        def desiredName = "${mod_id}-${mod_version}.jar"
+        def desiredFile = new File(outDir, desiredName)
+
+        // Pick the most recently modified jar
+        def candidate = jars.max { it.lastModified() }
+
+        println "renameFinalJar: Renaming ${candidate.name} → ${desiredName}"
+
+        copy {
+            from candidate
+            into outDir
+            rename { desiredName }
+        }
+
+        // Optionally delete the old file
+        if (candidate.exists()) {
+            candidate.delete()
+        }
+
+        println "renameFinalJar: Done!"
+    }
+}
+
+tasks.matching { it.name.toLowerCase().contains("reobf") }.configureEach {
+    finalizedBy("renameFinalJar")
+}
+
+tasks.named("jar").configure {
+    finalizedBy("renameFinalJar")
 }
 
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing:

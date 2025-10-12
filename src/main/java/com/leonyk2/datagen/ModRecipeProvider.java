@@ -7,8 +7,10 @@ import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllItems;
+import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.decoration.palettes.AllPaletteStoneTypes;
 import com.simibubi.create.content.fluids.transfer.FillingRecipe;
+import com.simibubi.create.content.kinetics.deployer.ManualApplicationRecipe;
 import com.simibubi.create.content.kinetics.mixer.CompactingRecipe;
 import com.simibubi.create.content.kinetics.press.PressingRecipe;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
@@ -24,6 +26,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.antarcticgardens.newage.NewAgeBlocks;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -64,6 +67,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.NETHER_STICK.get())
                 .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAPPHIRE_BLOCK.get(), 1)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.SAPPHIRE.get())
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CREATIFY_BLOCK.get(), 1)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.SAPPHIRE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get()))
+                .save(pWriter);
 
         tableRecipe(Blocks.OAK_LOG, ModBlocks.OAK_TABLE.get(), pWriter);
         tableRecipe(Blocks.BIRCH_LOG, ModBlocks.BIRCH_TABLE.get(), pWriter);
@@ -84,6 +101,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         tableRecipe(BOPBlocks.MAGIC_LOG.get(), ModBlocks.MAGIC_TABLE.get(), pWriter);
         tableRecipe(BOPBlocks.UMBRAN_LOG.get(), ModBlocks.UMBRAN_TABLE.get(), pWriter);
         tableRecipe(BOPBlocks.HELLBARK_LOG.get(), ModBlocks.HELLBARK_TABLE.get(), pWriter);
+
 
 
         // ----- Vanilla+ Recipes ----- //
@@ -119,6 +137,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Blocks.COBBLESTONE)
                 .unlockedBy(getHasName(Blocks.COBBLESTONE), has(Blocks.COBBLESTONE))
                 .save(pWriter, fromNamespaceAndPath(McMod.MOD_ID, "andesite"));
+
         // ------- Recipe Sequences - //
         SequencedAssemblyRecipeBuilder incomp_dia_builder =
                 new SequencedAssemblyRecipeBuilder(fromNamespaceAndPath(McMod.MOD_ID, "diamond_from_pressing_sequence_coal"));
@@ -136,6 +155,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
         incomp_dia_block_builder.addOutput(Items.DIAMOND_BLOCK, 1.0f).build(pWriter);
 
+
         // ------- ProcessingRecipe - //
         ProcessingRecipeBuilder<FillingRecipe> builder =
                 new ProcessingRecipeBuilder<>(FillingRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, "blaze_burner_from_filling_empty_blaze_burner"));
@@ -144,6 +164,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ProcessingRecipeBuilder<CompactingRecipe> builder2 =
                 new ProcessingRecipeBuilder<>(CompactingRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, "lava_from_heated_compacting"));
         builder2.require(Items.COBBLESTONE).output(Fluids.LAVA, 100).requiresHeat(HeatCondition.HEATED).build(pWriter);
+
+        ProcessingRecipeBuilder<ManualApplicationRecipe> builder3 =
+                new ProcessingRecipeBuilder<>(ManualApplicationRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, "creatify_reinforced_motor"));
+        builder3.require(NewAgeBlocks.REINFORCED_MOTOR).require(ModBlocks.CREATIFY_BLOCK.get()).output(AllBlocks.CREATIVE_MOTOR).build(pWriter);
+
+        ProcessingRecipeBuilder<ManualApplicationRecipe> builder4 =
+                new ProcessingRecipeBuilder<>(ManualApplicationRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, "creatify_fluid_tank"));
+        builder4.require(AllBlocks.FLUID_TANK).require(ModBlocks.CREATIFY_BLOCK.get()).output(AllBlocks.CREATIVE_FLUID_TANK).build(pWriter);
+
+        ProcessingRecipeBuilder<ManualApplicationRecipe> builder5 =
+                new ProcessingRecipeBuilder<>(ManualApplicationRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, "creatify_crate"));
+        builder5.require(net.p3pp3rf1y.sophisticatedbackpacks.init.ModBlocks.NETHERITE_BACKPACK.get()).require(ModBlocks.CREATIFY_BLOCK.get()).output(AllBlocks.CREATIVE_CRATE).build(pWriter);
+
+
+
 
         // ------- Create BB -------- //
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EdibleStuffModItems.BLUE_STUFF.get())

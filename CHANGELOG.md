@@ -1,6 +1,22 @@
 # 📜 Changelog & Documentation
 
 ---
+## v3.5.x
+### v3.5.0
+- Added Creatify block & Sapphire Block
+- Added crafting recipe for Sapphire Block and Creatify Block
+- Added "crafting recipe" for Creative Motor, Creative Crate, Creative Fluid tank
+- Added Loot table for Cretify Block/Sapphire Block
+- Changed BlockTags so the Tables need a StoneTool to get dropped, Sapphire Block needs IronTool, Creatify Block needs NetheriteTool
+- Changed nutrition and saturationMod for Linseneintopf to 50 & 10.0f
+- Changed AttackSpeedModifier for Sapphire Sword to -1
+- Moved ModCreativeModeTab
+- Changed some things in the CHANGELOG.md
+- Added Botarium, Create-New-Age, CreateBB/BB Edibles, SophisticadedBackpacks/SophisticatedCore mods to libs folder
+- Botarium and Create New Age are mandatory, any version
+- output.jar is from now on mcmod-version.jar
+
+---
 
 ## v3.4.x
 ### v3.4.1
@@ -74,23 +90,23 @@
 ---
 
 ## v2.6.x
-### 2.6.1-r2
+### v2.6.1-r2
 - changed the build.gradle so i can run the datagen and then client with one thing (bcs im still lazy) as well as datagen + jar
 - also corrected some spelling mistakes in this file (CHANGELOG.md) and changed one mistake where i forgot 2 words
 
-### 2.6.1
+### v2.6.1
 - added vanilla+ recipes for blasting cobble/stone/sand
 
-### 2.6.0-r4-r7
+### v2.6.0-r4-r7
 - README / CHANGELOG.md testing/modfying
 
-### 2.6.0-r3
+### v2.6.0-r3
 - Another changelog update XD (again basically useless)
 
-### 2.6.0-r2
+### v2.6.0-r2
 - Changelog changed xD (basically useless again)
 
-### 2.6.0
+### v2.6.0
 - Added `sendMessage` function and documentation
 - Added `debug testCommands` command
 
@@ -116,7 +132,7 @@
 
 ---
 
-## v2.3.1
+## v2.3.x
 ### v2.3.1-r3
 - Updated `ResourceLocation` usage so IntelliJ IDEA doesn’t scream
 
@@ -126,8 +142,6 @@
 ### v2.3.1
 - Antrag screen shows OP commands only if OP
 
----
-
 ## v2.3.0
 - Added `DropdownMenuWidget`
 - Antrag screen now uses dropdowns instead of input fields & buttons
@@ -136,15 +150,15 @@
 ---
 
 ## v2.2.x
-### v2.2.2
-- Fixed datagen bug: vanilla recipes now generate in `data/mcmod` instead of `data/minecraft`
-- Added JEI to build environment (not required for mod)
+### v2.2.2-r3
+- Removed `#mandatory` from `mods.toml`
 
 ### v2.2.2-r2
 - Added some `Function` documentation
 
-### v2.2.2-r3
-- Removed `#mandatory` from `mods.toml`
+### v2.2.2
+- Fixed datagen bug: vanilla recipes now generate in `data/mcmod` instead of `data/minecraft`
+- Added JEI to build environment (not required for mod)
 
 ### v2.2.1
 - Removed unused imports
@@ -152,14 +166,14 @@
     - `runCommand(CommandSourceStack, String)`
     - `runCommand(String)`
 
+### v2.2.0-r2
+- Added `README.md`
+
 ### v2.2.0
 - Added testing command that opens a dummy container
 - Added `HelloKeybind` (default: **H**) to open AntragScreen
 - Added AntragScreen
 - Changed `runCommand(CommandContext, String)`
-
-### v2.2.0-r2
-- Added `README.md`
 
 ---
 
@@ -168,22 +182,22 @@
 - Added `/enchantAll` command
 - Added `enchantWithAll` function
 
+### v2.1.1-r2
+- Removed custom `/help` command
+- Changed `/randomTickSpeed` and `/nv` permissions to level 2
+
 ### v2.1.1
 - Added recipes for **coal block from charcoal** & **quartz from quartz block** to datagen
 - Changed mod description
 
-### v2.1.1-r2
-- Removed custom `/help` command
-- Changed `/randomTickSpeed` and `/nv` permissions to level 2
+### v2.1.0-r2
+- Added `run-data` to `.gitignore`
+- Added music disc texture
 
 ### v2.1.0
 - Added new music disc
 - Changed creative mode tab name
 - Removed unused translation entries
-
-### v2.1.0-r2
-- Added `run-data` to `.gitignore`
-- Added music disc texture
 
 ---
 

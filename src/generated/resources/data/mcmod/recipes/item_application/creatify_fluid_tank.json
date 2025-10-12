@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "create:fluid_tank"
+    },
+    {
+      "item": "mcmod:creatify_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:creative_fluid_tank"
+    }
+  ]
+}

@@ -34,11 +34,24 @@ description='''${mod_description}'''
     side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="create"
-mandatory=true
-versionRange="[6.0.6,6.1.0)"
-ordering="NONE"
-side="BOTH"
+    modId="create"
+    mandatory=true
+    versionRange="[6.0.6,6.1.0)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="create_new_age"
+    mandatory=true
+    versionRange="[0.0.0,99.99.99)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="botarium"
+    mandatory=true
+    versionRange="[0.0.0,99.99.99)"
+    ordering="NONE"
+    side="BOTH"
 
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"

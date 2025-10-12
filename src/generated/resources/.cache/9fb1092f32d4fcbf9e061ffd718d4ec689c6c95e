@@ -1,10 +1,11 @@
-// 1.20.1	2025-10-10T22:05:30.7187612	Recipes
+// 1.20.1	2025-10-12T15:39:48.5288876	Recipes
 9c2c8bc91d138b7d0cc5d9a079bbe9e0a4cc5615 data/mcmod/advancements/recipes/misc/acacia_table.json
 c719e66a783ebc4d75e8460e69f4c9a5657fe046 data/mcmod/advancements/recipes/misc/andesite.json
 80d93318c56f2b4cf8bb5e7b9647d4fe1ae31299 data/mcmod/advancements/recipes/misc/belt.json
 8635eabb8166548cceada2dea8b4d589ff72da93 data/mcmod/advancements/recipes/misc/birch_table.json
 3689dade5837168550899cefde1c588cf468c6cd data/mcmod/advancements/recipes/misc/cherry_table.json
 ea316b2ecf68623c05b07ab7d8a21894911daf8b data/mcmod/advancements/recipes/misc/coal_block.json
+c23f6442dec15abd9a9d61e13af309f5a3e544ef data/mcmod/advancements/recipes/misc/creatify_block.json
 5f29fb0a10db5dcbd5f4b8ffdf2fb4cbd0870325 data/mcmod/advancements/recipes/misc/dark_oak_table.json
 585f54d79f53cddcba562971aece19329a0cff73 data/mcmod/advancements/recipes/misc/dead_table.json
 4ed7f74ce63be09b53b42dbac8b7ac5acb17f158 data/mcmod/advancements/recipes/misc/edible_blue_stuff.json
@@ -23,6 +24,7 @@ ae190f0bc07cb25442f1889cb88e5e018be9a10a data/mcmod/advancements/recipes/misc/pa
 514832345a655b32a4df60ec8ce05a5c1da785e9 data/mcmod/advancements/recipes/misc/quartz.json
 a6df9f45e173a5c457526110c7416262ecd977b9 data/mcmod/advancements/recipes/misc/redwood_table.json
 4856319b3cc9fec5edc003acedbfbcdb6e07b1a9 data/mcmod/advancements/recipes/misc/sapphire.json
+34e328cf548c0ea2515cd7656b959069894dfea6 data/mcmod/advancements/recipes/misc/sapphire_block.json
 a21586f149e6ac04146b6ef110ca35dd74e454a8 data/mcmod/advancements/recipes/misc/sapphire_sword.json
 9d8a15894e4bd622afd11d3105ecfa80e2b48991 data/mcmod/advancements/recipes/misc/spruce_table.json
 364164938cae9016ccfc70c413991a85f47e514e data/mcmod/advancements/recipes/misc/umbran_table.json
@@ -34,6 +36,7 @@ fd9948921381bcb8d1ed0a620a829e590ce0a8ed data/mcmod/recipes/birch_table.json
 0598a8a58ff66eb781e5570003140866f1e9d353 data/mcmod/recipes/cherry_table.json
 11f35f169238950416802720d4ca0e040a9fb93c data/mcmod/recipes/coal_block.json
 fa11554d4061003db187f84e52bd1fae0d9211c3 data/mcmod/recipes/compacting/lava_from_heated_compacting.json
+54fbe6e25c0b6266cd2546cb5fd63800605f560a data/mcmod/recipes/creatify_block.json
 f3c5cc2dc2cb12b335b5c95d9f73583fac43550a data/mcmod/recipes/dark_oak_table.json
 3495e5606d3b519c5a780b6cdac28cc4f22b39f5 data/mcmod/recipes/dead_table.json
 e9f5f0c0751bbd954d722538331fe1c4bad6cac3 data/mcmod/recipes/edible_blue_stuff.json
@@ -41,6 +44,9 @@ e9f5f0c0751bbd954d722538331fe1c4bad6cac3 data/mcmod/recipes/edible_blue_stuff.js
 553af76b27f48846df6c48369e63246cdb6b3f30 data/mcmod/recipes/filling/blaze_burner_from_filling_empty_blaze_burner.json
 a37659b08b02456f6657d4541a75a9e5a42b125e data/mcmod/recipes/fir_table.json
 f5e2a8c8cc40d23b1d9e96780ba040c58d9d5dfb data/mcmod/recipes/hellbark_table.json
+2af83bcafa392177dbd2b0f0a3b2da4033902b97 data/mcmod/recipes/item_application/creatify_crate.json
+20c68ff53cfc116aded2ad7ed849aac2c702be51 data/mcmod/recipes/item_application/creatify_fluid_tank.json
+3809e6cfc389a6feb39b4198d073dc8433f79c60 data/mcmod/recipes/item_application/creatify_reinforced_motor.json
 a584440683e3dddf96da24e239d572dd5e694c52 data/mcmod/recipes/jacaranda_table.json
 bdd708a985e905f3cccee9f2867de9cfcf6fb478 data/mcmod/recipes/jungle_table.json
 43cd60ab5051723d83245269ec5e7a9c293b1ea7 data/mcmod/recipes/linseneintopf.json
@@ -53,6 +59,7 @@ fe849aae3fd105392388e1cac343606f4b53d5a8 data/mcmod/recipes/nether_stick.json
 caf28fa02bdec30f2b2f5610034af6838cc1ab2a data/mcmod/recipes/quartz.json
 e0d72283e3ed33a3e44c0d283871759267327014 data/mcmod/recipes/redwood_table.json
 7c9128c66dfb7b840dba2aeecc157d3b04c76433 data/mcmod/recipes/sapphire.json
+77961af5b0ddd9387d9f0d347cca31d9e35efe58 data/mcmod/recipes/sapphire_block.json
 6e79ce341f080d8af0295272b591312bdca608e4 data/mcmod/recipes/sapphire_sword.json
 4fd5e83abd473fbfd59f8fde95d0659ffade8f3b data/mcmod/recipes/sequenced_assembly/diamond_block_from_pressing_sequence_coal.json
 3ec8d89854ce3e538ee0e84d64531a3a8c97ad9b data/mcmod/recipes/sequenced_assembly/diamond_from_pressing_sequence_coal.json
