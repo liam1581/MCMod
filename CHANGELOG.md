@@ -2,6 +2,9 @@
 
 ---
 ## v3.5.x
+### v3.5.0-r2
+- README.md change
+
 ### v3.5.0
 - Added Creatify block & Sapphire Block
 - Added crafting recipe for Sapphire Block and Creatify Block
