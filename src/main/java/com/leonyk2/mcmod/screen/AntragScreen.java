@@ -33,7 +33,7 @@ public class AntragScreen extends Screen {
         dropdown = new DropdownWidgetTranslatable(centerX, y - 20, 100, 20, OPTIONS);
         operator_dropdown = new DropdownWidgetTranslatable(centerX + 110, y - 20, 100, 20, OPERATOR_OPTIONS);
         antragField = new EditBox(this.font, centerX, y + 90, 100, 20, Component.literal("idk"));
-        Button submitButton = Button.builder(Component.translatable("screens.mcmod.antarg.button.submit"), b -> {
+        Button submitButton = Button.builder(Component.translatable("screens.mcmod.antrag.button.submit"), b -> {
             switch (dropdown.getSelected()) {
                 case "":
                     break;

@@ -53,14 +53,14 @@ public class LangFunctions {
             adder.accept(Keybinds.ANTRAG_KEY.getName(), "Antrag Key");
 
             // Screens & subcategory's
-            adder.accept("screens.mcmod.antarg.name", "Antrag Menu");
-            adder.accept("screens.mcmod.antarg.button.submit", "Submit");
+            adder.accept("screens.mcmod.antrag.name", "Antrag Menu");
+            adder.accept("screens.mcmod.antrag.button.submit", "Submit");
 
-            adder.accept("screens.mcmod.antarg.OPTIONS.antrag", "Antrag");
-            adder.accept("screens.mcmod.antarg.OPTIONS.delete", "Delete");
-            adder.accept("screens.mcmod.antarg.OPTIONS.list", "List");
-            adder.accept("screens.mcmod.antarg.OPTIONS.accept", "Accept");
-            adder.accept("screens.mcmod.antarg.OPTIONS.deny", "Deny");
+            adder.accept("screens.mcmod.antrag.OPTIONS.antrag", "Antrag");
+            adder.accept("screens.mcmod.antrag.OPTIONS.delete", "Delete");
+            adder.accept("screens.mcmod.antrag.OPTIONS.list", "List");
+            adder.accept("screens.mcmod.antrag.OPTIONS.accept", "Accept");
+            adder.accept("screens.mcmod.antrag.OPTIONS.deny", "Deny");
 
             // Commands
             adder.accept("commands.mcmod.afk.players", "AFK Players");
@@ -134,14 +134,14 @@ public class LangFunctions {
             adder.accept(Keybinds.ANTRAG_KEY.getName(), "Antrag Knopf");
 
             // Screens & subcategory's
-            adder.accept("screens.mcmod.antarg.name", "Antrag Menü");
-            adder.accept("screens.mcmod.antarg.button.submit", "Abgeben");
+            adder.accept("screens.mcmod.antrag.name", "Antrag Menü");
+            adder.accept("screens.mcmod.antrag.button.submit", "Abgeben");
 
-            adder.accept("screens.mcmod.antarg.OPTIONS.antrag", "Antrag");
-            adder.accept("screens.mcmod.antarg.OPTIONS.delete", "Löschen");
-            adder.accept("screens.mcmod.antarg.OPTIONS.list", "Listen");
-            adder.accept("screens.mcmod.antarg.OPTIONS.accept", "Akzeptieren");
-            adder.accept("screens.mcmod.antarg.OPTIONS.deny", "Ablehnen");
+            adder.accept("screens.mcmod.antrag.OPTIONS.antrag", "Antrag");
+            adder.accept("screens.mcmod.antrag.OPTIONS.delete", "Löschen");
+            adder.accept("screens.mcmod.antrag.OPTIONS.list", "Listen");
+            adder.accept("screens.mcmod.antrag.OPTIONS.accept", "Akzeptieren");
+            adder.accept("screens.mcmod.antrag.OPTIONS.deny", "Ablehnen");
 
             // Commands
             adder.accept("commands.mcmod.afk.players", "AFK Spieler");

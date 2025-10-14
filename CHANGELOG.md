@@ -2,6 +2,9 @@
 
 ---
 ## v3.5.x
+### v3.5.1
+- Bugfix were the language translations where wrong for the Antrag screen
+
 ### v3.5.0-r2
 - README.md change
 
@@ -221,9 +224,6 @@
     - Sapphire Sword
     - AFK/Antrag/Home/NBT/ViewCoords commands
     - Coal block from charcoal & quartz from quartz block recipes
-
-- **Known Bugs:**
-    - Music discs don’t work (missing sound files)
 
 ---
 
