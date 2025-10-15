@@ -2,6 +2,9 @@
 
 ---
 ## v3.5.x
+### v3.5.1-r2
+- added limesand -> White Phosphorous recipe
+
 ### v3.5.1
 - Bugfix were the language translations where wrong for the Antrag screen
 

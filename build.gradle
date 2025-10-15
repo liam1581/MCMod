@@ -188,6 +188,11 @@ dependencies {
     implementation fg.deobf("sophisticatedcore:sophisticatedcore:${sc_version}")
     runtimeOnly fg.deobf("sophisticatedcore:sophisticatedcore:${sc_version}")
 
+    // tfmg
+    implementation fg.deobf("tfmg:tfmg:${tfmg_version}")
+    runtimeOnly fg.deobf("tfmg:tfmg:${tfmg_version}")
+
+
 
     /*
     implementation fg.deobf("")

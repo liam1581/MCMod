@@ -1,6 +1,7 @@
 package com.leonyk2.datagen;
 
 import biomesoplenty.api.block.BOPBlocks;
+import com.drmangotea.tfmg.registry.TFMGItems;
 import com.jetpacker06.CreateBrokenBad.register.CBBItems;
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.ModBlocks;
@@ -189,6 +190,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(CBBItems.WHITE_METH)
                 .unlockedBy(getHasName(CBBItems.WHITE_METH), has(CBBItems.WHITE_METH))
                 .save(pWriter, fromNamespaceAndPath(McMod.MOD_ID, "edible_white_stuff"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CBBItems.WHITE_PHOSPHORUS)
+                .requires(TFMGItems.LIMESAND)
+                .unlockedBy(getHasName(TFMGItems.LIMESAND), has(TFMGItems.LIMESAND))
+                .save(pWriter, fromNamespaceAndPath(McMod.MOD_ID, "white_phosphorous"));
 
     }
 
