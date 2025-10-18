@@ -5,10 +5,12 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.server.ServerLifecycleHooks;
 
 public class Functions {
     /**
@@ -26,6 +28,54 @@ public class Functions {
     public static void runCommand(String command) {
         assert Minecraft.getInstance().player != null;
         Minecraft.getInstance().player.connection.sendCommand(command);
+    }
+
+    /**
+     * Runs the mc command orivided in argument but its smart QwQ, it checks if on server or client side
+     * @param command the command that should ran
+     */
+    public static void runCommandB(String command) {
+        if (isClientSide()) {
+            var mc = Minecraft.getInstance();
+            if (mc.player != null) {
+                mc.player.connection.sendCommand(command);
+            }
+            return;
+        }
+
+        MinecraftServer server = getServer();
+        if (server != null) {
+            CommandSourceStack source = server.createCommandSourceStack();
+            server.getCommands().performPrefixedCommand(source, command);
+        }
+    }
+
+    /**
+     * Checks if the mod is installed on the Client side
+     * @return bool if on client side
+     */
+    public static boolean isClientSide() {
+        try {
+            Minecraft.getInstance();
+            return true;
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
+    /**
+     * Checks if the mod is installed on the Server side
+     * @return bool if on server side
+     */
+    public static MinecraftServer getServer() {
+        // For integrated or dedicated server
+        if (isClientSide()) {
+            var mc = Minecraft.getInstance();
+            if (mc.hasSingleplayerServer()) {
+                return mc.getSingleplayerServer();
+            }
+        }
+        return ServerLifecycleHooks.getCurrentServer();
     }
 
     /**

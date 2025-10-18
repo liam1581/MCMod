@@ -8,7 +8,6 @@ import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllItems;
-import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.content.decoration.palettes.AllPaletteStoneTypes;
 import com.simibubi.create.content.fluids.transfer.FillingRecipe;
 import com.simibubi.create.content.kinetics.deployer.ManualApplicationRecipe;

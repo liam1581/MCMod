@@ -22,7 +22,7 @@ public class AntragScreen extends Screen {
     private static final List<String> OPERATOR_OPTIONS = List.of("screens.mcmod.antrag.OPTIONS.accept", "screens.mcmod.antrag.OPTIONS.deny");
 
     public AntragScreen() {
-        super(Component.literal(Component.translatable("screens.mcmod.antarg.name").toString()));
+        super(Component.literal(Component.translatable("screens.mcmod.antrag.name").toString()));
     }
 
     @Override

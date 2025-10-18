@@ -1,6 +1,5 @@
 package com.leonyk2.mcmod.commands.others;
 
-import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -12,15 +11,10 @@ import net.minecraft.commands.arguments.ResourceArgument;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundOpenScreenPacket;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.SimpleMenuProvider;
-import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 
-import java.util.Objects;
 
 import static com.leonyk2.mcmod.util.Functions.*;
 
@@ -83,19 +77,19 @@ public class OthersCommand {
         int number = IntegerArgumentType.getInteger(context, "number");
         String command = "gamerule randomTickSpeed " + number;
 
-        runCommand(context.getSource(), command);
+        runCommand(command);
         return 1;
     }
 
     private static int nvCommand(CommandContext<CommandSourceStack> context) {
         String command = "effect give @a minecraft:night_vision infinite 255 true";
 
-        runCommand(context.getSource(), command);
+        runCommand(command);
         return 1;
     }
 
     private static int dicksCommand(CommandContext<CommandSourceStack> context) {
-        runCommand(context.getSource(), "msg @a " + Component.translatable("commands.mcmod.schwänze.text").getString() +  "🤤");
+        runCommand("msg @a " + Component.translatable("commands.mcmod.schwänze.text").getString() +  "🤤");
         return 1;
     }
 

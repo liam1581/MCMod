@@ -19,19 +19,9 @@ public class Keybinds {
             "key.categories.mcmod"
             );
 
-    /*
-    public static final KeyMapping TEST_KEY = new KeyMapping(
-            "key.mcmod.test",
-            InputConstants.Type.KEYSYM,
-            GLFW.GLFW_KEY_P,
-            "key.categories.mcmod"
-    );
-     */
-
     @SubscribeEvent
     public static void registerKeyMapping(RegisterKeyMappingsEvent event) {
         event.register(ANTRAG_KEY);
-        //event.register(TEST_KEY);
 
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
     }

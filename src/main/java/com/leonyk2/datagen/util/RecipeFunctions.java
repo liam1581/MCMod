@@ -148,48 +148,6 @@ public class RecipeFunctions {
 
         builder.build(pWriter);
     }
-    /*
-    public static void deploying(ItemLike input, ItemLike output, Consumer<FinishedRecipe> pWriter, int... outputAmount) {
-        int value = outputAmount.length > 0 ? outputAmount[0] : 01;
-
-        ProcessingRecipeBuilder<DeployerApplicationRecipe> builder =
-                new ProcessingRecipeBuilder<>(DeployerApplicationRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, getItemName(output) + "_from_deploying_" + getItemName(input)));
-
-        builder.require(input).output(output, value).build(pWriter);
-    }
-    public static void deploying(ItemLike input, List<ItemLike> output, Consumer<FinishedRecipe> pWriter, int... outputAmount) {
-        int value = outputAmount.length > 0 ? outputAmount[0] : 01;
-
-        ProcessingRecipeBuilder<DeployerApplicationRecipe> builder =
-                new ProcessingRecipeBuilder<>(DeployerApplicationRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, getItemName(output.get(0)) + "_from_deploying_" + getItemName(input)));
-
-        builder.require(input);
-        for (ItemLike out : output)
-            builder.output(out, value);
-
-        builder.build(pWriter);
-    }
-    protected static void mixing(ItemLike input, ItemLike output, Consumer<FinishedRecipe> pWriter, int... outputAmount) {
-        int value = outputAmount.length > 0 ? outputAmount[0] : 01;
-
-        ProcessingRecipeBuilder<MixingRecipe> builder =
-                new ProcessingRecipeBuilder<>(MixingRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, getItemName(output) + "_from_mixing_" + getItemName(input)));
-
-        builder.require(input).output(output, value).build(pWriter);
-    }
-    protected static void mixing(ItemLike input, List<ItemLike> output, Consumer<FinishedRecipe> pWriter, int... outputAmount) {
-        int value = outputAmount.length > 0 ? outputAmount[0] : 01;
-
-        ProcessingRecipeBuilder<MixingRecipe> builder =
-                new ProcessingRecipeBuilder<>(MixingRecipe::new, fromNamespaceAndPath(McMod.MOD_ID, getItemName(output.get(0)) + "_from_mixing_" + getItemName(input)));
-
-        builder.require(input);
-        for (ItemLike out : output)
-            builder.output(out, value);
-
-        builder.build(pWriter);
-    }
-    */
 
     public static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTIme, @NotNull String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");

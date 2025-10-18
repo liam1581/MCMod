@@ -1,7 +1,6 @@
 package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
-import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

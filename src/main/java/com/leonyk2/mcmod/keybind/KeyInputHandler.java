@@ -13,10 +13,5 @@ public class KeyInputHandler {
         if (ANTRAG_KEY.isDown()) {
             Minecraft.getInstance().setScreen(new AntragScreen());
         }
-        /*
-        if (TEST_KEY.isDown()) {
-            Minecraft.getInstance().setScreen(new TestScreen());
-        }
-         */
     }
 }

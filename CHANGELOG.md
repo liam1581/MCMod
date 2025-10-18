@@ -2,6 +2,9 @@
 
 ---
 ## v3.5.x
+### v3.5.1-r3
+- a little bit of cleanup (removed unused imports etc)
+
 ### v3.5.1-r2
 - added limesand -> White Phosphorous recipe
 
@@ -35,8 +38,8 @@
 - Changed stuff in CHANGELOG.md (early naming scheme for versions and some other stuff)
 
 ### v3.4.0-r3
-- exactly same as 3.4.0-r2 but different i guess QwQ
-- maybe something changed because i completely re-ran data (deleted generated datagen stuff and just ran it again)
+- exactly same as 3.4.0-r2 but different I guess QwQ
+- maybe something changed because I completely re-ran data (deleted generated datagen stuff and just ran it again)
 
 ### v3.4.0-r2
 - changed "new ResourceLocation()" back to fromNamespaceAndPath() in BlockStateProvider
@@ -91,7 +94,7 @@
 
 ### v3.0.0
 - McMod is now a create mod addon
-- removed the runDataAndClient & runDataAndJar things bcs they dont (fucking) work
+- removed the runDataAndClient & runDataAndJar things bcs they don't (fucking) work
 - added recipe functions for create mod pressing, crushing, mixing and more
 - added diamond recipe (pressing a coal 25 times or a coal block 25 times for a diamond block)
 - added Incomplete diamond (for the above recipes)
@@ -100,8 +103,8 @@
 
 ## v2.6.x
 ### v2.6.1-r2
-- changed the build.gradle so i can run the datagen and then client with one thing (bcs im still lazy) as well as datagen + jar
-- also corrected some spelling mistakes in this file (CHANGELOG.md) and changed one mistake where i forgot 2 words
+- changed the build.gradle, so I can run the datagen and then client with one thing (bcs im still lazy) as well as datagen + jar
+- also corrected some spelling mistakes in this file (CHANGELOG.md) and changed one mistake where I forgot 2 words
 
 ### v2.6.1
 - added vanilla+ recipes for blasting cobble/stone/sand
@@ -351,7 +354,7 @@
 
 # 🖥️ Screens
 - **Antrag screen**: GUI equivalent of `/antrag` (no special support)
-- **Test screen**: GUI for testing stuff i created sometimes, isn't added in the version, just existing not used code
+- **Test screen**: GUI for testing stuff I created sometimes, isn't added in the version, just existing not used code
 
 ---
 

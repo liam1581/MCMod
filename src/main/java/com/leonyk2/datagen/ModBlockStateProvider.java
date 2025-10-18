@@ -2,12 +2,8 @@ package com.leonyk2.datagen;
 
 import com.leonyk2.mcmod.McMod;
 import com.leonyk2.mcmod.block.ModBlocks;
-import com.leonyk2.mcmod.compat.CompatHandler;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
