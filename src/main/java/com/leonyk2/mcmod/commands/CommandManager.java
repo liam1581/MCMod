@@ -1,5 +1,6 @@
 package com.leonyk2.mcmod.commands;
 
+import com.leonyk2.mcmod.McModConfig;
 import com.leonyk2.mcmod.commands.afk.AfkCommand;
 import com.leonyk2.mcmod.commands.antrag.AntragCommand;
 import com.leonyk2.mcmod.commands.debug.DebugCommand;
@@ -57,10 +58,13 @@ public class CommandManager {
 		//   change rts gamerule     "/randomTickSpeed NUM)    (nur op)
 		OthersCommand.register(dispatcher, event.getBuildContext());
 
+        boolean debugEnabled = McModConfig.COMMON.enableDebugCommand.get();
+        boolean nbtEnabled = McModConfig.COMMON.enableNBTCommands.get();
+
         //dumptNbt
         //dump nbt data of held item "/dumpNbt"
-        DumpNbtCommand.register(dispatcher);
+        if (nbtEnabled) DumpNbtCommand.register(dispatcher);
 
-        DebugCommand.register(dispatcher);
+        if (debugEnabled) DebugCommand.register(dispatcher);
 	}
 }

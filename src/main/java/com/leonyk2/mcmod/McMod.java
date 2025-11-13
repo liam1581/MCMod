@@ -5,7 +5,9 @@ import com.leonyk2.mcmod.item.ModItems;
 import com.leonyk2.mcmod.sound.ModSounds;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import static com.leonyk2.mcmod.McMod.MOD_ID;
@@ -22,6 +24,8 @@ public class McMod {
 
         ModBlocks.register(modEventBus);
         ModCreativeModeTab.registerMod(modEventBus);
+
+        context.registerConfig(ModConfig.Type.COMMON, McModConfig.COMMON_SPEC);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -2,6 +2,9 @@
 
 ---
 ## v3.5.x
+### v3.5.2
+- added a config file, for now only to enable the debug and NBT commands (both are set to false as default)
+
 ### v3.5.1-r3
 - a little bit of cleanup (removed unused imports etc)
 
