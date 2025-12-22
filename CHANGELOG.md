@@ -2,12 +2,13 @@
 
 ---
 ## v3.6.x
+### v3.6.9 (funny)
+- added /smelt command that smelts items in hand
+
 ### v3.6.0
-- update to create 6.0.8 (mandatory) aswell as sophisticated backpacks/core update and tfmg update (3.24.12.1411;1.2.107.1240;1.0.2d)
 - added config for enabling/disabling debug command and nbt command
 - changed lang function
 - added hide_and_seek command into the game (i forgot to register it, it was just in code xD)
-- 
 
 ---
 
