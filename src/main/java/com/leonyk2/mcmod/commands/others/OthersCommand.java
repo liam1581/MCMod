@@ -12,9 +12,17 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.level.Level;
 
+
+import java.util.Optional;
 
 import static com.leonyk2.mcmod.util.Functions.*;
 
@@ -56,6 +64,48 @@ public class OthersCommand {
                 Commands.literal("enchantAll")
                         .requires(source -> source.hasPermission(2))
                         .executes(OthersCommand::enchantAll)
+        );
+        dispatcher.register(
+                Commands.literal("smelt")
+                        .executes(commandContext -> {
+                            CommandSourceStack source = commandContext.getSource();
+
+                            ServerPlayer player = source.getPlayerOrException();
+                            ItemStack held = player.getMainHandItem();
+
+                            if (held.isEmpty()) {
+                                source.sendFailure(Component.literal("You dumb fuck, you gotta have something IN HAND to smelt!"));
+                                return 0;
+                            }
+
+                            Level lvl = player.level();
+                            RecipeManager recipeMan = lvl.getRecipeManager();
+
+                            SimpleContainer container = new SimpleContainer(held);
+
+                            Optional<SmeltingRecipe> recipe = recipeMan.getRecipeFor(RecipeType.SMELTING, container, lvl);
+
+                            if (recipe.isEmpty()) {
+                                source.sendFailure(Component.literal("No recipe found for smelting!"));
+                                return 0;
+                            }
+
+                            ItemStack result = recipe.get().getResultItem(lvl.registryAccess());
+                            if (result.isEmpty()) {
+                                return 0;
+                            }
+
+                            ItemStack smelted = result.copy();
+                            smelted.setCount(result.getCount() * held.getCount());
+
+                            player.setItemInHand(InteractionHand.MAIN_HAND, smelted);
+
+                            source.sendSuccess(
+                                    () -> Component.literal("Smelted held items"),
+                                    false);
+
+                            return 1;
+                        })
         );
     }
 

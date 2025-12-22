@@ -47,6 +47,9 @@ minecraft {
     runs {
         // applies to all the run configs below
         configureEach {
+            property("mixin.env.remapRefMap", "true")
+            property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+
             workingDirectory project.file('run')
 
             // Recommended logging data for a userdev environment
@@ -77,6 +80,9 @@ minecraft {
         }
 
         server {
+            property("mixin.env.remapRefMap", "true")
+            property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
         }
@@ -85,6 +91,9 @@ minecraft {
         // By default, the server will crash when no gametests are provided.
         // The gametest system is also enabled by default for other run configs under the /test command.
         gameTestServer {
+            property("mixin.env.remapRefMap", "true")
+            property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+
             property 'forge.enabledGameTestNamespaces', mod_id
         }
 
@@ -182,11 +191,11 @@ dependencies {
     runtimeOnly fg.deobf("botarium:botarium:${botarium_version}")
 
     // Sophisticated Backpacks
-    implementation fg.deobf("sophisticatedbackpacks:sophisticatedbackpacks:${sb_version}")
-    runtimeOnly fg.deobf("sophisticatedbackpacks:sophisticatedbackpacks:${sb_version}")
+    implementation fg.deobf("sophisticatedbackpacks:sbp:${sb_version}")
+    runtimeOnly fg.deobf("sophisticatedbackpacks:sbp:${sb_version}")
     // Sophisticated Core
-    implementation fg.deobf("sophisticatedcore:sophisticatedcore:${sc_version}")
-    runtimeOnly fg.deobf("sophisticatedcore:sophisticatedcore:${sc_version}")
+    implementation fg.deobf("sophisticatedcore:sc:${sc_version}")
+    runtimeOnly fg.deobf("sophisticatedcore:sc:${sc_version}")
 
     // tfmg
     implementation fg.deobf("tfmg:tfmg:${tfmg_version}")

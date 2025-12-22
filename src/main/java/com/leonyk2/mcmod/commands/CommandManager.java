@@ -4,6 +4,7 @@ import com.leonyk2.mcmod.McModConfig;
 import com.leonyk2.mcmod.commands.afk.AfkCommand;
 import com.leonyk2.mcmod.commands.antrag.AntragCommand;
 import com.leonyk2.mcmod.commands.debug.DebugCommand;
+import com.leonyk2.mcmod.commands.hide_and_seek.Has;
 import com.leonyk2.mcmod.commands.home.HomeCommand;
 import com.leonyk2.mcmod.commands.nbt.DumpNbtCommand;
 import com.leonyk2.mcmod.commands.others.OthersCommand;
@@ -14,6 +15,8 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import static com.leonyk2.mcmod.util.Functions.println;
 
 
 @Mod.EventBusSubscriber
@@ -57,6 +60,9 @@ public class CommandManager {
 		//-->randomTickSpeed
 		//   change rts gamerule     "/randomTickSpeed NUM)    (nur op)
 		OthersCommand.register(dispatcher, event.getBuildContext());
+
+        //hide_and_seek
+        Has.register(dispatcher);
 
         boolean debugEnabled = McModConfig.COMMON.enableDebugCommand.get();
         boolean nbtEnabled = McModConfig.COMMON.enableNBTCommands.get();

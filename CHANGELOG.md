@@ -1,7 +1,22 @@
 # 📜 Changelog & Documentation
 
 ---
+## v3.6.x
+### v3.6.0
+- update to create 6.0.8 (mandatory) aswell as sophisticated backpacks/core update and tfmg update (3.24.12.1411;1.2.107.1240;1.0.2d)
+- added config for enabling/disabling debug command and nbt command
+- changed lang function
+- added hide_and_seek command into the game (i forgot to register it, it was just in code xD)
+- 
+
+---
+
 ## v3.5.x
+### v3.5.2-r2
+- changed mod dependency versions
+- (it is planned to go to create version 6.0.8, only if new age and tfmg drop updates supporting it though)
+- added hide_and_seek command
+
 ### v3.5.2
 - added a config file, for now only to enable the debug and NBT commands (both are set to false as default)
 
@@ -233,140 +248,3 @@
     - Sapphire Sword
     - AFK/Antrag/Home/NBT/ViewCoords commands
     - Coal block from charcoal & quartz from quartz block recipes
-
----
-
-# ℹ️ Info
-- For all music discs (except *Ne Leiche*), you must wait a few seconds before the music starts
-- JEI added as a dependency (not mandatory, mainly for build environment)
-- Create added as dependency (mandatory)
-- Updated parchment version
-- Known bug: dropdowns allow OP & non-OP actions at the same time (in Antrag screen)
-- Working on debug check system
-
----
-
-# 📚 Documented Functions
-- `runCommand` (both overloads)
-- `enchant`
-- `enchantWithAll`
-- `println`
-- `sendMessage`
-
----
-
-# 🍳 Recipes
-
-**Coal Block (from Charcoal)**  
-- CCC
-- CCC
-- CCC
-- C = Charcoal → Coal Block
-
-**Sapphire (from Nether Stars)**  
-- SSS
-- SSS
-- SSS
-- S = Nether Star → Sapphire
-
-**Nether Star Stick (from Sapphire)**  
-- S
-- S
-- S = Sapphire → Nether Star Stick
-
-**Sapphire Sword**  
-- S
-- S
-- \#
-- S = Sapphire
-- \# = Nether Star Stick → Sapphire Sword
-
-**Tables**
-- LLL
-- S S
-- L = Log
-- S = Stick → Log Name-Table
-
-**Quartz (from Quartz Block)** *(Shapeless)*
-- Quartz Block → 4 Quartz
-
-**Diamond/Diamond Block** *(Create Recipe Sequence)*
-- Pressing coal/coal block 25 times resulting in the corresponding item
-
-**Edible White/Blue Stuff** *(Shapeless)*
-- White/Blue Stuff → Edible White/Blue Stuff
-
----
-
-# Items
-- Music Discs:
-    - `beats/beats bb`
-    - `crush/crush bb`
-    - `tage wach/tage wach bb`
-    - `leiche`
-- Linseneintopf
-- Sapphire Sword
-- Sapphire
-- Nether Star Stick
-- Incomplete Diamond
-- Incomplete Diamond Block
-
-# Blocks
-- Tables (based on the wood types in game)
-
----
-
-# ⌨️ Commands
-
-### `/afk`
-- `/afk-init` — initializes AFK scoreboard (OP only)
-- `/afk` — marks player as AFK
-- `/un-afk` — un-AFKs player
-
-### `/viewCoords`
-- Outputs coordinates and dimension of given player
-
-### `/nbt`
-- `/dumpNbt` — prints held item’s NBT (console only)
-- `/listItemNbtTags` — attempts to print all valid NBT tags (not fully working + console only)
-
-### `/home`
-- `/home public/private set` — sets a home
-- `/home public/private tp` — teleports to home
-- `/home public/private clear` — clears home (special behavior for public homes + OPs)
-
-### `/antrag`
-- `/antrag` — creates an antrag with text
-- `/antrag delete` — deletes an antrag by ID (slightly buggy)
-- `/antrag list` — lists all antrags (more info for OPs)
-- `/antrag accept` — accepts an antrag (OP only)
-- `/antrag deny` — denies an antrag (OP only)
-- `/antrag special` — creates an antrag for another user (OP only)
-- `/antrag special custom` — creates an antrag for a custom username (OP only)
-
-### Other Commands
-- `/randomTickSpeed` — sets random tick speed (OP only)
-- `/nv` — gives all players infinite night vision (OP only)
-- `/enchantB` — vanilla `/enchant` but allows levels up to 255 (OP only)
-- `/enchantAll` — enchants held item with all enchantments at level 255 (except thorns & curses) (OP only)
-
-### `/debug`
-- `/debug testCommands` — runs all mod commands (except itself)
-
----
-
-# 🖥️ Screens
-- **Antrag screen**: GUI equivalent of `/antrag` (no special support)
-- **Test screen**: GUI for testing stuff I created sometimes, isn't added in the version, just existing not used code
-
----
-
-# ⌨️ Keybinds
-- `H` (default) — opens Antrag screen (configurable in settings)
-- `P` (default, in code) - opens Test screen (not used, just existing in code)
-
----
-
-# 🧩 Widgets
-- `DropdownWidget`
-- `DropdownWidgetTranslatable` same as DropdownWidget just takes list of id's that are being handled as Component.translatable's

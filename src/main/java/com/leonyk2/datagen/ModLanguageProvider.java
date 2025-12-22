@@ -16,6 +16,6 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addLang(this::add, this::add, this::add, locale);
+        addLang(this, locale);
     }
 }

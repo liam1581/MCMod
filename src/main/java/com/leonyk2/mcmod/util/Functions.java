@@ -21,6 +21,7 @@ public class Functions {
     public static void runCommand(CommandSourceStack source, String command) {
         source.getServer().getCommands().performPrefixedCommand(source, command);
     }
+
     /**
      * Runs the mc command provided in the argument
      * @param command the command that should be run
@@ -127,5 +128,14 @@ public class Functions {
      */
     public static void println(String x) {
         System.out.println(x);
+    }
+    public static void println(double x) {
+        System.out.println(x);
+    }
+    public static void println(boolean x) {
+        System.out.println(x);
+    }
+    public static void println(Component x) {
+        System.out.println(x.getString());
     }
 }

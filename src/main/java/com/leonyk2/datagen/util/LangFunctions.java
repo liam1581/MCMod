@@ -4,72 +4,69 @@ import com.leonyk2.mcmod.block.ModBlocks;
 import com.leonyk2.mcmod.item.ModItems;
 import com.leonyk2.mcmod.keybind.Keybinds;
 import com.leonyk2.mcmod.sound.ModSounds;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-
-import java.util.function.BiConsumer;
+import net.minecraftforge.common.data.LanguageProvider;
 
 public class LangFunctions {
-    public static void addLang(BiConsumer<String, String> adder, BiConsumer<Item, String> itemAdder, BiConsumer<Block, String> blockAdder, String locale) {
+    public static void addLang(LanguageProvider lang, String locale) {
         if (locale.equalsIgnoreCase("en_us")) {
             // Items
-            itemAdder.accept(ModItems.LINSENEINTOPF.get(), "Linseneintopf");
-            itemAdder.accept(ModItems.UNCOMPLETE_DIAMOND.get(), "Incomplete Diamond");
-            itemAdder.accept(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get(), "Incomplete Diamond Block");
-            itemAdder.accept(ModItems.SAPPHIRE.get(), "Sapphire");
-            itemAdder.accept(ModItems.SAPPHIRE_SWORD.get(), "Sapphire Sword");
-            itemAdder.accept(ModItems.NETHER_STICK.get(), "Nether Star Stick");
+            lang.add(ModItems.LINSENEINTOPF.get(), "Linseneintopf");
+            lang.add(ModItems.UNCOMPLETE_DIAMOND.get(), "Incomplete Diamond");
+            lang.add(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get(), "Incomplete Diamond Block");
+            lang.add(ModItems.SAPPHIRE.get(), "Sapphire");
+            lang.add(ModItems.SAPPHIRE_SWORD.get(), "Sapphire Sword");
+            lang.add(ModItems.NETHER_STICK.get(), "Nether Star Stick");
 
             // Blocks
-            blockAdder.accept(ModBlocks.CREATIFY_BLOCK.get(), "Creatify Block");
-            blockAdder.accept(ModBlocks.SAPPHIRE_BLOCK.get(), "Sapphire Block");
-            //adder.accept(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
-            blockAdder.accept(ModBlocks.OAK_TABLE.get(), "Oak Table");
-            blockAdder.accept(ModBlocks.DARK_OAK_TABLE.get(), "Dark Oak Table");
-            blockAdder.accept(ModBlocks.BIRCH_TABLE.get(), "Birch Table");
-            blockAdder.accept(ModBlocks.JUNGLE_TABLE.get(), "Jungle Table");
-            blockAdder.accept(ModBlocks.SPRUCE_TABLE.get(), "Spruce Table");
-            blockAdder.accept(ModBlocks.ACACIA_TABLE.get(), "Acacia Table");
-            blockAdder.accept(ModBlocks.MANGROVE_TABLE.get(), "Mangrove Table");
-            blockAdder.accept(ModBlocks.CHERRY_TABLE.get(), "Cherry Table");
+            lang.add(ModBlocks.CREATIFY_BLOCK.get(), "Creatify Block");
+            lang.add(ModBlocks.SAPPHIRE_BLOCK.get(), "Sapphire Block");
+            //lang.add(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
+            lang.add(ModBlocks.OAK_TABLE.get(), "Oak Table");
+            lang.add(ModBlocks.DARK_OAK_TABLE.get(), "Dark Oak Table");
+            lang.add(ModBlocks.BIRCH_TABLE.get(), "Birch Table");
+            lang.add(ModBlocks.JUNGLE_TABLE.get(), "Jungle Table");
+            lang.add(ModBlocks.SPRUCE_TABLE.get(), "Spruce Table");
+            lang.add(ModBlocks.ACACIA_TABLE.get(), "Acacia Table");
+            lang.add(ModBlocks.MANGROVE_TABLE.get(), "Mangrove Table");
+            lang.add(ModBlocks.CHERRY_TABLE.get(), "Cherry Table");
             // BOP
-            blockAdder.accept(ModBlocks.FIR_TABLE.get(), "Fir Table");
-            blockAdder.accept(ModBlocks.REDWOOD_TABLE.get(), "Redwood Table");
-            blockAdder.accept(ModBlocks.MAHOGANY_TABLE.get(), "Mahogany Table");
-            blockAdder.accept(ModBlocks.JACARANDA_TABLE.get(), "Jacaranda Table");
-            blockAdder.accept(ModBlocks.PALM_TABLE.get(), "Palm Table");
-            blockAdder.accept(ModBlocks.WILLOW_TABLE.get(), "Willow Table");
-            blockAdder.accept(ModBlocks.DEAD_TABLE.get(), "Dead Table");
-            blockAdder.accept(ModBlocks.MAGIC_TABLE.get(), "Magic Table");
-            blockAdder.accept(ModBlocks.UMBRAN_TABLE.get(), "Umbran Table");
-            blockAdder.accept(ModBlocks.HELLBARK_TABLE.get(), "Hellbark Table");
+            lang.add(ModBlocks.FIR_TABLE.get(), "Fir Table");
+            lang.add(ModBlocks.REDWOOD_TABLE.get(), "Redwood Table");
+            lang.add(ModBlocks.MAHOGANY_TABLE.get(), "Mahogany Table");
+            lang.add(ModBlocks.JACARANDA_TABLE.get(), "Jacaranda Table");
+            lang.add(ModBlocks.PALM_TABLE.get(), "Palm Table");
+            lang.add(ModBlocks.WILLOW_TABLE.get(), "Willow Table");
+            lang.add(ModBlocks.DEAD_TABLE.get(), "Dead Table");
+            lang.add(ModBlocks.MAGIC_TABLE.get(), "Magic Table");
+            lang.add(ModBlocks.UMBRAN_TABLE.get(), "Umbran Table");
+            lang.add(ModBlocks.HELLBARK_TABLE.get(), "Hellbark Table");
 
             // Creative Mode Tabs
-            adder.accept("creativetab.mcmod_tab", "McMod Tab");
-            adder.accept("creativetab.mcmod_tab_bop", "McMod Tab BOP");
+            lang.add("creativetab.mcmod_tab", "McMod Tab");
+            lang.add("creativetab.mcmod_tab_bop", "McMod Tab BOP");
 
             // Keybinds / Category's
-            adder.accept(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
-            adder.accept(Keybinds.ANTRAG_KEY.getName(), "Antrag Key");
+            lang.add(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
+            lang.add(Keybinds.ANTRAG_KEY.getName(), "Antrag Key");
 
             // Screens & subcategory's
-            adder.accept("screens.mcmod.antrag.name", "Antrag Menu");
-            adder.accept("screens.mcmod.antrag.button.submit", "Submit");
+            lang.add("screens.mcmod.antrag.name", "Antrag Menu");
+            lang.add("screens.mcmod.antrag.button.submit", "Submit");
 
-            adder.accept("screens.mcmod.antrag.OPTIONS.antrag", "Antrag");
-            adder.accept("screens.mcmod.antrag.OPTIONS.delete", "Delete");
-            adder.accept("screens.mcmod.antrag.OPTIONS.list", "List");
-            adder.accept("screens.mcmod.antrag.OPTIONS.accept", "Accept");
-            adder.accept("screens.mcmod.antrag.OPTIONS.deny", "Deny");
+            lang.add("screens.mcmod.antrag.OPTIONS.antrag", "Antrag");
+            lang.add("screens.mcmod.antrag.OPTIONS.delete", "Delete");
+            lang.add("screens.mcmod.antrag.OPTIONS.list", "List");
+            lang.add("screens.mcmod.antrag.OPTIONS.add", "Accept");
+            lang.add("screens.mcmod.antrag.OPTIONS.deny", "Deny");
 
             // Commands
-            adder.accept("commands.mcmod.afk.players", "AFK Players");
-            adder.accept("commands.mcmod.afk.scoreboard_init", "AFK Scoreboard initialized");
-            adder.accept("commands.mcmod.afk.scoreboard_not_init", "AFK scoreboard not initialized. Ask an admin to run /afk-init.");
-            adder.accept("commands.mcmod.afk.is_afk", "is now AFK");
-            adder.accept("commands.mcmod.afk.is_no_afk", "is no longer AFK");
+            lang.add("commands.mcmod.afk.players", "AFK Players");
+            lang.add("commands.mcmod.afk.scoreboard_init", "AFK Scoreboard initialized");
+            lang.add("commands.mcmod.afk.scoreboard_not_init", "AFK scoreboard not initialized. Ask an admin to run /afk-init.");
+            lang.add("commands.mcmod.afk.is_afk", "is now AFK");
+            lang.add("commands.mcmod.afk.is_no_afk", "is no longer AFK");
 
-            adder.accept("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
+            lang.add("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
 
             // Sounds
             assert ModSounds.BEATS.getId() != null;
@@ -79,78 +76,78 @@ public class LangFunctions {
             assert ModSounds.TAGE_WACH.getId() != null;
             assert ModSounds.TAGE_WACH_BB.getId() != null;
             assert ModSounds.LEICHE.getId() != null;
-            adder.accept("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
-            adder.accept("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
-            adder.accept("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
-            adder.accept("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
-            adder.accept("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
-            adder.accept("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
-            adder.accept("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
+            lang.add("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
+            lang.add("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
+            lang.add("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
+            lang.add("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
+            lang.add("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
+            lang.add("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
+            lang.add("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
 
             // Music Discs / Desc
-            itemAdder.accept(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
-            itemAdder.accept(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
-            itemAdder.accept(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
-            itemAdder.accept(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
-            itemAdder.accept(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
-            itemAdder.accept(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
-            itemAdder.accept(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
+            lang.add(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
+            lang.add(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
+            lang.add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
+            lang.add(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
+            lang.add(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
+            lang.add(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
+            lang.add(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
 
-            adder.accept("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
-            adder.accept("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
-            adder.accept("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
-            adder.accept("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
-            adder.accept("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
-            adder.accept("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
-            adder.accept("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
+            lang.add("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
+            lang.add("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
+            lang.add("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
+            lang.add("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
+            lang.add("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
+            lang.add("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
+            lang.add("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
         } else if (locale.equalsIgnoreCase("de_de")) {
             // Items
-            itemAdder.accept(ModItems.LINSENEINTOPF.get(), "Linseneintopf");
-            itemAdder.accept(ModItems.UNCOMPLETE_DIAMOND.get(), "Unvollständiger Diamant");
-            itemAdder.accept(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get(), "Unvollständiger Diamant Block");
-            itemAdder.accept(ModItems.SAPPHIRE.get(), "Saphir");
-            itemAdder.accept(ModItems.SAPPHIRE_SWORD.get(), "Saphir Schwert");
-            itemAdder.accept(ModItems.NETHER_STICK.get(), "Nether stern stock");
+            lang.add(ModItems.LINSENEINTOPF.get(), "Linseneintopf");
+            lang.add(ModItems.UNCOMPLETE_DIAMOND.get(), "Unvollständiger Diamant");
+            lang.add(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get(), "Unvollständiger Diamant Block");
+            lang.add(ModItems.SAPPHIRE.get(), "Saphir");
+            lang.add(ModItems.SAPPHIRE_SWORD.get(), "Saphir Schwert");
+            lang.add(ModItems.NETHER_STICK.get(), "Nether stern stock");
 
             // Blocks
-            blockAdder.accept(ModBlocks.CREATIFY_BLOCK.get(), "Kreatifizierungs Block");
-            blockAdder.accept(ModBlocks.SAPPHIRE_BLOCK.get(), "Saphir Block");
-            //adder.accept(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
-            blockAdder.accept(ModBlocks.OAK_TABLE.get(), "Eichen Tisch");
-            blockAdder.accept(ModBlocks.DARK_OAK_TABLE.get(), "Schwarzeichen Tisch");
-            blockAdder.accept(ModBlocks.BIRCH_TABLE.get(), "Birken Tisch");
-            blockAdder.accept(ModBlocks.JUNGLE_TABLE.get(), "Jungel Tisch");
-            blockAdder.accept(ModBlocks.SPRUCE_TABLE.get(), "Fichten Tisch");
-            blockAdder.accept(ModBlocks.ACACIA_TABLE.get(), "Akazien Tisch");
-            blockAdder.accept(ModBlocks.MANGROVE_TABLE.get(), "Mangroven Tisch");
-            blockAdder.accept(ModBlocks.CHERRY_TABLE.get(), "Kirsch Tisch");
+            lang.add(ModBlocks.CREATIFY_BLOCK.get(), "Kreatifizierungs Block");
+            lang.add(ModBlocks.SAPPHIRE_BLOCK.get(), "Saphir Block");
+            //lang.add(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
+            lang.add(ModBlocks.OAK_TABLE.get(), "Eichen Tisch");
+            lang.add(ModBlocks.DARK_OAK_TABLE.get(), "Schwarzeichen Tisch");
+            lang.add(ModBlocks.BIRCH_TABLE.get(), "Birken Tisch");
+            lang.add(ModBlocks.JUNGLE_TABLE.get(), "Jungel Tisch");
+            lang.add(ModBlocks.SPRUCE_TABLE.get(), "Fichten Tisch");
+            lang.add(ModBlocks.ACACIA_TABLE.get(), "Akazien Tisch");
+            lang.add(ModBlocks.MANGROVE_TABLE.get(), "Mangroven Tisch");
+            lang.add(ModBlocks.CHERRY_TABLE.get(), "Kirsch Tisch");
 
             // Creative Mode Tabs
-            adder.accept("creativetab.mcmod_tab", "McMod Tab");
-            adder.accept("creativetab.mcmod_tab_bop", "McMod Tab BOP");
+            lang.add("creativetab.mcmod_tab", "McMod Tab");
+            lang.add("creativetab.mcmod_tab_bop", "McMod Tab BOP");
 
             // Keybinds / Category's
-            adder.accept(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
-            adder.accept(Keybinds.ANTRAG_KEY.getName(), "Antrag Knopf");
+            lang.add(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
+            lang.add(Keybinds.ANTRAG_KEY.getName(), "Antrag Knopf");
 
             // Screens & subcategory's
-            adder.accept("screens.mcmod.antrag.name", "Antrag Menü");
-            adder.accept("screens.mcmod.antrag.button.submit", "Abgeben");
+            lang.add("screens.mcmod.antrag.name", "Antrag Menü");
+            lang.add("screens.mcmod.antrag.button.submit", "Abgeben");
 
-            adder.accept("screens.mcmod.antrag.OPTIONS.antrag", "Antrag");
-            adder.accept("screens.mcmod.antrag.OPTIONS.delete", "Löschen");
-            adder.accept("screens.mcmod.antrag.OPTIONS.list", "Listen");
-            adder.accept("screens.mcmod.antrag.OPTIONS.accept", "Akzeptieren");
-            adder.accept("screens.mcmod.antrag.OPTIONS.deny", "Ablehnen");
+            lang.add("screens.mcmod.antrag.OPTIONS.antrag", "Antrag");
+            lang.add("screens.mcmod.antrag.OPTIONS.delete", "Löschen");
+            lang.add("screens.mcmod.antrag.OPTIONS.list", "Listen");
+            lang.add("screens.mcmod.antrag.OPTIONS.add", "Akzeptieren");
+            lang.add("screens.mcmod.antrag.OPTIONS.deny", "Ablehnen");
 
             // Commands
-            adder.accept("commands.mcmod.afk.players", "AFK Spieler");
-            adder.accept("commands.mcmod.afk.scoreboard_init", "AFK Scoreboard initialisiert");
-            adder.accept("commands.mcmod.afk.scoreboard_not_init", "AFK scoreboard nicht initialisiert. Frage einen admin ob er /afk-init ausführen kann.");
-            adder.accept("commands.mcmod.afk.is_afk", "ist jetzt AFK");
-            adder.accept("commands.mcmod.afk.is_no_afk", "ist nicht mehr AFK");
+            lang.add("commands.mcmod.afk.players", "AFK Spieler");
+            lang.add("commands.mcmod.afk.scoreboard_init", "AFK Scoreboard initialisiert");
+            lang.add("commands.mcmod.afk.scoreboard_not_init", "AFK scoreboard nicht initialisiert. Frage einen admin ob er /afk-init ausführen kann.");
+            lang.add("commands.mcmod.afk.is_afk", "ist jetzt AFK");
+            lang.add("commands.mcmod.afk.is_no_afk", "ist nicht mehr AFK");
 
-            adder.accept("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
+            lang.add("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
 
             // Sounds
             assert ModSounds.BEATS.getId() != null;
@@ -160,30 +157,30 @@ public class LangFunctions {
             assert ModSounds.TAGE_WACH.getId() != null;
             assert ModSounds.TAGE_WACH_BB.getId() != null;
             assert ModSounds.LEICHE.getId() != null;
-            adder.accept("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
-            adder.accept("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
-            adder.accept("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
-            adder.accept("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
-            adder.accept("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
-            adder.accept("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
-            adder.accept("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
+            lang.add("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
+            lang.add("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
+            lang.add("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
+            lang.add("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
+            lang.add("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
+            lang.add("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
+            lang.add("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
 
             // Music Discs / Desc
-            itemAdder.accept(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
-            itemAdder.accept(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
-            itemAdder.accept(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
-            itemAdder.accept(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
-            itemAdder.accept(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
-            itemAdder.accept(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
-            itemAdder.accept(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
+            lang.add(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
+            lang.add(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
+            lang.add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
+            lang.add(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
+            lang.add(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
+            lang.add(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
+            lang.add(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
 
-            adder.accept("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
-            adder.accept("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
-            adder.accept("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
-            adder.accept("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
-            adder.accept("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
-            adder.accept("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
-            adder.accept("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
+            lang.add("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
+            lang.add("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
+            lang.add("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
+            lang.add("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
+            lang.add("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
+            lang.add("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
+            lang.add("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
         }
     }
 }
