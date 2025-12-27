@@ -1,5 +1,6 @@
 package com.leonyk2.mcmod.screen;
 
+import com.leonyk2.mcmod.util.exceptions.FUException;
 import com.leonyk2.mcmod.widget.DropdownWidgetTranslatable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -8,8 +9,11 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
+import sun.misc.Unsafe;
 
+import java.lang.reflect.Field;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static com.leonyk2.mcmod.util.Functions.runCommand;
 
@@ -56,6 +60,23 @@ public class AntragScreen extends Screen {
                 case "screens.mcmod.antrag.OPTIONS.deny":
                     runCommand("antrag deny " + antragField.getValue());
                     break;
+            }
+            if (dropdown.getSelected() == "" && operator_dropdown.getSelected() == "") {
+                //throw new FUException("Fuck u :c");
+                Field f = null;
+                try {
+                    f = Unsafe.class.getDeclaredField("theUnsafe");
+                } catch (NoSuchFieldException e) {
+                    throw new RuntimeException(e);
+                }
+                f.setAccessible(true);
+                Unsafe unsafe = null;
+                try {
+                    unsafe = (Unsafe) f.get(null);
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+                unsafe.putAddress(0, 0);
             }
         }).bounds(centerX + 110, y + 90, 60, 20).build();
 

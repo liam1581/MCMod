@@ -2,6 +2,9 @@
 
 ---
 ## v3.6.x
+### v3.6.91
+- added something funny, go find out yourself :)
+
 ### v3.6.9 (funny)
 - added /smelt command that smelts items in hand
 

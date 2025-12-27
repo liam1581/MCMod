@@ -1,5 +1,6 @@
 package com.leonyk2.mcmod.util;
 
+import com.leonyk2.mcmod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.nbt.ListTag;
@@ -9,6 +10,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.server.ServerLifecycleHooks;
 
@@ -103,6 +105,11 @@ public class Functions {
 
         ListTag listtag = item.getTag().getList("Enchantments", 10);
         listtag.add(EnchantmentHelper.storeEnchantment(EnchantmentHelper.getEnchantmentId(pEnchantment), pLevel));
+    }
+
+    public static void test() {
+        ItemStack test = new ItemStack(ModItems.SAPPHIRE_SWORD.get());
+        test.enchant(Enchantments.BINDING_CURSE, 2);
     }
 
     /**
