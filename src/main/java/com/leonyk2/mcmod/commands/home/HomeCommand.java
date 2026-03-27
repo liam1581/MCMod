@@ -96,7 +96,7 @@ public class HomeCommand {
     private static int tpPrivateHome(ServerPlayer player, int id) {
         CompoundTag homes = player.getPersistentData().getCompound("Homes");
         if (!homes.contains(String.valueOf(id))) {
-            player.sendSystemMessage(Component.literal("No private home found at id " + id));
+            player.sendSystemMessage(Component.literal("You dumb fuck, you gotta set a home at " + id + " BEFORE YOU TRY TO USE IT"));
             return 0;
         }
 
@@ -113,7 +113,7 @@ public class HomeCommand {
     private static int clearPrivateHome(ServerPlayer player, int id) {
         CompoundTag homes = player.getPersistentData().getCompound("Homes");
         if (!homes.contains(String.valueOf(id))) {
-            player.sendSystemMessage(Component.literal("No private home found at id " + id));
+            player.sendSystemMessage(Component.literal("You dumb fuck, you gotta set a home at " + id + " BEFORE YOU TRY TO USE IT"));
             return 0;
         }
 
@@ -150,7 +150,7 @@ public class HomeCommand {
         CompoundTag tag = data.homes.get(id);
 
         if (tag == null) {
-            player.sendSystemMessage(Component.literal("No public home found at id " + id));
+            player.sendSystemMessage(Component.literal("You dumb fuck, you gotta set a public home at " + id + " BEFORE YOU TRY TO USE IT"));
             return 0;
         }
 
@@ -159,7 +159,7 @@ public class HomeCommand {
         double z = tag.getDouble("z");
 
         player.teleportTo(player.serverLevel(), x, y, z, player.getYRot(), player.getXRot());
-        player.sendSystemMessage(Component.literal("Teleported to public home " + id));
+        player.sendSystemMessage(Component.literal("You dumb fuck, you gotta set a public home at " + id + " BEFORE YOU TRY TO USE IT"));
         return 1;
     }
 

@@ -17,6 +17,7 @@ public class DebugCommand {
     }
 
     private static int debug_testCommands(CommandContext<CommandSourceStack> commandSourceStackCommandContext) {
+        runCommand("clear @s");
         runCommand("afk-init");
         runCommand("afk");
         runCommand("un-afk");
@@ -30,7 +31,7 @@ public class DebugCommand {
         runCommand("home public tp 10");
         runCommand("home tp 0");
         runCommand("nv");
-        runCommand("randomTickSpeed 10");
+        runCommand("rts 10");
         runCommand("schwänze");
         runCommand("give @s netherite_sword 36");
         assert Minecraft.getInstance().player != null;
@@ -47,7 +48,14 @@ public class DebugCommand {
         runCommand("antrag list");
         runCommand("antrag delete 0");
         runCommand("antrag list");
+        Minecraft.getInstance().player.getInventory().selected = 1;
+        runCommand("dumpNbt");
         runCommand("clear @s netherite_sword");
+        Minecraft.getInstance().player.getInventory().selected = 0;
+        runCommand("give @s oak_log 64");
+        runCommand("smelt");
+
+        // TODO: add hide_and_seek when working :3
         return 1;
     }
 }

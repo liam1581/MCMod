@@ -27,6 +27,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CREATIFY_BLOCK = registerBlock("creatify_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> PONDER_TEST_BLOCK = registerBlock("ponder_test_block",
+            () ->  new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
     public static final RegistryObject<Block> OAK_TABLE = registerBlock("oak_table",
             () -> new TableBlock(BlockBehaviour.Properties.of().strength(1.5F, 6.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> BIRCH_TABLE = registerBlock("birch_table",

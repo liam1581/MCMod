@@ -1,6 +1,21 @@
 # 📜 Changelog & Documentation
 
 ---
+
+## v3.7.x
+### 3.7.0
+- removed /listItemNbtTags (cause its basically useless)
+- changed /randomTickSpeed to /rts
+- fixed /smelt to include a required permission level
+- changed the creative mode tabs (one for the tables, one for everything else)
+- added more SASSYNESS :3
+- changed the /debug testCommands command to add all currently existing commands
+- also completely re-ran datagen (deleted old data files and generated new ones)
+- added testing ponder again xD
+- 
+
+---
+
 ## v3.6.x
 ### v3.6.91
 - added something funny, go find out yourself :)

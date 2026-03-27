@@ -26,6 +26,8 @@ public class ModCreativeModeTab {
 
                         pOutput.accept(ModBlocks.CREATIFY_BLOCK.get());
 
+                        pOutput.accept(ModBlocks.PONDER_TEST_BLOCK.get());
+
                         pOutput.accept(ModItems.BEATS_MUSIC_DISC.get());
                         pOutput.accept(ModItems.BEATS_BB_MUSIC_DISC.get());
                         pOutput.accept(ModItems.CRUSH_MUSIC_DISC.get());
@@ -33,22 +35,22 @@ public class ModCreativeModeTab {
                         pOutput.accept(ModItems.TAGE_WACH_MUSIC_DISC.get());
                         pOutput.accept(ModItems.TAGE_WACH_BB_MUSIC_DISC.get());
                         pOutput.accept(ModItems.LEICHE_MUSIC_DISC.get());
-
-                        pOutput.accept(ModBlocks.OAK_TABLE.get());
-                        pOutput.accept(ModBlocks.DARK_OAK_TABLE.get());
-                        pOutput.accept(ModBlocks.SPRUCE_TABLE.get());
-                        pOutput.accept(ModBlocks.BIRCH_TABLE.get());
-                        pOutput.accept(ModBlocks.JUNGLE_TABLE.get());
-                        pOutput.accept(ModBlocks.ACACIA_TABLE.get());
-                        pOutput.accept(ModBlocks.MANGROVE_TABLE.get());
-                        pOutput.accept(ModBlocks.CHERRY_TABLE.get());
                     }))
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> MCMOD_TAB_BOP = CREATIVE_MODE_TAB.register("mcmod_tab_bop",
+    public static final RegistryObject<CreativeModeTab> MCMOD_TABLES = CREATIVE_MODE_TAB.register("mcmod_tables",
                 () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.JACARANDA_TABLE.get().asItem()))
-                        .title(Component.translatable("creativetab.mcmod_tab_bop"))
+                        .title(Component.translatable("creativetab.mcmod_tables"))
                         .displayItems(((pParameters, pOutput) -> {
+                            pOutput.accept(ModBlocks.OAK_TABLE.get());
+                            pOutput.accept(ModBlocks.DARK_OAK_TABLE.get());
+                            pOutput.accept(ModBlocks.SPRUCE_TABLE.get());
+                            pOutput.accept(ModBlocks.BIRCH_TABLE.get());
+                            pOutput.accept(ModBlocks.JUNGLE_TABLE.get());
+                            pOutput.accept(ModBlocks.ACACIA_TABLE.get());
+                            pOutput.accept(ModBlocks.MANGROVE_TABLE.get());
+                            pOutput.accept(ModBlocks.CHERRY_TABLE.get());
+
                             pOutput.accept(ModBlocks.FIR_TABLE.get());
                             pOutput.accept(ModBlocks.REDWOOD_TABLE.get());
                             pOutput.accept(ModBlocks.MAHOGANY_TABLE.get());

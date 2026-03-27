@@ -19,6 +19,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.CREATIFY_BLOCK.get());
 
+        this.dropSelf(ModBlocks.PONDER_TEST_BLOCK.get());
+
         this.dropSelf(ModBlocks.OAK_TABLE.get());
         this.dropSelf(ModBlocks.BIRCH_TABLE.get());
         this.dropSelf(ModBlocks.ACACIA_TABLE.get());

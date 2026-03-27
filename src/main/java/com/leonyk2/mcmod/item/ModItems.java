@@ -21,9 +21,9 @@ public class ModItems {
     public static RegistryObject<Item> NETHER_STICK = ITEMS.register("nether_stick",
             () -> new Item(new Item.Properties()));
 
-    public static RegistryObject<Item> UNCOMPLETE_DIAMOND = ITEMS.register("incomplete_diamond",
+    public static RegistryObject<Item> INCOMPLETE_DIAMOND = ITEMS.register("incomplete_diamond",
             () -> new Item(new Item.Properties().stacksTo(1)));
-    public static RegistryObject<Item> UNCOMPLETE_DIAMOND_BLOCK = ITEMS.register("incomplete_diamond_block",
+    public static RegistryObject<Item> INCOMPLETE_DIAMOND_BLOCK = ITEMS.register("incomplete_diamond_block",
             () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static RegistryObject<Item> LINSENEINTOPF = ITEMS.register("linseneintopf",

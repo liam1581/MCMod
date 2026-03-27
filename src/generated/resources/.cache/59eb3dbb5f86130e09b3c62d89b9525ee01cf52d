@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-13T19:47:52.5212791	Loot Tables
+// 1.20.1	2026-03-27T20:48:25.2104313	Loot Tables
 be420e569a98dd632596303c90480ca93ff89266 data/mcmod/loot_tables/blocks/acacia_table.json
 48ea6f33fbb278f61d85cafb4b0a7775056b6cc3 data/mcmod/loot_tables/blocks/birch_table.json
 95afbc45689769ddec36b91bae7ac103315de483 data/mcmod/loot_tables/blocks/cherry_table.json
@@ -14,6 +14,7 @@ ff30da21d9f9c24072f4cbb177b172d9368dc529 data/mcmod/loot_tables/blocks/mahogany_
 f06fd2f9cb8f6ed35deb450d8db0e0797408dccc data/mcmod/loot_tables/blocks/mangrove_table.json
 00117d6df6ddf19a578e3a4a4b9eff8530260c07 data/mcmod/loot_tables/blocks/oak_table.json
 bf17e23e4ca7940faa8ee4726c8a40edf2568c24 data/mcmod/loot_tables/blocks/palm_table.json
+2cf3af5f6755b8a72a3949998b4ba0ab92b0fc6e data/mcmod/loot_tables/blocks/ponder_test_block.json
 0901cf393b4630bdcb6e31765887976cab5d437b data/mcmod/loot_tables/blocks/redwood_table.json
 4601a06fac9899e39890b035d341fdc43f797a8f data/mcmod/loot_tables/blocks/sapphire_block.json
 7b816523d99c2180ddf439040f1233cbf0a3092c data/mcmod/loot_tables/blocks/spruce_table.json

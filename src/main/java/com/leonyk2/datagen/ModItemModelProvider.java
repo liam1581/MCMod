@@ -25,7 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.LINSENEINTOPF);
         simpleItem(ModItems.NETHER_STICK);
-        simpleItem(ModItems.UNCOMPLETE_DIAMOND);
+        simpleItem(ModItems.INCOMPLETE_DIAMOND);
 
         diskItem(ModItems.LEICHE_MUSIC_DISC);
         diskItem(ModItems.BEATS_BB_MUSIC_DISC);

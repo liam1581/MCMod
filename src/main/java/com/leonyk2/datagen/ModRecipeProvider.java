@@ -141,7 +141,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // ------- Recipe Sequences - //
         SequencedAssemblyRecipeBuilder incomp_dia_builder =
                 new SequencedAssemblyRecipeBuilder(fromNamespaceAndPath(McMod.MOD_ID, "diamond_from_pressing_sequence_coal"));
-        incomp_dia_builder.require(Items.COAL).transitionTo(ModItems.UNCOMPLETE_DIAMOND.get());
+        incomp_dia_builder.require(Items.COAL).transitionTo(ModItems.INCOMPLETE_DIAMOND.get());
         for (int i = 0; i < 5; i++) {
             incomp_dia_builder.addStep(PressingRecipe::new, UnaryOperator.identity());
         }
@@ -149,7 +149,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SequencedAssemblyRecipeBuilder incomp_dia_block_builder =
                 new SequencedAssemblyRecipeBuilder(fromNamespaceAndPath(McMod.MOD_ID, "diamond_block_from_pressing_sequence_coal"));
-        incomp_dia_block_builder.require(Items.COAL_BLOCK).transitionTo(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get());
+        incomp_dia_block_builder.require(Items.COAL_BLOCK).transitionTo(ModItems.INCOMPLETE_DIAMOND_BLOCK.get());
         for (int i = 0; i < 5; i++) {
             incomp_dia_block_builder.addStep(PressingRecipe::new, UnaryOperator.identity());
         }

@@ -29,7 +29,7 @@ import static com.leonyk2.mcmod.util.Functions.*;
 public class OthersCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext ctx) {
         dispatcher.register(
-                Commands.literal("randomTickSpeed")
+                Commands.literal("rts")
                         .requires(source -> source.hasPermission(2))
                         .then(
                                 Commands.argument("number", IntegerArgumentType.integer())
@@ -67,6 +67,7 @@ public class OthersCommand {
         );
         dispatcher.register(
                 Commands.literal("smelt")
+                        .requires(commandSourceStack ->  commandSourceStack.hasPermission(0))
                         .executes(commandContext -> {
                             CommandSourceStack source = commandContext.getSource();
 

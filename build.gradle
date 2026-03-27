@@ -204,8 +204,8 @@ dependencies {
 
 
     /*
-    implementation fg.deobf("")
-    runtimeOnly fg.deobf("")
+    implementation fg.deobf("modid:filename:version")
+    runtimeOnly fg.deobf("modid:filename:version")
      */
 
     // For more info:

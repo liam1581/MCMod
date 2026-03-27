@@ -8,11 +8,46 @@ import net.minecraftforge.common.data.LanguageProvider;
 
 public class LangFunctions {
     public static void addLang(LanguageProvider lang, String locale) {
+        lang.add("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
+
+        assert ModSounds.BEATS.getId() != null;
+        assert ModSounds.BEATS_BB.getId() != null;
+        assert ModSounds.CRUSH.getId() != null;
+        assert ModSounds.CRUSH_BB.getId() != null;
+        assert ModSounds.TAGE_WACH.getId() != null;
+        assert ModSounds.TAGE_WACH_BB.getId() != null;
+        assert ModSounds.LEICHE.getId() != null;
+        // Sounds
+        lang.add("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
+        lang.add("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
+        lang.add("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
+        lang.add("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
+        lang.add("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
+        lang.add("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
+        lang.add("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
+
+        // Music Discs / Desc
+        lang.add(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
+        lang.add(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
+        lang.add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
+        lang.add(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
+        lang.add(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
+        lang.add(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
+        lang.add(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
+
+        lang.add("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
+        lang.add("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
+        lang.add("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
+        lang.add("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
+        lang.add("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
+        lang.add("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
+        lang.add("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
+
         if (locale.equalsIgnoreCase("en_us")) {
             // Items
             lang.add(ModItems.LINSENEINTOPF.get(), "Linseneintopf");
-            lang.add(ModItems.UNCOMPLETE_DIAMOND.get(), "Incomplete Diamond");
-            lang.add(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get(), "Incomplete Diamond Block");
+            lang.add(ModItems.INCOMPLETE_DIAMOND.get(), "Incomplete Diamond");
+            lang.add(ModItems.INCOMPLETE_DIAMOND_BLOCK.get(), "Incomplete Diamond Block");
             lang.add(ModItems.SAPPHIRE.get(), "Sapphire");
             lang.add(ModItems.SAPPHIRE_SWORD.get(), "Sapphire Sword");
             lang.add(ModItems.NETHER_STICK.get(), "Nether Star Stick");
@@ -20,7 +55,7 @@ public class LangFunctions {
             // Blocks
             lang.add(ModBlocks.CREATIFY_BLOCK.get(), "Creatify Block");
             lang.add(ModBlocks.SAPPHIRE_BLOCK.get(), "Sapphire Block");
-            //lang.add(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
+            lang.add(ModBlocks.PONDER_TEST_BLOCK.get(), "Ponder Test Block");
             lang.add(ModBlocks.OAK_TABLE.get(), "Oak Table");
             lang.add(ModBlocks.DARK_OAK_TABLE.get(), "Dark Oak Table");
             lang.add(ModBlocks.BIRCH_TABLE.get(), "Birch Table");
@@ -43,7 +78,7 @@ public class LangFunctions {
 
             // Creative Mode Tabs
             lang.add("creativetab.mcmod_tab", "McMod Tab");
-            lang.add("creativetab.mcmod_tab_bop", "McMod Tab BOP");
+            lang.add("creativetab.mcmod_tables", "McMod Tables");
 
             // Keybinds / Category's
             lang.add(Keybinds.ANTRAG_KEY.getCategory(), "McMod");
@@ -65,46 +100,11 @@ public class LangFunctions {
             lang.add("commands.mcmod.afk.scoreboard_not_init", "AFK scoreboard not initialized. Ask an admin to run /afk-init.");
             lang.add("commands.mcmod.afk.is_afk", "is now AFK");
             lang.add("commands.mcmod.afk.is_no_afk", "is no longer AFK");
-
-            lang.add("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
-
-            // Sounds
-            assert ModSounds.BEATS.getId() != null;
-            assert ModSounds.BEATS_BB.getId() != null;
-            assert ModSounds.CRUSH.getId() != null;
-            assert ModSounds.CRUSH_BB.getId() != null;
-            assert ModSounds.TAGE_WACH.getId() != null;
-            assert ModSounds.TAGE_WACH_BB.getId() != null;
-            assert ModSounds.LEICHE.getId() != null;
-            lang.add("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
-            lang.add("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
-            lang.add("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
-            lang.add("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
-            lang.add("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
-            lang.add("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
-            lang.add("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
-
-            // Music Discs / Desc
-            lang.add(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
-            lang.add(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
-            lang.add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
-            lang.add(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
-            lang.add(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
-            lang.add(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
-            lang.add(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
-
-            lang.add("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
-            lang.add("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
-            lang.add("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
-            lang.add("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
-            lang.add("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
-            lang.add("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
-            lang.add("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
         } else if (locale.equalsIgnoreCase("de_de")) {
             // Items
             lang.add(ModItems.LINSENEINTOPF.get(), "Linseneintopf");
-            lang.add(ModItems.UNCOMPLETE_DIAMOND.get(), "Unvollständiger Diamant");
-            lang.add(ModItems.UNCOMPLETE_DIAMOND_BLOCK.get(), "Unvollständiger Diamant Block");
+            lang.add(ModItems.INCOMPLETE_DIAMOND.get(), "Unvollständiger Diamant");
+            lang.add(ModItems.INCOMPLETE_DIAMOND_BLOCK.get(), "Unvollständiger Diamant Block");
             lang.add(ModItems.SAPPHIRE.get(), "Saphir");
             lang.add(ModItems.SAPPHIRE_SWORD.get(), "Saphir Schwert");
             lang.add(ModItems.NETHER_STICK.get(), "Nether stern stock");
@@ -112,7 +112,7 @@ public class LangFunctions {
             // Blocks
             lang.add(ModBlocks.CREATIFY_BLOCK.get(), "Kreatifizierungs Block");
             lang.add(ModBlocks.SAPPHIRE_BLOCK.get(), "Saphir Block");
-            //lang.add(ModBlocks.TEST_PONDER.get(), "Ponder test Block");
+            lang.add(ModBlocks.PONDER_TEST_BLOCK.get(), "Ponder Test Block");
             lang.add(ModBlocks.OAK_TABLE.get(), "Eichen Tisch");
             lang.add(ModBlocks.DARK_OAK_TABLE.get(), "Schwarzeichen Tisch");
             lang.add(ModBlocks.BIRCH_TABLE.get(), "Birken Tisch");
@@ -146,41 +146,6 @@ public class LangFunctions {
             lang.add("commands.mcmod.afk.scoreboard_not_init", "AFK scoreboard nicht initialisiert. Frage einen admin ob er /afk-init ausführen kann.");
             lang.add("commands.mcmod.afk.is_afk", "ist jetzt AFK");
             lang.add("commands.mcmod.afk.is_no_afk", "ist nicht mehr AFK");
-
-            lang.add("commands.mcmod.schwänze.text", "Schwänze sind lecker :D");
-
-            // Sounds
-            assert ModSounds.BEATS.getId() != null;
-            assert ModSounds.BEATS_BB.getId() != null;
-            assert ModSounds.CRUSH.getId() != null;
-            assert ModSounds.CRUSH_BB.getId() != null;
-            assert ModSounds.TAGE_WACH.getId() != null;
-            assert ModSounds.TAGE_WACH_BB.getId() != null;
-            assert ModSounds.LEICHE.getId() != null;
-            lang.add("sounds." + ModSounds.BEATS.getId().toLanguageKey(), "Beats");
-            lang.add("sounds." + ModSounds.BEATS_BB.getId().toLanguageKey(), "Beats (BB)");
-            lang.add("sounds." + ModSounds.CRUSH.getId().toLanguageKey(), "Crush");
-            lang.add("sounds." + ModSounds.CRUSH_BB.getId().toLanguageKey(), "Crush (BB)");
-            lang.add("sounds." + ModSounds.TAGE_WACH.getId().toLanguageKey(), "7 Tage Wach");
-            lang.add("sounds." + ModSounds.TAGE_WACH_BB.getId().toLanguageKey(), "7 Tage Wach (BB)");
-            lang.add("sounds." + ModSounds.LEICHE.getId().toLanguageKey(), "Ne Leiche");
-
-            // Music Discs / Desc
-            lang.add(ModItems.BEATS_BB_MUSIC_DISC.get(), "150 Beats (BB) - Music Disc");
-            lang.add(ModItems.BEATS_MUSIC_DISC.get(), "150 Beats - Music Disc");
-            lang.add(ModItems.TAGE_WACH_BB_MUSIC_DISC.get(), "7 Tage Wach (BB) - Music Disc");
-            lang.add(ModItems.TAGE_WACH_MUSIC_DISC.get(), "7 Tage Wach - Music Disc");
-            lang.add(ModItems.LEICHE_MUSIC_DISC.get(), "Ne Leiche - Music Disc");
-            lang.add(ModItems.CRUSH_BB_MUSIC_DISC.get(), "Crush (BB) - Music Disc");
-            lang.add(ModItems.CRUSH_MUSIC_DISC.get(), "Crush - Music Disc");
-
-            lang.add("item.mcmod." + ModItems.BEATS_BB_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats (BB)");
-            lang.add("item.mcmod." + ModItems.BEATS_MUSIC_DISC.get() + ".desc", "Rob & Chris - 150 Beats");
-            lang.add("item.mcmod." + ModItems.CRUSH_BB_MUSIC_DISC.get() + ".desc", "DrDonk - Crush (BB)");
-            lang.add("item.mcmod." + ModItems.CRUSH_MUSIC_DISC.get() + ".desc", "DrDonk - Crush");
-            lang.add("item.mcmod." + ModItems.TAGE_WACH_BB_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach (BB)");
-            lang.add("item.mcmod." + ModItems.TAGE_WACH_MUSIC_DISC.get() + ".desc", "TekkSchuster - 7 Tage Wach");
-            lang.add("item.mcmod." + ModItems.LEICHE_MUSIC_DISC.get() + ".desc", "SDP & Sido - Ne Leiche");
         }
     }
 }
